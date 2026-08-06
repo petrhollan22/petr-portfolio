@@ -13,7 +13,7 @@ export default function WorkPage() {
 
   return (
     <div className="bg-gradient-to-b from-primary to-secondary">
-      <section className="container py-20 text-center">
+      <section className="container pt-20 pb-4 text-center">
         <h1 className="text-5xl font-bold mb-4 gradient-text">{t('title')}</h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">{t('lead')}</p>
       </section>
@@ -26,7 +26,7 @@ export default function WorkPage() {
         if (items.length === 0) return null;
 
         return (
-          <section key={cat} className="container py-12">
+          <section key={cat} className="container pt-16 pb-12">
             <h2 className="section-title">
               {cat === 'thesis' ? t('thesesTitle') : t('competitionsTitle')}
             </h2>
