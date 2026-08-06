@@ -53,6 +53,7 @@ export const hustleProjects: HustleProject[] = [
     period: "2021–2026",
     cta: { cs: "Fakulta na LinkedIn", en: "Faculty on LinkedIn" },
     ctaLink: "https://cz.linkedin.com/school/fisvse/",
+    image: "/images/hustle/plakat.jpg",
     bullets: [
       { cs: "Člen studentské organizace Stačí se zeptat", en: "Member of the Stačí se zeptat student association" },
       { cs: "Návštěvy středních škol s informacemi o studiu", en: "School visits presenting study information" },
