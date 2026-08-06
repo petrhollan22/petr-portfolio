@@ -152,6 +152,16 @@
       "event": "Name of the event or competition",
       "place": "Name of the venue or place",
       "person": "Name"
+    },
+    "whyPh": {
+      "default": "One sentence is enough.",
+      "book": "What will I take away from it?",
+      "podcast": "What caught your attention?",
+      "web": "What is it good for?",
+      "course": "What will I learn there?",
+      "event": "Why would I enjoy it?",
+      "place": "What should I go for?",
+      "person": "Why is she or he worth following?"
     }
   }
 }

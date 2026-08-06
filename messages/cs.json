@@ -152,6 +152,16 @@
       "event": "Název akce nebo soutěže",
       "place": "Název podniku nebo místa",
       "person": "Jméno"
+    },
+    "whyPh": {
+      "default": "Stačí jedna věta.",
+      "book": "Co si z ní odnesu?",
+      "podcast": "Čím tě zaujal?",
+      "web": "K čemu je dobrý?",
+      "course": "Co se tam naučím?",
+      "event": "Proč by mě to bavilo?",
+      "place": "Na co si tam zajít?",
+      "person": "Proč stojí za to ji sledovat?"
     }
   }
 }

@@ -78,7 +78,8 @@ export default function InspirationPage() {
                 {t('why')} <span className="text-gray-500 font-normal">({t('linkNote')})</span>
               </label>
               <textarea name="why" value={form.why} onChange={onChange} rows={3}
-                className={field} placeholder={t('whyPlaceholder')} />
+                className={field}
+                placeholder={form.category ? t(`whyPh.${form.category}`) : t('whyPh.default')} />
             </div>
 
             <div>
