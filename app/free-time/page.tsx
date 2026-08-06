@@ -35,7 +35,7 @@ export default function FreeTimePage() {
                 <div className="bg-purple-500/10 border border-purple-500/30 rounded-lg p-5 mb-6">
                   <h3 className="text-lg font-semibold mb-3 text-purple-400">Trénink</h3>
                   <p className="text-gray-300 mb-4">{sport.coaching}</p>
-                  <a href="/schedule-time" className="btn-primary text-sm inline-block">
+                  <a href={`/schedule-time?service=${encodeURIComponent("Šachový trénink")}`} className="btn-primary text-sm inline-block">
                     Domluvit trénink →
                   </a>
                 </div>
