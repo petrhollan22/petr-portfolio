@@ -1,64 +1,70 @@
+import type { Localized } from '@/lib/localized';
+
 export interface Service {
   id: string;
-  name: string;
-  description: string;
-  icon: string;
-  color: string;
+  name: Localized;
+  description: Localized;
 }
 
 export const workServices: Service[] = [
   {
     id: "web-design",
-    name: "Web design",
-    description: "Design a build moderních webových aplikací s React/Next.js, responsive design, optimalizace pro uživatele.",
-    icon: "🎨",
-    color: "from-blue-400 to-blue-600"
+    name: { cs: "Web design", en: "Web design" },
+    description: {
+      cs: "Návrh a stavba moderních webových aplikací v Reactu a Next.js, responzivní design, optimalizace pro uživatele.",
+      en: "Design and build of modern web applications in React and Next.js, responsive layouts, user-focused optimisation."
+    }
   },
   {
     id: "ai-solutions",
-    name: "AI solutions",
-    description: "Implementace AI/ML řešení, custom LLM integrace, chatboti, automatizace procesů s umělou inteligencí.",
-    icon: "🤖",
-    color: "from-purple-400 to-purple-600"
+    name: { cs: "AI řešení", en: "AI solutions" },
+    description: {
+      cs: "Nasazení AI a ML řešení, integrace jazykových modelů, chatboti, automatizace procesů.",
+      en: "Deploying AI and ML solutions, language model integrations, chatbots, process automation."
+    }
   },
   {
     id: "data-analytics",
-    name: "Data analytics",
-    description: "Analýza dat v Databricks/PySpark, vizualizace, business intelligence, optimalizace datových pipeline.",
-    icon: "📊",
-    color: "from-green-400 to-green-600"
+    name: { cs: "Datová analytika", en: "Data analytics" },
+    description: {
+      cs: "Analýza dat v Databricks a PySparku, vizualizace, business intelligence, optimalizace datových pipeline.",
+      en: "Data analysis in Databricks and PySpark, visualisation, business intelligence, pipeline optimisation."
+    }
   },
   {
     id: "ai-audit",
-    name: "AI audit",
-    description: "Audit AI systémů, compliance check vůči EU AI Act, assessment ML modelů, governance framework.",
-    icon: "✅",
-    color: "from-orange-400 to-orange-600"
+    name: { cs: "AI audit", en: "AI audit" },
+    description: {
+      cs: "Audit AI systémů, soulad s EU AI Act, posouzení modelů, nastavení governance.",
+      en: "Auditing AI systems, EU AI Act compliance, model assessment, governance frameworks."
+    }
   },
   {
     id: "social-media",
-    name: "Social media",
-    description: "Strategie sociálních sítí, content planning, analýza dosahu a engagement, community management.",
-    icon: "📱",
-    color: "from-pink-400 to-pink-600"
+    name: { cs: "Sociální sítě", en: "Social media" },
+    description: {
+      cs: "Strategie sociálních sítí, plánování obsahu, analýza dosahu a zapojení, správa komunity.",
+      en: "Social media strategy, content planning, reach and engagement analysis, community management."
+    }
   },
   {
     id: "chess-coaching",
-    name: "Šachový trénink",
-    description: "Individuální i skupinové lekce šachu pro všechny úrovně, online i offline.",
-    icon: "♟️",
-    color: "from-indigo-400 to-indigo-600"
+    name: { cs: "Šachový trénink", en: "Chess coaching" },
+    description: {
+      cs: "Individuální i skupinové lekce šachu pro všechny úrovně, online i offline.",
+      en: "Individual and group chess lessons for all levels, online or in person."
+    }
   }
 ];
 
-export const scheduleActivities = [
-  "Bouldering",
-  "Badminton",
-  "Padel",
-  "Squash",
-  "Lyžování",
-  "Hory a turistika",
-  "Cestování",
-  "Společenské akce",
-  "Workshop",
+export const scheduleActivities: Localized[] = [
+  { cs: "Bouldering", en: "Bouldering" },
+  { cs: "Badminton", en: "Badminton" },
+  { cs: "Padel", en: "Padel" },
+  { cs: "Squash", en: "Squash" },
+  { cs: "Lyžování", en: "Skiing" },
+  { cs: "Hory a turistika", en: "Hiking" },
+  { cs: "Cestování", en: "Travel" },
+  { cs: "Společenské akce", en: "Social events" },
+  { cs: "Workshop", en: "Workshop" }
 ];

@@ -1,30 +1,41 @@
+import type { Localized } from '@/lib/localized';
+
 export interface Project {
   id: string;
-  title: string;
-  description: string;
+  title: Localized;
+  description: Localized;
   url: string;
   tags: string[];
   year: string;
-  image?: string;
 }
 
 export const projects: Project[] = [
   {
     id: "bachelor",
-    title: "Optimalizace digitální komunikace Fakulty informatiky a statistiky",
-    description: "Bakalářská práce zaměřená na optimalizaci komunikace VŠE na sociálních sítích (Facebook, Instagram, LinkedIn). Zahrnovala kvalitativní výzkum (194 respondentů, focus groups) a konkrétní doporučení pro zlepšení efektivity komunikace se studenty, uchazeči a absolventy.",
+    title: {
+      cs: "Optimalizace digitální komunikace Fakulty informatiky a statistiky",
+      en: "Optimising digital communication at the Faculty of Informatics and Statistics"
+    },
+    description: {
+      cs: "Bakalářská práce zaměřená na komunikaci fakulty VŠE na sociálních sítích. Zahrnovala dotazníkové šetření se 194 respondenty, focus groups a benchmarking ostatních fakult, na jehož základě vznikla sada doporučení pro obsah, formu i cílení.",
+      en: "Bachelor's thesis on the faculty's social media communication. It combined a survey of 194 respondents, focus groups and benchmarking against other faculties, resulting in recommendations on content, format and targeting."
+    },
     url: "https://vskp.vse.cz/89655_optimalizace-digitalni-komunikace-fakulty-informatiky-a-statistiky?author=Hollan&page=1",
     tags: ["social media", "research", "communication"],
-    year: "2022–2023",
-    image: "/images/projects/bachelor.jpg"
+    year: "2022–2023"
   },
   {
     id: "master",
-    title: "Implementace umělé inteligence ve firmách: Přínosy, výzvy a strategie",
-    description: "Diplomová práce na téma AI maturity a strategie adopce AI v českých firmách. Výzkum zahrnoval 8 případových studií technologických startupů až nadnárodních korporací s důrazem na governance, legislativu (EU AI Act) a praktické překážky implementace.",
+    title: {
+      cs: "Implementace umělé inteligence ve firmách: Přínosy, výzvy a strategie",
+      en: "AI adoption in companies: benefits, challenges and strategies"
+    },
+    description: {
+      cs: "Diplomová práce o zralosti a strategiích adopce AI v českých firmách. Kvalitativní výzkum formou osmi srovnávacích případových studií od technologických startupů po nadnárodní korporace, s důrazem na governance a rámec EU AI Act.",
+      en: "Master's thesis on AI maturity and adoption strategies in Czech companies. Qualitative research across eight comparative case studies, from technology startups to multinationals, focused on governance and the EU AI Act."
+    },
     url: "https://vskp.vse.cz/98708_implementace-umele-inteligence-ve-firmach-prinosy-vyzvy-a-strategie?author=Hollan&page=1",
     tags: ["AI", "research", "strategy", "governance"],
-    year: "2025",
-    image: "/images/projects/master.jpg"
+    year: "2025"
   }
 ];
