@@ -142,6 +142,16 @@
     "submit": "Send the tip",
     "sending": "Sending…",
     "success": "Thanks for the tip. I'll take a look.",
-    "error": "Something went wrong. Please try again."
+    "error": "Something went wrong. Please try again.",
+    "ph": {
+      "default": "Title of the book, event, place…",
+      "book": "Title and author",
+      "podcast": "Podcast name",
+      "web": "Name of the site or tool",
+      "course": "Course name and who runs it",
+      "event": "Name of the event or competition",
+      "place": "Name of the venue or place",
+      "person": "Name"
+    }
   }
 }

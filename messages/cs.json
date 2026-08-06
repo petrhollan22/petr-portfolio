@@ -142,6 +142,16 @@
     "submit": "Poslat tip",
     "sending": "Odesílám…",
     "success": "Díky za tip. Mrknu na to.",
-    "error": "Něco se pokazilo. Zkus to prosím znovu."
+    "error": "Něco se pokazilo. Zkus to prosím znovu.",
+    "ph": {
+      "default": "Název knihy, akce, místa…",
+      "book": "Název knihy a autor",
+      "podcast": "Název podcastu",
+      "web": "Název webu nebo nástroje",
+      "course": "Název kurzu a kdo ho vede",
+      "event": "Název akce nebo soutěže",
+      "place": "Název podniku nebo místa",
+      "person": "Jméno"
+    }
   }
 }

@@ -20,10 +20,11 @@ export default function InspirationPage() {
     e.preventDefault();
     setStatus('loading');
     try {
+      const cat = inspirationCategories.find((c) => c.id === form.category);
       const res = await fetch('/api/inspiration', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, category: cat ? pick(cat.name, locale) : form.category }),
       });
       if (res.ok) {
         setStatus('success');
@@ -52,7 +53,7 @@ export default function InspirationPage() {
               <select name="category" value={form.category} onChange={onChange} required className={field}>
                 <option value="">{t('choose')}</option>
                 {inspirationCategories.map((c) => (
-                  <option key={c.id} value={pick(c.name, locale)}>{pick(c.name, locale)}</option>
+                  <option key={c.id} value={c.id}>{pick(c.name, locale)}</option>
                 ))}
               </select>
             </div>
@@ -60,7 +61,8 @@ export default function InspirationPage() {
             <div>
               <label className="block text-sm font-medium mb-2">{t('name')} *</label>
               <input type="text" name="name" value={form.name} onChange={onChange} required
-                className={field} placeholder={t('namePlaceholder')} />
+                className={field}
+                placeholder={form.category ? t(`ph.${form.category}`) : t('ph.default')} />
             </div>
 
             <div>
