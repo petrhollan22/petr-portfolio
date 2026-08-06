@@ -40,7 +40,7 @@ export default function WorkPage() {
               </div>
               {p.url && (
                 <a href={p.url} target="_blank" rel="noopener noreferrer" className="inline-block btn-primary text-sm">
-                  {t('readThesis')} →
+                  {p.id.includes('thesis') || p.id === 'bachelor' || p.id === 'master' ? t('readThesis') : t('openLink')} →
                 </a>
               )}
             </div>

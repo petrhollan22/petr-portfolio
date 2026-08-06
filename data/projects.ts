@@ -64,6 +64,7 @@ export const projects: Project[] = [
     },
     tags: ["SAP", "ERPsim", "business simulation"],
     year: "2023",
+    url: "https://bizsimcup.cz/results.aspx",
     image: "/images/projects/bizsim.jpg"
   }
 ];
