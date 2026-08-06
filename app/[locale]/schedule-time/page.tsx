@@ -22,12 +22,21 @@ function BookingForm() {
 
   useEffect(() => {
     if (!preselected) return;
-    const isActivity = scheduleActivities.some((a) => a.cs === preselected || a.en === preselected);
-    const isWork = workServices.some((s) => s.name.cs === preselected || s.name.en === preselected);
-    if (isActivity || isWork) {
-      setB((p) => ({ ...p, type: isActivity ? 'activity' : 'work', service: preselected }));
+    const byId = workServices.find((s) => s.id === preselected);
+    if (byId) {
+      setB((p) => ({ ...p, type: 'work', service: pick(byId.name, locale) }));
+      return;
     }
-  }, [preselected]);
+    const activity = scheduleActivities.find((a) => a.cs === preselected || a.en === preselected);
+    if (activity) {
+      setB((p) => ({ ...p, type: 'activity', service: pick(activity, locale) }));
+      return;
+    }
+    const work = workServices.find((s) => s.name.cs === preselected || s.name.en === preselected);
+    if (work) {
+      setB((p) => ({ ...p, type: 'work', service: pick(work.name, locale) }));
+    }
+  }, [preselected, locale]);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;

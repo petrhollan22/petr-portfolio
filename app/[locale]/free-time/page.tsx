@@ -37,7 +37,7 @@ export default function FreeTimePage() {
                 <div className="bg-purple-500/10 border border-purple-500/30 rounded-lg p-5 mb-6">
                   <h3 className="text-lg font-semibold mb-3 text-purple-400">{t('coaching')}</h3>
                   <p className="text-gray-300 mb-4">{pick(sport.coaching, locale)}</p>
-                  <Link href="/schedule-time" className="btn-primary text-sm inline-block">
+                  <Link href={{ pathname: "/schedule-time", query: { service: "chess-coaching" } }} className="btn-primary text-sm inline-block">
                     {t('coachingCta')} →
                   </Link>
                 </div>
