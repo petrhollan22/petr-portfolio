@@ -4,7 +4,7 @@ export interface Project {
   id: string;
   title: Localized;
   description: Localized;
-  url: string;
+  url?: string;
   tags: string[];
   year: string;
 }
@@ -37,5 +37,18 @@ export const projects: Project[] = [
     url: "https://vskp.vse.cz/98708_implementace-umele-inteligence-ve-firmach-prinosy-vyzvy-a-strategie?author=Hollan&page=1",
     tags: ["AI", "research", "strategy", "governance"],
     year: "2025"
+  },
+  {
+    id: "meetings-optimization",
+    title: {
+      cs: "Online Meetings Optimization",
+      en: "Online Meetings Optimization"
+    },
+    description: {
+      cs: "Týmový projekt zkoumající, jak mohou AI asistenti ušetřit čas strávený na online schůzkách. Vznikl s Kristiánem Mellešem a Samuelem Čandíkem a probojoval se mezi deset finalistů soutěže Profinit AI Talents.",
+      en: "A team project exploring how AI assistants can cut down the time spent in online meetings. Built with Kristián Melleš and Samuel Čandík, it reached the top ten in the Profinit AI Talents competition."
+    },
+    tags: ["AI", "productivity", "LLM"],
+    year: "2024"
   }
 ];

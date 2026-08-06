@@ -29,9 +29,11 @@ export default function WorkPage() {
                   <span key={tag} className="px-3 py-1 bg-purple-500/20 text-purple-300 text-sm rounded-full">{tag}</span>
                 ))}
               </div>
-              <a href={p.url} target="_blank" rel="noopener noreferrer" className="inline-block btn-primary text-sm">
-                {t('readThesis')} →
-              </a>
+              {p.url && (
+                <a href={p.url} target="_blank" rel="noopener noreferrer" className="inline-block btn-primary text-sm">
+                  {t('readThesis')} →
+                </a>
+              )}
             </div>
           ))}
         </div>
