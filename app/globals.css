@@ -56,3 +56,48 @@ button {
 .container {
   @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
 }
+
+.rdp-dark {
+  --rdp-cell-size: 38px;
+  --rdp-accent-color: #7c3aed;
+  --rdp-background-color: #1e293b;
+  --rdp-outline: 2px solid #7c3aed;
+  --rdp-outline-selected: 2px solid #7c3aed;
+  margin: 0;
+  color: #e2e8f0;
+}
+
+.rdp-dark .rdp-day_selected,
+.rdp-dark .rdp-day_selected:hover {
+  background-color: #7c3aed;
+  color: #fff;
+}
+
+.rdp-dark .rdp-day:hover:not([disabled]) {
+  background-color: #334155;
+}
+
+.rdp-dark .rdp-day_disabled {
+  color: #475569;
+  opacity: 0.5;
+}
+
+.rdp-dark .rdp-head_cell {
+  color: #94a3b8;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.rdp-dark .rdp-caption_label {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+}
+
+.rdp-dark .rdp-nav_button {
+  color: #94a3b8;
+}
+
+.rdp-dark .rdp-nav_button:hover {
+  background-color: #334155;
+  color: #fff;
+}

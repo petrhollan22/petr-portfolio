@@ -6,6 +6,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { workServices, scheduleActivities } from '@/data/services';
 import { pick } from '@/lib/localized';
 import ContactForm from '@/components/ContactForm';
+import DatePicker from '@/components/DatePicker';
 
 function BookingForm() {
   const t = useTranslations('schedule');
@@ -100,7 +101,13 @@ function BookingForm() {
         <div className="grid md:grid-cols-3 gap-4">
           <div>
             <label className="block text-sm font-medium mb-2">{t('date')} *</label>
-            <input type="date" name="date" value={b.date} onChange={onChange} required min={today} className={field} />
+            <DatePicker
+              value={b.date}
+              onChange={(v) => setB((p) => ({ ...p, date: v }))}
+              locale={locale}
+              placeholder={t('choose')}
+              className={field}
+            />
           </div>
           <div>
             <label className="block text-sm font-medium mb-2">{t('time')} *</label>
