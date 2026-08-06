@@ -118,6 +118,8 @@
     "certificates": "Certificates",
     "ctaTitle": "Want the full CV as a PDF?",
     "ctaLead": "Drop me a message and I'll send it over.",
-    "ctaButton": "Get in touch"
+    "ctaButton": "Get in touch",
+    "present": "present",
+    "minor": "minor"
   }
 }

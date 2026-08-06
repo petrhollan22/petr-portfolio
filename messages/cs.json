@@ -118,6 +118,8 @@
     "certificates": "Certifikáty",
     "ctaTitle": "Chceš celý životopis v PDF?",
     "ctaLead": "Napiš mi a pošlu ti ho.",
-    "ctaButton": "Ozvat se"
+    "ctaButton": "Ozvat se",
+    "present": "nyní",
+    "minor": "vedlejší specializace"
   }
 }

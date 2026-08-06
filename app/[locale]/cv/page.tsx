@@ -7,6 +7,9 @@ export default function CvPage() {
   const t = useTranslations('cv');
   const locale = useLocale();
 
+  const sub = (v: string) =>
+    v.replace('@present', t('present')).replace('@minor', t('minor'));
+
   return (
     <div className="bg-gradient-to-b from-primary to-secondary">
       <section className="container pt-20 pb-4 text-center">
@@ -21,7 +24,7 @@ export default function CvPage() {
             <div key={i} className="card">
               <div className="flex justify-between items-baseline gap-4 flex-wrap mb-1">
                 <h3 className="text-xl font-bold">{pick(job.title, locale)}</h3>
-                <span className="text-sm text-gray-500 whitespace-nowrap">{job.period}</span>
+                <span className="text-sm text-gray-500 whitespace-nowrap">{sub(job.period)}</span>
               </div>
               <p className="text-purple-400 text-sm mb-3">{job.org}</p>
               {job.description && (
@@ -61,7 +64,7 @@ export default function CvPage() {
                 <div key={i}>
                   <p className="font-semibold">{pick(e.title, locale)}</p>
                   <p className="text-sm text-gray-500">
-                    {e.org}{e.period ? ` · ${e.period}` : ''}
+                    {sub(e.org)}{e.period ? ` · ${e.period}` : ''}
                   </p>
                 </div>
               ))}

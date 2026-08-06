@@ -17,7 +17,7 @@ export const jobs: Job[] = [
   {
     title: { cs: "Business Intelligence Analyst", en: "Business Intelligence Analyst" },
     org: "Albert Česká republika",
-    period: "04/2025 – nyní",
+    period: "04/2025 – @present",
     description: {
       cs: "Datové modely, dashboardy a analytické reporty pro rozhodování napříč Českem, Řeckem, Rumunskem a Srbskem. Koordinace mezi byznysem a centrální datovou platformou včetně pravidelné prezentace výsledků managementu.",
       en: "Data models, dashboards and analytical reports supporting decisions across Czechia, Greece, Romania and Serbia. Coordination between business teams and the central data platform, including regular reporting to management."
@@ -53,7 +53,7 @@ export const jobs: Job[] = [
   {
     title: { cs: "Trenér šachu", en: "Chess coach" },
     org: "Šachová škola Vávra a Černoušek",
-    period: "09/2020 – nyní",
+    period: "09/2020 – @present",
     description: {
       cs: "Individuální a skupinové tréninky pro hráče všech věkových kategorií.",
       en: "Individual and group coaching for players of all ages."
@@ -70,7 +70,7 @@ export const education: Education[] = [
   { title: { cs: "Kognitivní informatika (Ing.)", en: "Cognitive Informatics (MSc)" }, org: "VŠE Praha", period: "2023–2026" },
   { title: { cs: "Informační média a služby (Bc.)", en: "Information Media and Services (BSc)" }, org: "VŠE Praha", period: "2020–2023" },
   { title: { cs: "Information Systems", en: "Information Systems" }, org: "Erasmus+, Liechtenstein", period: "2024–2025" },
-  { title: { cs: "Sales Management", en: "Sales Management" }, org: "VŠE Praha, vedlejší specializace", period: "" }
+  { title: { cs: "Sales Management", en: "Sales Management" }, org: "VŠE Praha, @minor", period: "" }
 ];
 
 export const skillsDaily = ["SQL", "Python", "Databricks", "PySpark", "Power BI", "Azure"];
