@@ -31,6 +31,7 @@ export default function Footer() {
               <li><Link href="/free-time" className="hover:text-purple-400 transition-colors">{nav('freeTime')}</Link></li>
               <li><Link href="/schedule-time" className="hover:text-purple-400 transition-colors">{nav('scheduleTime')}</Link></li>
               <li><Link href="/hustle" className="hover:text-purple-400 transition-colors">{nav('hustle')}</Link></li>
+              <li><Link href="/inspiration" className="hover:text-purple-400 transition-colors">{nav('inspiration')}</Link></li>
             </ul>
           </div>
 

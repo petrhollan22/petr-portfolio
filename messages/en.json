@@ -4,7 +4,8 @@
     "freeTime": "Free time",
     "scheduleTime": "Schedule",
     "hustle": "Hustle",
-    "cv": "CV"
+    "cv": "CV",
+    "inspiration": "Inspiration"
   },
   "home": {
     "role": "Data & AI",
@@ -121,5 +122,24 @@
     "ctaButton": "Get in touch",
     "present": "present",
     "minor": "minor"
+  },
+  "inspiration": {
+    "title": "Inspiration",
+    "lead": "Got a book, podcast, event or place worth knowing about? Send it over — it takes ten seconds.",
+    "formTitle": "Recommend something",
+    "category": "What is it",
+    "choose": "Select…",
+    "name": "Name",
+    "namePlaceholder": "Title of the book, event, place…",
+    "link": "Link",
+    "linkNote": "optional",
+    "why": "Why it's worth it",
+    "whyPlaceholder": "One sentence is enough.",
+    "from": "From",
+    "fromPlaceholder": "Name or email, so I know who to thank",
+    "submit": "Send the tip",
+    "sending": "Sending…",
+    "success": "Thanks for the tip. I'll take a look.",
+    "error": "Something went wrong. Please try again."
   }
 }

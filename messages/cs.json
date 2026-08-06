@@ -4,7 +4,8 @@
     "freeTime": "Volný čas",
     "scheduleTime": "Rezervace",
     "hustle": "Projekty",
-    "cv": "Životopis"
+    "cv": "Životopis",
+    "inspiration": "Inspirace"
   },
   "home": {
     "role": "Data & AI",
@@ -121,5 +122,24 @@
     "ctaButton": "Ozvat se",
     "present": "nyní",
     "minor": "vedlejší specializace"
+  },
+  "inspiration": {
+    "title": "Inspirace",
+    "lead": "Máš tip na knihu, podcast, akci nebo místo, které stojí za pozornost? Pošli mi ho — vezme ti to deset vteřin.",
+    "formTitle": "Doporučit něco",
+    "category": "Co to je",
+    "choose": "Vyber…",
+    "name": "Název",
+    "namePlaceholder": "Jméno knihy, akce, místa…",
+    "link": "Odkaz",
+    "linkNote": "nepovinné",
+    "why": "Proč to stojí za to",
+    "whyPlaceholder": "Stačí jedna věta.",
+    "from": "Kdo posílá",
+    "fromPlaceholder": "Jméno nebo e-mail, ať vím komu poděkovat",
+    "submit": "Poslat tip",
+    "sending": "Odesílám…",
+    "success": "Díky za tip. Mrknu na to.",
+    "error": "Něco se pokazilo. Zkus to prosím znovu."
   }
 }
