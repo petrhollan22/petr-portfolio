@@ -24,6 +24,15 @@ export default function WorkPage() {
               <span className="text-sm text-purple-400 font-semibold">{p.year}</span>
               <h3 className="text-2xl font-bold mt-2 mb-4">{pick(p.title, locale)}</h3>
               <p className="text-gray-400 mb-4">{pick(p.description, locale)}</p>
+
+              {p.image && (
+                <img
+                  src={p.image}
+                  alt={pick(p.title, locale)}
+                  className="w-full rounded-lg mb-4"
+                  loading="lazy"
+                />
+              )}
               <div className="flex flex-wrap gap-2 mb-6">
                 {p.tags.map((tag) => (
                   <span key={tag} className="px-3 py-1 bg-purple-500/20 text-purple-300 text-sm rounded-full">{tag}</span>

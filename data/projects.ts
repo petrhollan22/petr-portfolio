@@ -7,6 +7,7 @@ export interface Project {
   url?: string;
   tags: string[];
   year: string;
+  image?: string;
 }
 
 export const projects: Project[] = [
@@ -50,5 +51,19 @@ export const projects: Project[] = [
     },
     tags: ["AI", "productivity", "LLM"],
     year: "2024"
+  },
+  {
+    id: "bizsim-cup",
+    title: {
+      cs: "BIZ SIM CUP 2023 — 6. místo",
+      en: "BIZ SIM CUP 2023 — 6th place"
+    },
+    description: {
+      cs: "Republikové finále manažersko-ekonomické soutěže v centrále Škoda Auto v Kosmonosech. V týmu VALENTYNKY jsme za VŠE obsadili 6. místo v mezinárodní konkurenci. Deset kol simulace ERPsim v prostředí SAP S/4HANA, kde jsme řídili obchodní a logistické operace, tvořili cenovou strategii a modelovali tržní trendy.",
+      en: "National finals of a business simulation competition held at Škoda Auto headquarters. Competing for VŠE as team VALENTYNKY, we placed 6th in an international field. Ten rounds of ERPsim in SAP S/4HANA, running sales and logistics operations, setting pricing strategy and modelling market trends."
+    },
+    tags: ["SAP", "ERPsim", "business simulation"],
+    year: "2023",
+    image: "/images/projects/bizsim.jpg"
   }
 ];
