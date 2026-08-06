@@ -23,7 +23,12 @@
     "tagline": "Data & AI. Prague, Czech Republic.",
     "navTitle": "Navigation",
     "contactTitle": "Contact",
-    "running": "Running results"
+    "running": "Running results",
+    "bio": "Data and AI in retail. Alongside that I coach chess and organise sports events.",
+    "footerCta": "Book a time",
+    "bannerTitle": "Got a project, or just want to talk?",
+    "bannerLead": "A consultation on data and AI, a chess lesson or a game together — get in touch.",
+    "bannerButton": "Find a slot"
   },
   "work": {
     "title": "My work",

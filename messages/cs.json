@@ -23,7 +23,12 @@
     "tagline": "Data & AI. Praha, Česká republika.",
     "navTitle": "Navigace",
     "contactTitle": "Kontakt",
-    "running": "Běžecké výsledky"
+    "running": "Běžecké výsledky",
+    "bio": "Data a umělá inteligence v retailu. Vedle toho trénuji šachy a organizuji sportovní akce.",
+    "footerCta": "Rezervuj si čas",
+    "bannerTitle": "Máš projekt, nebo si chceš jen popovídat?",
+    "bannerLead": "Konzultace k datům a AI, šachová lekce nebo společný sport — ozvi se.",
+    "bannerButton": "Domluvit termín"
   },
   "work": {
     "title": "Moje práce",

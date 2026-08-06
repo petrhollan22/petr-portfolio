@@ -6,12 +6,21 @@ export default function Footer() {
   const nav = useTranslations('nav');
 
   return (
-    <footer className="bg-secondary mt-20 py-12 border-t border-gray-700">
-      <div className="container">
+    <footer className="bg-secondary mt-20 border-t border-gray-700">
+      <div className="container py-14 border-b border-gray-700 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold mb-3">{t('bannerTitle')}</h2>
+        <p className="text-gray-400 mb-6 max-w-xl mx-auto">{t('bannerLead')}</p>
+        <Link href="/schedule-time" className="btn-primary">{t('bannerButton')} →</Link>
+      </div>
+
+      <div className="container py-12">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-xl font-bold mb-4 gradient-text">Petr Hollan</h3>
-            <p className="text-gray-400 text-sm">{t('tagline')}</p>
+            <p className="text-gray-400 text-sm mb-4">{t('bio')}</p>
+            <Link href="/schedule-time" className="text-sm text-purple-400 hover:text-purple-300 transition-colors font-medium">
+              {t('footerCta')} →
+            </Link>
           </div>
 
           <div>
