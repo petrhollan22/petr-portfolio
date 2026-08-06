@@ -51,7 +51,8 @@ export const projects: Project[] = [
       en: "A team project exploring how AI assistants can cut down the time spent in online meetings. Built with Kristián Melleš and Samuel Čandík, it reached the top ten in the Profinit AI Talents competition."
     },
     tags: ["AI", "productivity", "LLM"],
-    year: "2024"
+    year: "2024",
+    image: "/images/projects/assistant.jpg"
   },
   {
     id: "bizsim-cup",
