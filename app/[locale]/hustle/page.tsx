@@ -31,6 +31,15 @@ export default function HustlePage() {
 
               <p className="text-gray-400 mb-4">{pick(p.description, locale)}</p>
 
+              {p.image && (
+                <img
+                  src={p.image}
+                  alt={pick(p.title, locale)}
+                  className="w-full max-w-2xl rounded-lg mb-6"
+                  loading="lazy"
+                />
+              )}
+
               {p.bullets && (
                 <ul className="space-y-2 mb-6">
                   {p.bullets.map((b, i) => (

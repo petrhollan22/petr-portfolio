@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <nav className="bg-secondary sticky top-0 z-50 shadow-lg">
       <div className="container flex justify-between items-center py-4">
-        <Link href="/" className="text-2xl font-bold gradient-text">Petr</Link>
+        <Link href="/" className="text-xl font-bold gradient-text whitespace-nowrap">Petr Hollan</Link>
 
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
