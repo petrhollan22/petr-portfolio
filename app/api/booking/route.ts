@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
       weekday: 'long',
     });
 
-    const typeLabel = type === 'work' ? '💼 Pracovní služba' : '⚽ Sportovní aktivita';
+    const typeLabel = type === 'work' ? '💼 Pracovní aktivita' : '⚽ Sportovní aktivita';
 
     // Format message for Discord
     const discordMessage = {

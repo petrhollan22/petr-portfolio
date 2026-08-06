@@ -100,14 +100,14 @@ function BookingForm() {
           <label className="block text-sm font-medium mb-2">Typ rezervace *</label>
           <select name="type" value={booking.type} onChange={handleChange}
             className="w-full px-4 py-2 bg-primary rounded-lg border border-gray-700 focus:border-purple-500 focus:outline-none">
-            <option value="work">Pracovní služba</option>
+            <option value="work">Pracovní aktivita</option>
             <option value="activity">Sportovní aktivita</option>
           </select>
         </div>
 
         <div>
           <label className="block text-sm font-medium mb-2">
-            {booking.type === 'work' ? 'Služba' : 'Aktivita'} *
+            {booking.type === 'work' ? 'Pracovní aktivita' : 'Sportovní aktivita'} *
           </label>
           <select name="service" value={booking.service} onChange={handleChange} required
             className="w-full px-4 py-2 bg-primary rounded-lg border border-gray-700 focus:border-purple-500 focus:outline-none">

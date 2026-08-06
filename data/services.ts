@@ -41,6 +41,13 @@ export const workServices: Service[] = [
     description: "Strategie sociálních sítí, content planning, analýza dosahu a engagement, community management.",
     icon: "📱",
     color: "from-pink-400 to-pink-600"
+  },
+  {
+    id: "chess-coaching",
+    name: "Šachový trénink",
+    description: "Individuální i skupinové lekce šachu pro všechny úrovně, online i offline.",
+    icon: "♟️",
+    color: "from-indigo-400 to-indigo-600"
   }
 ];
 
@@ -54,5 +61,4 @@ export const scheduleActivities = [
   "Cestování",
   "Společenské akce",
   "Workshop",
-  "Šachový trénink"
 ];
