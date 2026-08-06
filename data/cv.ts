@@ -74,7 +74,7 @@ export const education: Education[] = [
 ];
 
 export const skillsDaily = ["SQL", "Python", "Databricks", "PySpark", "Power BI", "Azure"];
-export const skillsBasic = ["R", "Tableau", "Git", "HTML / CSS", "Figma", "Linux"];
+export const skillsBasic = ["R", "JavaScript", "Tableau", "Git", "HTML / CSS", "Figma", "Linux"];
 
 export const languages: { name: Localized; level: Localized }[] = [
   { name: { cs: "Čeština", en: "Czech" }, level: { cs: "rodilý mluvčí", en: "native" } },
