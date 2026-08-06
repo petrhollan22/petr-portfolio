@@ -6,6 +6,7 @@ export interface Project {
   description: Localized;
   url?: string;
   tags: string[];
+  category: "thesis" | "competition";
   year: string;
   image?: string;
   links?: { label: Localized; url: string }[];
@@ -14,6 +15,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "bachelor",
+    category: "thesis" as const,
     title: {
       cs: "Optimalizace digitální komunikace Fakulty informatiky a statistiky",
       en: "Optimising digital communication at the Faculty of Informatics and Statistics"
@@ -28,6 +30,7 @@ export const projects: Project[] = [
   },
   {
     id: "master",
+    category: "thesis" as const,
     title: {
       cs: "Implementace umělé inteligence ve firmách: Přínosy, výzvy a strategie",
       en: "AI adoption in companies: benefits, challenges and strategies"
@@ -42,6 +45,7 @@ export const projects: Project[] = [
   },
   {
     id: "meetings-optimization",
+    category: "competition" as const,
     title: {
       cs: "Online Meetings Optimization",
       en: "Online Meetings Optimization"
@@ -56,6 +60,7 @@ export const projects: Project[] = [
   },
   {
     id: "bizsim-cup",
+    category: "competition" as const,
     title: {
       cs: "BIZ SIM CUP 2023 — 6. místo",
       en: "BIZ SIM CUP 2023 — 6th place"

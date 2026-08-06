@@ -9,6 +9,8 @@ export default function WorkPage() {
   const t = useTranslations('work');
   const locale = useLocale();
 
+  const categories = ['thesis', 'competition'] as const;
+
   return (
     <div className="bg-gradient-to-b from-primary to-secondary">
       <section className="container py-20 text-center">
@@ -16,50 +18,66 @@ export default function WorkPage() {
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">{t('lead')}</p>
       </section>
 
-      <section className="container py-12">
-        <h2 className="section-title">{t('projectsTitle')}</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((p) => (
-            <div key={p.id} className="card">
-              <span className="text-sm text-purple-400 font-semibold">{p.year}</span>
-              <h3 className="text-2xl font-bold mt-2 mb-4">{pick(p.title, locale)}</h3>
-              <p className="text-gray-400 mb-4">{pick(p.description, locale)}</p>
+      {categories.map((cat) => {
+        const items = projects
+          .filter((p) => p.category === cat)
+          .sort((a, b) => b.year.localeCompare(a.year));
 
-              {p.image && (
-                <img
-                  src={p.image}
-                  alt={pick(p.title, locale)}
-                  className="w-full rounded-lg mb-4"
-                  loading="lazy"
-                />
-              )}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {p.tags.map((tag) => (
-                  <span key={tag} className="px-3 py-1 bg-purple-500/20 text-purple-300 text-sm rounded-full">{tag}</span>
-                ))}
-              </div>
-              {p.url && (
-                <a href={p.url} target="_blank" rel="noopener noreferrer" className="inline-block btn-primary text-sm">
-                  {t('readThesis')} →
-                </a>
-              )}
+        if (items.length === 0) return null;
 
-              {p.links && p.links.length > 0 && (
-                <ul className="grid sm:grid-cols-2 gap-2">
-                  {p.links.map((l) => (
-                    <li key={l.url}>
-                      <a href={l.url} target="_blank" rel="noopener noreferrer"
-                        className="block px-4 py-2 bg-primary rounded-lg text-sm text-gray-300 hover:text-purple-400 transition-colors">
-                        {pick(l.label, locale)} ↗
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              )}
+        return (
+          <section key={cat} className="container py-12">
+            <h2 className="section-title">
+              {cat === 'thesis' ? t('thesesTitle') : t('competitionsTitle')}
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {items.map((p) => (
+                <div key={p.id} className="card">
+                  <span className="text-sm text-purple-400 font-semibold">{p.year}</span>
+                  <h3 className="text-2xl font-bold mt-2 mb-4">{pick(p.title, locale)}</h3>
+                  <p className="text-gray-400 mb-4">{pick(p.description, locale)}</p>
+
+                  {p.image && (
+                    <img
+                      src={p.image}
+                      alt={pick(p.title, locale)}
+                      className="w-full rounded-lg mb-4"
+                      loading="lazy"
+                    />
+                  )}
+
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {p.tags.map((tag) => (
+                      <span key={tag} className="px-3 py-1 bg-purple-500/20 text-purple-300 text-sm rounded-full">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {p.url && (
+                    <a href={p.url} target="_blank" rel="noopener noreferrer" className="inline-block btn-primary text-sm">
+                      {t('readThesis')} →
+                    </a>
+                  )}
+
+                  {p.links && p.links.length > 0 && (
+                    <ul className="grid sm:grid-cols-2 gap-2">
+                      {p.links.map((l) => (
+                        <li key={l.url}>
+                          <a href={l.url} target="_blank" rel="noopener noreferrer"
+                            className="block px-4 py-2 bg-primary rounded-lg text-sm text-gray-300 hover:text-purple-400 transition-colors">
+                            {pick(l.label, locale)} ↗
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </section>
+          </section>
+        );
+      })}
 
       <section className="container py-12">
         <h2 className="section-title">{t('servicesTitle')}</h2>
