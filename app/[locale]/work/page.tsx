@@ -40,8 +40,21 @@ export default function WorkPage() {
               </div>
               {p.url && (
                 <a href={p.url} target="_blank" rel="noopener noreferrer" className="inline-block btn-primary text-sm">
-                  {p.id.includes('thesis') || p.id === 'bachelor' || p.id === 'master' ? t('readThesis') : t('openLink')} →
+                  {t('readThesis')} →
                 </a>
+              )}
+
+              {p.links && p.links.length > 0 && (
+                <ul className="grid sm:grid-cols-2 gap-2">
+                  {p.links.map((l) => (
+                    <li key={l.url}>
+                      <a href={l.url} target="_blank" rel="noopener noreferrer"
+                        className="block px-4 py-2 bg-primary rounded-lg text-sm text-gray-300 hover:text-purple-400 transition-colors">
+                        {pick(l.label, locale)} ↗
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               )}
             </div>
           ))}

@@ -8,6 +8,7 @@ export interface Project {
   tags: string[];
   year: string;
   image?: string;
+  links?: { label: Localized; url: string }[];
 }
 
 export const projects: Project[] = [
@@ -64,7 +65,10 @@ export const projects: Project[] = [
     },
     tags: ["SAP", "ERPsim", "business simulation"],
     year: "2023",
-    url: "https://bizsimcup.cz/results.aspx",
-    image: "/images/projects/bizsim.jpg"
+    image: "/images/projects/bizsim.jpg",
+    links: [
+      { label: { cs: "Výsledky soutěže", en: "Competition results" }, url: "https://bizsimcup.cz/results.aspx" },
+      { label: { cs: "Článek na webu FIS", en: "Article on the FIS website" }, url: "https://fis.vse.cz/aktuality/uspech-studentu-fis-v-soutezi-bizsimcup-2023/" }
+    ]
   }
 ];
