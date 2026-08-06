@@ -63,14 +63,14 @@ export const hustleProjects: HustleProject[] = [
   },
   {
     id: "profinit-ai-hotspot",
-    title: { cs: "Profinit AI Hotspot", en: "Profinit AI Hotspot" },
+    title: { cs: "Profinit AI Talents — finalista", en: "Profinit AI Talents — finalist" },
     description: {
-      cs: "Účast na konferenci Profinit AI Hotspot věnované praktickému nasazení umělé inteligence. Setkání propojilo lidi z byznysu i technické praxe nad tím, kde AI reálně přináší hodnotu.",
-      en: "Attended the Profinit AI Hotspot conference on practical AI adoption, bringing together business and technical perspectives on where AI actually delivers value."
+      cs: "Finalista soutěže Profinit AI Talents. S Kristiánem Mellešem a Samuelem Čandíkem jsme se s projektem Online Meetings Optimization probojovali mezi deset nejlepších a představili ho ve finále na konferenci AI HotSpot.",
+      en: "Finalist in the Profinit AI Talents competition. Together with Kristián Melleš and Samuel Čandík, our Online Meetings Optimization project reached the top ten and was presented at the AI HotSpot conference finals."
     },
     type: "event",
-    cta: { cs: "Příspěvek na LinkedIn", en: "LinkedIn post" },
-    ctaLink: "https://www.linkedin.com/posts/petr-hollan_last-week-i-had-the-privilege-of-attending-share-7264032563231342593-dgmb/",
+    cta: { cs: "O konferenci AI HotSpot", en: "About AI HotSpot" },
+    ctaLink: "https://profinit.eu/events/ai-hotspot/",
     image: "/images/hustle/profinit.jpg"
   },
   {
