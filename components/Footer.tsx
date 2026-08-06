@@ -5,15 +5,11 @@ export default function Footer() {
     <footer className="bg-secondary mt-20 py-12 border-t border-gray-700">
       <div className="container">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
-          {/* About */}
           <div>
             <h3 className="text-xl font-bold mb-4 gradient-text">Petr Hollan</h3>
-            <p className="text-gray-400 text-sm">
-              Data Engineer & AI Consultant based in Prague, CZ.
-            </p>
+            <p className="text-gray-400 text-sm">Data &amp; AI. Praha, Česká republika.</p>
           </div>
 
-          {/* Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Navigace</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
@@ -24,20 +20,19 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Kontakt</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
-              <li><a href="mailto:petr@example.com" className="hover:text-purple-400 transition-colors">Email</a></li>
-              <li><a href="https://linkedin.com/in/petrhollan" className="hover:text-purple-400 transition-colors">LinkedIn</a></li>
-              <li><a href="https://discord.com" className="hover:text-purple-400 transition-colors">Discord</a></li>
-              <li><a href="https://github.com" className="hover:text-purple-400 transition-colors">GitHub</a></li>
+              <li><a href="mailto:petr@hollan.eu" className="hover:text-purple-400 transition-colors">petr@hollan.eu</a></li>
+              <li><a href="https://cz.linkedin.com/in/petr-hollan" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors">LinkedIn ↗</a></li>
+              <li><a href="https://www.chess.com/cs/member/pedroholly22" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors">Chess.com ↗</a></li>
+              <li><a href="https://www.triatlony.com/bezecke-tabulky/zavodnici/286167-hollan-petr" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors">Běžecké výsledky ↗</a></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-700 pt-8 text-center text-gray-500 text-sm">
-          <p>&copy; 2025 Petr Hollan. All rights reserved.</p>
+          <p>&copy; 2026 Petr Hollan</p>
         </div>
       </div>
     </footer>
