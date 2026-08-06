@@ -3,7 +3,8 @@
     "work": "Work",
     "freeTime": "Free time",
     "scheduleTime": "Schedule",
-    "hustle": "Hustle"
+    "hustle": "Hustle",
+    "cv": "CV"
   },
   "home": {
     "role": "Data & AI",
@@ -104,5 +105,19 @@
     "sending": "Sending...",
     "success": "Thanks, your message is on its way.",
     "error": "Something went wrong. Please try again later."
+  },
+  "cv": {
+    "title": "CV",
+    "lead": "Data and AI in retail. Five years across analytics, BI and AI projects.",
+    "experience": "Experience",
+    "skills": "Skills",
+    "daily": "Daily",
+    "basic": "Familiar with",
+    "education": "Education",
+    "languages": "Languages",
+    "certificates": "Certificates",
+    "ctaTitle": "Want the full CV as a PDF?",
+    "ctaLead": "Drop me a message and I'll send it over.",
+    "ctaButton": "Get in touch"
   }
 }

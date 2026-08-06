@@ -11,6 +11,7 @@ export default function Navbar() {
 
   const links = [
     { href: '/work', label: t('work') },
+    { href: '/cv', label: t('cv') },
     { href: '/free-time', label: t('freeTime') },
     { href: '/schedule-time', label: t('scheduleTime') },
     { href: '/hustle', label: t('hustle') },

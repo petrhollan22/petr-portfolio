@@ -27,6 +27,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">{t('navTitle')}</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li><Link href="/work" className="hover:text-purple-400 transition-colors">{nav('work')}</Link></li>
+              <li><Link href="/cv" className="hover:text-purple-400 transition-colors">{nav('cv')}</Link></li>
               <li><Link href="/free-time" className="hover:text-purple-400 transition-colors">{nav('freeTime')}</Link></li>
               <li><Link href="/schedule-time" className="hover:text-purple-400 transition-colors">{nav('scheduleTime')}</Link></li>
               <li><Link href="/hustle" className="hover:text-purple-400 transition-colors">{nav('hustle')}</Link></li>

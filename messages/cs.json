@@ -3,7 +3,8 @@
     "work": "Práce",
     "freeTime": "Volný čas",
     "scheduleTime": "Rezervace",
-    "hustle": "Projekty"
+    "hustle": "Projekty",
+    "cv": "Životopis"
   },
   "home": {
     "role": "Data & AI",
@@ -104,5 +105,19 @@
     "sending": "Odesílám...",
     "success": "Děkuji, zpráva odeslána.",
     "error": "Chyba při odesílání. Zkus to prosím později."
+  },
+  "cv": {
+    "title": "Životopis",
+    "lead": "Data a umělá inteligence v retailu. Pět let praxe napříč analytikou, BI a AI projekty.",
+    "experience": "Praxe",
+    "skills": "Dovednosti",
+    "daily": "Denně",
+    "basic": "Základ",
+    "education": "Vzdělání",
+    "languages": "Jazyky",
+    "certificates": "Certifikáty",
+    "ctaTitle": "Chceš celý životopis v PDF?",
+    "ctaLead": "Napiš mi a pošlu ti ho.",
+    "ctaButton": "Ozvat se"
   }
 }
