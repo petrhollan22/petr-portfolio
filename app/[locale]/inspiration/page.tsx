@@ -16,6 +16,14 @@ export default function InspirationPage() {
     setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
   };
 
+  const normaliseLink = () => {
+    setForm((p) => {
+      const v = p.link.trim();
+      if (!v || /^https?:\/\//i.test(v)) return p;
+      return { ...p, link: `https://${v}` };
+    });
+  };
+
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('loading');
@@ -69,8 +77,8 @@ export default function InspirationPage() {
               <label className="block text-sm font-medium mb-2">
                 {t('link')} <span className="text-gray-500 font-normal">({t('linkNote')})</span>
               </label>
-              <input type="url" name="link" value={form.link} onChange={onChange}
-                className={field} placeholder="https://" />
+              <input type="url" name="link" value={form.link} onChange={onChange} onBlur={normaliseLink}
+                className={field} placeholder="www.priklad.cz" />
             </div>
 
             <div>
