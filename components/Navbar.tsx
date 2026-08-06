@@ -1,60 +1,50 @@
 'use client';
 
-import Link from 'next/link';
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations('nav');
 
   const links = [
-    { href: '/work', label: 'Work' },
-    { href: '/free-time', label: 'Free time' },
-    { href: '/schedule-time', label: 'Schedule time' },
-    { href: '/hustle', label: 'Hustle' },
+    { href: '/work', label: t('work') },
+    { href: '/free-time', label: t('freeTime') },
+    { href: '/schedule-time', label: t('scheduleTime') },
+    { href: '/hustle', label: t('hustle') },
   ];
 
   return (
     <nav className="bg-secondary sticky top-0 z-50 shadow-lg">
       <div className="container flex justify-between items-center py-4">
-        <Link href="/" className="text-2xl font-bold gradient-text">
-          Petr
-        </Link>
+        <Link href="/" className="text-2xl font-bold gradient-text">Petr</Link>
 
-        {/* Desktop menu */}
-        <div className="hidden md:flex gap-8">
+        <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="hover:text-purple-400 transition-colors font-medium"
-            >
+            <Link key={link.href} href={link.href} className="hover:text-purple-400 transition-colors font-medium">
               {link.label}
             </Link>
           ))}
+          <LanguageSwitcher />
         </div>
 
-        {/* Mobile menu button */}
-        <button
-          className="md:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <LanguageSwitcher />
+          <button onClick={() => setIsOpen(!isOpen)} aria-label="Menu">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
       </div>
 
-      {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden bg-primary">
           <div className="flex flex-col gap-4 p-4">
             {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="hover:text-purple-400 transition-colors font-medium"
-                onClick={() => setIsOpen(false)}
-              >
+              <Link key={link.href} href={link.href} className="hover:text-purple-400 transition-colors font-medium" onClick={() => setIsOpen(false)}>
                 {link.label}
               </Link>
             ))}

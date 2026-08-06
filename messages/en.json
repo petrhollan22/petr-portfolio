@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "work": "Work",
+    "freeTime": "Free time",
+    "scheduleTime": "Schedule",
+    "hustle": "Hustle"
+  },
+  "home": {
+    "role": "Data & AI",
+    "intro": "I work with data and artificial intelligence. Outside work I run, play and coach chess, and organise sports events.",
+    "ctaWork": "My work",
+    "ctaSchedule": "Book a time",
+    "cardWork": "Projects and services",
+    "cardFreeTime": "Sports and activities",
+    "cardSchedule": "Book a time",
+    "cardHustle": "Projects and events",
+    "aboutTitle": "About me",
+    "aboutP1": "I work in data and artificial intelligence. I studied at the Prague University of Economics and Business, where my master's thesis examined how Czech companies adopt AI in practice.",
+    "aboutP2": "Outside work I'm a FIDE Master in chess, I run marathons, and for four years I organised sports events for students at VŠE.",
+    "aboutCta": "More about me"
+  },
+  "footer": {
+    "tagline": "Data & AI. Prague, Czech Republic.",
+    "navTitle": "Navigation",
+    "contactTitle": "Contact",
+    "running": "Running results"
+  }
+}
