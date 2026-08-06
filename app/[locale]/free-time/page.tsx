@@ -21,6 +21,15 @@ export default function FreeTimePage() {
               <h2 className="text-3xl font-bold mb-3">{pick(sport.name, locale)}</h2>
               <p className="text-gray-400 mb-6">{pick(sport.description, locale)}</p>
 
+              {sport.image && (
+                <img
+                  src={sport.image}
+                  alt={pick(sport.name, locale)}
+                  className="w-full rounded-lg mb-6"
+                  loading="lazy"
+                />
+              )}
+
               <div className="bg-primary rounded-lg p-5 mb-6">
                 <h3 className="text-lg font-semibold mb-3 text-purple-400">{t('achievements')}</h3>
                 <ul className="space-y-2">

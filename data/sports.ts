@@ -13,6 +13,7 @@ export interface Sport {
   links?: SportLink[];
   videos?: SportLink[];
   coaching?: Localized;
+  image?: string;
 }
 
 export const sports: Sport[] = [
@@ -46,6 +47,7 @@ export const sports: Sport[] = [
       { label: { cs: "Komentář 3. kola šachy.cz Extraligy (2021)", en: "Commentary, round 3 of the Czech Extraliga (2021)" }, url: "https://www.youtube.com/watch?v=zazc-USGY5k" },
       { label: { cs: "Komentář 4. kola šachy.cz Extraligy (2021)", en: "Commentary, round 4 of the Czech Extraliga (2021)" }, url: "https://www.youtube.com/watch?v=zsJukjgxGfo" }
     ],
+    image: "/images/sports/chess.jpg",
     coaching: {
       cs: "Šachy trénuji přes patnáct let. Nezáleží na věku, pohlaví ani na tom, jak daleko jste — důležitý je zájem se něco dozvědět. Mám zkušenosti se skupinovými i individuálními tréninky a vedu je offline i online podle domluvy.",
       en: "I have been coaching chess for over fifteen years. Age, gender and current level do not matter — what matters is the willingness to learn. I work with both groups and individuals, in person or online."
