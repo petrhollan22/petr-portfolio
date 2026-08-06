@@ -44,7 +44,7 @@ export const sports: Sport[] = [
       { label: "Komentář 4. kola šachy.cz Extraligy (2021)", url: "https://www.youtube.com/watch?v=zsJukjgxGfo" },
     ],
     coaching:
-      "Šachy trénuji přes osm let. Nezáleží na věku, pohlaví ani na tom, jak daleko jste — důležitý je zájem se něco dozvědět. Mám zkušenosti se skupinovými i individuálními tréninky a vedu je offline i online podle domluvy.",
+      "Šachy trénuji přes patnáct let. Nezáleží na věku, pohlaví ani na tom, jak daleko jste — důležitý je zájem se něco dozvědět. Mám zkušenosti se skupinovými i individuálními tréninky a vedu je offline i online podle domluvy.",
     color: "from-blue-400 to-indigo-600",
   },
   {

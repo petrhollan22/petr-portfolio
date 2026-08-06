@@ -53,5 +53,6 @@ export const scheduleActivities = [
   "Hory a turistika",
   "Cestování",
   "Společenské akce",
-  "Workshop"
+  "Workshop",
+  "Šachový trénink"
 ];
