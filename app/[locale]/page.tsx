@@ -17,7 +17,7 @@ export default function Home() {
           <Link href="/schedule-time" className="btn-secondary">{t('ctaSchedule')}</Link>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           <Link href="/work" className="card text-left hover:border-purple-500">
             <h3 className="text-xl font-bold mb-2">{nav('work')}</h3>
             <p className="text-sm text-gray-400">{t('cardWork')}</p>
@@ -33,6 +33,14 @@ export default function Home() {
           <Link href="/hustle" className="card text-left hover:border-purple-500">
             <h3 className="text-xl font-bold mb-2">{nav('hustle')}</h3>
             <p className="text-sm text-gray-400">{t('cardHustle')}</p>
+          </Link>
+          <Link href="/cv" className="card text-left hover:border-purple-500">
+            <h3 className="text-xl font-bold mb-2">{nav('cv')}</h3>
+            <p className="text-sm text-gray-400">{t('cardCv')}</p>
+          </Link>
+          <Link href="/inspiration" className="card text-left hover:border-purple-500">
+            <h3 className="text-xl font-bold mb-2">{nav('inspiration')}</h3>
+            <p className="text-sm text-gray-400">{t('cardInspiration')}</p>
           </Link>
         </div>
       </section>
