@@ -50,6 +50,14 @@ function BookingForm() {
     } catch { setStatus('error'); }
   };
 
+  const today = new Date().toISOString().split('T')[0];
+
+  const timeSlots: string[] = [];
+  for (let h = 8; h <= 21; h++) {
+    timeSlots.push(`${String(h).padStart(2, '0')}:00`);
+    if (h < 21) timeSlots.push(`${String(h).padStart(2, '0')}:30`);
+  }
+
   const options = b.type === 'work'
     ? workServices.map((s) => pick(s.name, locale))
     : scheduleActivities.map((a) => pick(a, locale));
@@ -92,11 +100,14 @@ function BookingForm() {
         <div className="grid md:grid-cols-3 gap-4">
           <div>
             <label className="block text-sm font-medium mb-2">{t('date')} *</label>
-            <input type="date" name="date" value={b.date} onChange={onChange} required className={field} />
+            <input type="date" name="date" value={b.date} onChange={onChange} required min={today} className={field} />
           </div>
           <div>
             <label className="block text-sm font-medium mb-2">{t('time')} *</label>
-            <input type="time" name="time" value={b.time} onChange={onChange} required className={field} />
+            <select name="time" value={b.time} onChange={onChange} required className={field}>
+              <option value="">{t('choose')}</option>
+              {timeSlots.map((slot) => <option key={slot} value={slot}>{slot}</option>)}
+            </select>
           </div>
           <div>
             <label className="block text-sm font-medium mb-2">{t('duration')} *</label>
