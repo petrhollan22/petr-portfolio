@@ -4,6 +4,7 @@ export interface Service {
   id: string;
   name: Localized;
   description: Localized;
+  hidden?: boolean;
 }
 
 export const workServices: Service[] = [
@@ -49,6 +50,7 @@ export const workServices: Service[] = [
   },
   {
     id: "cv-request",
+    hidden: true,
     name: { cs: "Žádost o životopis", en: "CV request" },
     description: {
       cs: "Pošlu ti kompletní životopis v PDF včetně kontaktních údajů.",

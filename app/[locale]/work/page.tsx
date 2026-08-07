@@ -89,7 +89,7 @@ export default function WorkPage() {
         <h2 className="section-title">{t('servicesTitle')}</h2>
         <p className="text-gray-400 mb-12 text-center max-w-2xl mx-auto">{t('servicesLead')}</p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {workServices.map((s) => (
+          {workServices.filter((s) => !s.hidden).map((s) => (
             <div key={s.id} className="card">
               <h3 className="text-xl font-bold mb-3">{pick(s.name, locale)}</h3>
               <p className="text-gray-400 text-sm">{pick(s.description, locale)}</p>
