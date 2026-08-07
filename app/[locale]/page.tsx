@@ -1,5 +1,11 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import { buildMetadata } from '@/lib/metadata';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return buildMetadata(locale, 'defaultTitle', 'defaultDescription', '');
+}
 
 export default function Home() {
   const t = useTranslations('home');

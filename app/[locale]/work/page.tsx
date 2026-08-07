@@ -4,6 +4,12 @@ import { projects } from '@/data/projects';
 import { workServices } from '@/data/services';
 import { pick } from '@/lib/localized';
 import ContactForm from '@/components/ContactForm';
+import { buildMetadata } from '@/lib/metadata';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return buildMetadata(locale, 'workTitle', 'workDescription', '/work');
+}
 
 export default function WorkPage() {
   const t = useTranslations('work');

@@ -2,6 +2,12 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { sports } from '@/data/sports';
 import { pick } from '@/lib/localized';
+import { buildMetadata } from '@/lib/metadata';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return buildMetadata(locale, 'freeTimeTitle', 'freeTimeDescription', '/free-time');
+}
 
 export default function FreeTimePage() {
   const t = useTranslations('freeTime');

@@ -3,6 +3,12 @@ import { Link } from '@/i18n/routing';
 import { hustleProjects } from '@/data/hustle';
 import { pick } from '@/lib/localized';
 import ContactForm from '@/components/ContactForm';
+import { buildMetadata } from '@/lib/metadata';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return buildMetadata(locale, 'hustleTitle', 'hustleDescription', '/hustle');
+}
 
 export default function HustlePage() {
   const t = useTranslations('hustle');

@@ -2,6 +2,12 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { jobs, earlierRoles, education, skillsDaily, skillsBasic, languages, certificates } from '@/data/cv';
 import { pick } from '@/lib/localized';
+import { buildMetadata } from '@/lib/metadata';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return buildMetadata(locale, 'cvTitle', 'cvDescription', '/cv');
+}
 
 export default function CvPage() {
   const t = useTranslations('cv');
