@@ -91,7 +91,8 @@
     "success": "Rezervace odeslána. Brzy se ti ozvu s potvrzením.",
     "error": "Chyba při odesílání. Zkus to prosím později.",
     "altTitle": "Nebo se mi napiš",
-    "altLead": "Pokud ti formulář nevyhovuje, napiš mi přímo:"
+    "altLead": "Pokud ti formulář nevyhovuje, napiš mi přímo:",
+    "verify": "Prosím počkej na ověření."
   },
   "contact": {
     "title": "Kontaktuj mě",
@@ -107,7 +108,8 @@
     "submit": "Odeslat",
     "sending": "Odesílám...",
     "success": "Děkuji, zpráva odeslána.",
-    "error": "Chyba při odesílání. Zkus to prosím později."
+    "error": "Chyba při odesílání. Zkus to prosím později.",
+    "verify": "Prosím počkej na ověření."
   },
   "cv": {
     "title": "Životopis",
@@ -162,6 +164,7 @@
       "event": "Proč by mě to bavilo?",
       "place": "Na co si tam zajít?",
       "person": "Proč stojí za to ji sledovat?"
-    }
+    },
+    "verify": "Prosím počkej na ověření."
   }
 }

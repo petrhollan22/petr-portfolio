@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { inspirationCategories } from '@/data/inspiration';
 import { pick } from '@/lib/localized';
+import Turnstile from '@/components/Turnstile';
 
 export default function InspirationPage() {
   const t = useTranslations('inspiration');
@@ -11,6 +12,8 @@ export default function InspirationPage() {
 
   const [form, setForm] = useState({ category: '', name: '', link: '', why: '', from: '' });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [token, setToken] = useState('');
+  const [resetKey, setResetKey] = useState(0);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
@@ -32,10 +35,12 @@ export default function InspirationPage() {
       const res = await fetch('/api/inspiration', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, category: cat ? pick(cat.name, locale) : form.category }),
+        body: JSON.stringify({ ...form, category: cat ? pick(cat.name, locale) : form.category, turnstileToken: token }),
       });
       if (res.ok) {
         setStatus('success');
+        setToken('');
+        setResetKey((k) => k + 1);
         setForm({ category: '', name: '', link: '', why: '', from: '' });
         setTimeout(() => setStatus('idle'), 4000);
       } else setStatus('error');
@@ -105,7 +110,9 @@ export default function InspirationPage() {
               <div className="p-4 bg-red-500/20 border border-red-500 rounded-lg text-red-400">{t('error')}</div>
             )}
 
-            <button type="submit" disabled={status === 'loading'} className="btn-primary w-full disabled:opacity-50">
+            <Turnstile onVerify={setToken} resetKey={resetKey} />
+
+            <button type="submit" disabled={status === 'loading' || !token} className="btn-primary w-full disabled:opacity-50">
               {status === 'loading' ? t('sending') : t('submit')}
             </button>
           </div>

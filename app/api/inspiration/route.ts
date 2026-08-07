@@ -1,8 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { verifyTurnstile } from '@/lib/verifyTurnstile';
 
 export async function POST(request: NextRequest) {
   try {
-    const { category, name, link, why, from } = await request.json();
+    const body = await request.json();
+    const { category, name, link, why, from } = body;
+
+    const human = await verifyTurnstile(body.turnstileToken);
+    if (!human) {
+      return NextResponse.json({ error: 'Verification failed' }, { status: 403 });
+    }
 
     if (!category || !name) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });

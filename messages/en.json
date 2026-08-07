@@ -91,7 +91,8 @@
     "success": "Booking sent. I'll confirm shortly.",
     "error": "Something went wrong. Please try again later.",
     "altTitle": "Or write to me",
-    "altLead": "If the form doesn't suit you, message me directly:"
+    "altLead": "If the form doesn't suit you, message me directly:",
+    "verify": "Please wait for verification."
   },
   "contact": {
     "title": "Get in touch",
@@ -107,7 +108,8 @@
     "submit": "Send",
     "sending": "Sending...",
     "success": "Thanks, your message is on its way.",
-    "error": "Something went wrong. Please try again later."
+    "error": "Something went wrong. Please try again later.",
+    "verify": "Please wait for verification."
   },
   "cv": {
     "title": "CV",
@@ -162,6 +164,7 @@
       "event": "Why would I enjoy it?",
       "place": "What should I go for?",
       "person": "Why is she or he worth following?"
-    }
+    },
+    "verify": "Please wait for verification."
   }
 }

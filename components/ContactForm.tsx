@@ -4,12 +4,15 @@ import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { workServices, scheduleActivities } from '@/data/services';
 import { pick } from '@/lib/localized';
+import Turnstile from '@/components/Turnstile';
 
 export default function ContactForm() {
   const t = useTranslations('contact');
   const locale = useLocale();
   const [form, setForm] = useState({ name: '', email: '', service: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [token, setToken] = useState('');
+  const [resetKey, setResetKey] = useState(0);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
@@ -22,10 +25,12 @@ export default function ContactForm() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, turnstileToken: token }),
       });
       if (res.ok) {
         setStatus('success');
+        setToken('');
+        setResetKey((k) => k + 1);
         setForm({ name: '', email: '', service: '', message: '' });
         setTimeout(() => setStatus('idle'), 3000);
       } else setStatus('error');
@@ -70,7 +75,9 @@ export default function ContactForm() {
         {status === 'success' && <div className="p-4 bg-green-500/20 border border-green-500 rounded-lg text-green-400">{t('success')}</div>}
         {status === 'error' && <div className="p-4 bg-red-500/20 border border-red-500 rounded-lg text-red-400">{t('error')}</div>}
 
-        <button type="submit" disabled={status === 'loading'} className="btn-primary w-full disabled:opacity-50">
+        <Turnstile onVerify={setToken} resetKey={resetKey} />
+
+        <button type="submit" disabled={status === 'loading' || !token} className="btn-primary w-full disabled:opacity-50">
           {status === 'loading' ? t('sending') : t('submit')}
         </button>
       </div>

@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
 import { workServices, scheduleActivities } from '@/data/services';
 import { pick } from '@/lib/localized';
+import Turnstile from '@/components/Turnstile';
 import ContactForm from '@/components/ContactForm';
 import DatePicker from '@/components/DatePicker';
 
@@ -19,6 +20,8 @@ function BookingForm() {
     service: '', date: '', time: '', duration: '60', message: '',
   });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [token, setToken] = useState('');
+  const [resetKey, setResetKey] = useState(0);
 
   useEffect(() => {
     if (!preselected) return;
@@ -50,10 +53,12 @@ function BookingForm() {
       const res = await fetch('/api/booking', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(b),
+        body: JSON.stringify({ ...b, turnstileToken: token }),
       });
       if (res.ok) {
         setStatus('success');
+        setToken('');
+        setResetKey((k) => k + 1);
         setB({ name: '', email: '', type: 'work', service: '', date: '', time: '', duration: '60', message: '' });
         setTimeout(() => setStatus('idle'), 4000);
       } else setStatus('error');
@@ -143,7 +148,9 @@ function BookingForm() {
         {status === 'success' && <div className="p-4 bg-green-500/20 border border-green-500 rounded-lg text-green-400">{t('success')}</div>}
         {status === 'error' && <div className="p-4 bg-red-500/20 border border-red-500 rounded-lg text-red-400">{t('error')}</div>}
 
-        <button type="submit" disabled={status === 'loading'} className="btn-primary w-full disabled:opacity-50">
+        <Turnstile onVerify={setToken} resetKey={resetKey} />
+
+        <button type="submit" disabled={status === 'loading' || !token} className="btn-primary w-full disabled:opacity-50">
           {status === 'loading' ? t('sending') : t('submit')}
         </button>
       </div>
