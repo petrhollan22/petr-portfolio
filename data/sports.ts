@@ -49,16 +49,16 @@ export const sports: Sport[] = [
     ],
     image: "/images/sports/chess.jpg",
     coaching: {
-      cs: "Šachy trénuji přes patnáct let. Nezáleží na věku, pohlaví ani na tom, jak daleko jste — důležitý je zájem se něco dozvědět. Mám zkušenosti se skupinovými i individuálními tréninky a vedu je offline i online podle domluvy.",
-      en: "I have been coaching chess for over fifteen years. Age, gender and current level do not matter — what matters is the willingness to learn. I work with both groups and individuals, in person or online."
+      cs: "Šachy trénuji přes patnáct let. Nezáleží na věku, pohlaví ani na tom, jak daleko jste. Důležitý je zájem se něco dozvědět. Mám zkušenosti se skupinovými i individuálními tréninky a vedu je offline i online podle domluvy.",
+      en: "I have been coaching chess for over fifteen years. Age, gender and current level do not matter. What matters is the willingness to learn. I work with both groups and individuals, in person or online."
     }
   },
   {
     id: "running",
     name: { cs: "Běh", en: "Running" },
     description: {
-      cs: "Běh je pro mě protiváha k práci u počítače — jasně měřitelný pokrok a čas o samotě. Střídám závodní tempo s během v přírodě.",
-      en: "Running balances out desk work — measurable progress and time alone. I mix race pace with easy runs outdoors."
+      cs: "Běh je pro mě protiváha k práci u počítače: jasně měřitelný pokrok a čas o samotě. Střídám závodní tempo s během v přírodě.",
+      en: "Running balances out desk work: measurable progress and time alone. I mix race pace with easy runs outdoors."
     },
     achievements: [
       { cs: "Maraton pod 4:20", en: "Marathon under 4:20" },
