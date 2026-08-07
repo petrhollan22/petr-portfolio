@@ -168,5 +168,22 @@
       "other": "Proč by mě to mělo zajímat?"
     },
     "verify": "Prosím počkej na ověření."
+  },
+  "meta": {
+    "siteName": "Petr Hollan",
+    "defaultTitle": "Petr Hollan — Data a AI",
+    "defaultDescription": "Pracuji s daty a umělou inteligencí. Konzultace, šachový trénink a sportovní aktivity.",
+    "workTitle": "Práce",
+    "workDescription": "Projekty, závěrečné práce a služby v oblasti dat, AI a web developmentu.",
+    "cvTitle": "Životopis",
+    "cvDescription": "Praxe, vzdělání a dovednosti. Data a AI v retailu.",
+    "freeTimeTitle": "Volný čas",
+    "freeTimeDescription": "Šachy, běh, volejbal a fotbal. Úspěchy a odkazy.",
+    "scheduleTitle": "Rezervace",
+    "scheduleDescription": "Domluv si konzultaci, šachový trénink nebo společný sport.",
+    "hustleTitle": "Projekty",
+    "hustleDescription": "Trénování, organizace akcí a dobrovolnictví.",
+    "inspirationTitle": "Inspirace",
+    "inspirationDescription": "Máš tip na knihu, podcast, akci nebo místo? Pošli mi ho."
   }
 }
