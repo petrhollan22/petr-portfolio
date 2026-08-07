@@ -55,7 +55,7 @@
     "videos": "Videos",
     "coachingCta": "Book a lesson",
     "ctaTitle": "Want to play?",
-    "ctaLead": "Football, volleyball, bouldering or a chess lesson — we can arrange a time.",
+    "ctaLead": "Football, volleyball, bouldering or a chess lesson: we can arrange a time.",
     "ctaButton": "Book a time"
   },
   "hustle": {
@@ -65,12 +65,12 @@
     "typeEvent": "Events",
     "typeVolunteer": "Volunteering",
     "ctaTitle": "Want to get involved?",
-    "ctaLead": "A chess lesson, a game together or an event invitation — drop me a line.",
+    "ctaLead": "A chess lesson, a game together or an event invitation. Drop me a line.",
     "ctaButton": "Book a time"
   },
   "schedule": {
     "title": "Book a time",
-    "lead": "A consultation, a sports activity or a chess lesson — let's find a slot.",
+    "lead": "A consultation, a sports activity or a chess lesson. Let's find a slot.",
     "formTitle": "New booking",
     "name": "Name",
     "email": "Email",

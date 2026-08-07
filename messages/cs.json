@@ -55,7 +55,7 @@
     "videos": "Videa",
     "coachingCta": "Domluvit trénink",
     "ctaTitle": "Chceš si zahrát?",
-    "ctaLead": "Ať už jde o fotbal, volejbal, bouldering nebo šachovou lekci — dá se se mnou domluvit čas.",
+    "ctaLead": "Ať už jde o fotbal, volejbal, bouldering nebo šachovou lekci, dá se se mnou domluvit čas.",
     "ctaButton": "Rezervuj si čas"
   },
   "hustle": {
@@ -65,12 +65,12 @@
     "typeEvent": "Akce",
     "typeVolunteer": "Dobrovolnictví",
     "ctaTitle": "Chceš se zapojit?",
-    "ctaLead": "Šachová lekce, společný sport nebo pozvánka na akci — napiš mi.",
+    "ctaLead": "Šachová lekce, společný sport nebo pozvánka na akci. Napiš mi.",
     "ctaButton": "Rezervuj si čas"
   },
   "schedule": {
     "title": "Rezervuj si čas",
-    "lead": "Konzultace, sportovní aktivita nebo šachový trénink — tady si domluvíme termín.",
+    "lead": "Konzultace, sportovní aktivita nebo šachový trénink. Tady si domluvíme termín.",
     "formTitle": "Vytvořit rezervaci",
     "name": "Jméno",
     "email": "E-mail",
