@@ -48,6 +48,14 @@ export const workServices: Service[] = [
     }
   },
   {
+    id: "cv-request",
+    name: { cs: "Žádost o životopis", en: "CV request" },
+    description: {
+      cs: "Pošlu ti kompletní životopis v PDF včetně kontaktních údajů.",
+      en: "I'll send you the full CV as a PDF, including contact details."
+    }
+  },
+  {
     id: "chess-coaching",
     name: { cs: "Šachový trénink", en: "Chess coaching" },
     description: {

@@ -99,7 +99,7 @@ export default function CvPage() {
       <section className="container py-16 text-center">
         <h2 className="text-3xl font-bold mb-4">{t('ctaTitle')}</h2>
         <p className="text-gray-400 mb-8">{t('ctaLead')}</p>
-        <Link href="/schedule-time" className="btn-primary">{t('ctaButton')} →</Link>
+        <Link href={{ pathname: "/schedule-time", query: { service: "cv-request" } }} className="btn-primary">{t('ctaButton')} →</Link>
       </section>
     </div>
   );
