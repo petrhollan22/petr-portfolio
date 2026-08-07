@@ -59,11 +59,14 @@ export default function Home() {
             <p className="text-gray-400 mb-6">{t('aboutP2')}</p>
             <Link href="/work" className="btn-primary">{t('aboutCta')} →</Link>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="card text-center"><p className="font-semibold">Data Engineering</p></div>
-            <div className="card text-center"><p className="font-semibold">AI Solutions</p></div>
-            <div className="card text-center"><p className="font-semibold">Web Design</p></div>
-            <div className="card text-center"><p className="font-semibold">Chess Coaching</p></div>
+          <div className="flex justify-center md:justify-end">
+            <img
+              src="/portret.jpg"
+              alt="Petr Hollan"
+              width={900}
+              height={900}
+              className="w-full max-w-sm rounded-2xl shadow-xl"
+            />
           </div>
         </div>
       </section>
