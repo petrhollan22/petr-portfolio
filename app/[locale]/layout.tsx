@@ -6,6 +6,7 @@ import { routing } from '@/i18n/routing';
 import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Petr Hollan | Data & AI",
@@ -30,6 +31,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
+      <head>
+        <StructuredData locale={locale} />
+      </head>
       <body className="bg-primary text-white">
         <NextIntlClientProvider messages={messages}>
           <Navbar />
