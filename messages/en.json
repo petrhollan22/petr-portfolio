@@ -153,7 +153,8 @@
       "course": "Course name and who runs it",
       "event": "Name of the event or competition",
       "place": "Name of the venue or place",
-      "person": "Name"
+      "person": "Name",
+      "other": "What is it?"
     },
     "whyPh": {
       "default": "One sentence is enough.",
@@ -163,7 +164,8 @@
       "course": "What will I learn there?",
       "event": "Why would I enjoy it?",
       "place": "What should I go for?",
-      "person": "Why is she or he worth following?"
+      "person": "Why is she or he worth following?",
+      "other": "Why should I care?"
     },
     "verify": "Please wait for verification."
   }

@@ -90,7 +90,7 @@
     "sending": "Odesílám...",
     "success": "Rezervace odeslána. Brzy se ti ozvu s potvrzením.",
     "error": "Chyba při odesílání. Zkus to prosím později.",
-    "altTitle": "Nebo se mi napiš",
+    "altTitle": "Nebo mi napiš",
     "altLead": "Pokud ti formulář nevyhovuje, napiš mi přímo:",
     "verify": "Prosím počkej na ověření."
   },
@@ -153,7 +153,8 @@
       "course": "Název kurzu a kdo ho vede",
       "event": "Název akce nebo soutěže",
       "place": "Název podniku nebo místa",
-      "person": "Jméno"
+      "person": "Jméno",
+      "other": "Co to je?"
     },
     "whyPh": {
       "default": "Stačí jedna věta.",
@@ -163,7 +164,8 @@
       "course": "Co se tam naučím?",
       "event": "Proč by mě to bavilo?",
       "place": "Na co si tam zajít?",
-      "person": "Proč stojí za to ji sledovat?"
+      "person": "Proč stojí za to ji sledovat?",
+      "other": "Proč by mě to mělo zajímat?"
     },
     "verify": "Prosím počkej na ověření."
   }

@@ -12,5 +12,6 @@ export const inspirationCategories: InspirationCategory[] = [
   { id: "course", name: { cs: "Kurz nebo workshop", en: "Course or workshop" } },
   { id: "event", name: { cs: "Akce nebo soutěž", en: "Event or competition" } },
   { id: "place", name: { cs: "Místo", en: "Place" } },
-  { id: "person", name: { cs: "Osoba", en: "Person" } }
+  { id: "person", name: { cs: "Osoba", en: "Person" } },
+  { id: "other", name: { cs: "Něco jiného", en: "Something else" } }
 ];

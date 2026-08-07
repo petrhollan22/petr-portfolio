@@ -43,7 +43,7 @@ function BookingForm() {
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setB((p) => ({ ...p, [name]: value, ...(name === 'type' ? { service: '' } : {}) }));
+    setB((p) => ({ ...p, [name]: value, ...(name === 'type' ? { service: '' } : {}), ...(name === 'date' ? { time: '' } : {}) }));
   };
 
   const onSubmit = async (e: React.FormEvent) => {
@@ -67,10 +67,17 @@ function BookingForm() {
 
   const today = new Date().toISOString().split('T')[0];
 
+  const now = new Date();
+  const isToday = b.date === today;
+  const minMinutes = isToday ? now.getHours() * 60 + now.getMinutes() : -1;
+
   const timeSlots: string[] = [];
   for (let h = 8; h <= 21; h++) {
-    timeSlots.push(`${String(h).padStart(2, '0')}:00`);
-    if (h < 21) timeSlots.push(`${String(h).padStart(2, '0')}:30`);
+    for (const m of [0, 30]) {
+      if (h === 21 && m === 30) continue;
+      if (h * 60 + m <= minMinutes) continue;
+      timeSlots.push(`${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`);
+    }
   }
 
   const options = b.type === 'work'
