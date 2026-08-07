@@ -33,6 +33,9 @@ export async function buildMetadata(
       locale: locale === 'en' ? 'en_US' : 'cs_CZ',
       images: [{ url: '/og.jpg', width: 1200, height: 630, alt: t('siteName') }],
     },
+    verification: {
+      google: 'FWgdv-78ZUlCI83FuxVeOOJWU6F-h_t-LbCfjlHzays',
+    },
     twitter: {
       card: 'summary_large_image',
       title,
