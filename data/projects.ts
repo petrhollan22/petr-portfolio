@@ -18,7 +18,7 @@ export const projects: Project[] = [
     category: "thesis" as const,
     title: {
       cs: "Optimalizace digitální komunikace Fakulty informatiky a statistiky",
-      en: "Optimising digital communication at the Faculty of Informatics and Statistics"
+      en: "Optimization of digital communication of the Faculty of Informatics and Statistics"
     },
     description: {
       cs: "Bakalářská práce zaměřená na komunikaci fakulty VŠE na sociálních sítích. Zahrnovala dotazníkové šetření se 194 respondenty, focus groups a benchmarking ostatních fakult, na jehož základě vznikla sada doporučení pro obsah, formu i cílení.",
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     category: "thesis" as const,
     title: {
       cs: "Implementace umělé inteligence ve firmách: Přínosy, výzvy a strategie",
-      en: "AI adoption in companies: benefits, challenges and strategies"
+      en: "Implementation of artificial intelligence in companies: Benefits,challenges and strategies"
     },
     description: {
       cs: "Diplomová práce o zralosti a strategiích adopce AI v českých firmách. Kvalitativní výzkum formou osmi srovnávacích případových studií od technologických startupů po nadnárodní korporace, s důrazem na governance a rámec EU AI Act.",
