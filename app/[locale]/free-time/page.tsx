@@ -77,16 +77,34 @@ export default function FreeTimePage() {
               {sport.videos && sport.videos.length > 0 && (
                 <div>
                   <h3 className="text-lg font-semibold mb-3 text-red-400">{t('videos')}</h3>
-                  <ul className="space-y-2">
+                  <div className="grid sm:grid-cols-2 gap-3">
                     {sport.videos.map((v) => (
-                      <li key={v.url}>
-                        <a href={v.url} target="_blank" rel="noopener noreferrer"
-                          className="block px-4 py-2 bg-primary rounded-lg text-sm text-gray-300 hover:text-red-400 transition-colors">
-                          ▶ {pick(v.label, locale)}
-                        </a>
-                      </li>
+                      <a
+                        key={v.url}
+                        href={v.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block rounded-lg overflow-hidden bg-primary hover:opacity-90 transition-opacity"
+                      >
+                        {v.thumbnail && (
+                          <div className="relative aspect-video">
+                            <img
+                              src={v.thumbnail}
+                              alt={pick(v.label, locale)}
+                              className="w-full h-full object-cover"
+                              loading="lazy"
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
+                              <div className="w-12 h-12 rounded-full bg-red-600/90 flex items-center justify-center">
+                                <div className="w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-l-[14px] border-l-white ml-1" />
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                        <p className="px-3 py-2 text-sm text-gray-300">{pick(v.label, locale)}</p>
+                      </a>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               )}
             </div>

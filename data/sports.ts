@@ -3,6 +3,7 @@ import type { Localized } from '@/lib/localized';
 export interface SportLink {
   label: Localized;
   url: string;
+  thumbnail?: string;
 }
 
 export interface Sport {
@@ -44,8 +45,8 @@ export const sports: Sport[] = [
       { label: { cs: "Collegiate Chess League (Fall 2025)", en: "Collegiate Chess League (Fall 2025)" }, url: "https://www.chess.cz/collegiate-chess-league-fall-2025/" }
     ],
     videos: [
-      { label: { cs: "Komentář 3. kola šachy.cz Extraligy (2021)", en: "Commentary, round 3 of the Czech Extraliga (2021)" }, url: "https://www.youtube.com/watch?v=zazc-USGY5k" },
-      { label: { cs: "Komentář 4. kola šachy.cz Extraligy (2021)", en: "Commentary, round 4 of the Czech Extraliga (2021)" }, url: "https://www.youtube.com/watch?v=zsJukjgxGfo" }
+      { label: { cs: "Komentář 3. kola šachy.cz Extraligy (2021)", en: "Commentary, round 3 of the Czech Extraliga (2021)" }, url: "https://www.youtube.com/watch?v=zazc-USGY5k", thumbnail: "https://img.youtube.com/vi/zazc-USGY5k/hqdefault.jpg" },
+      { label: { cs: "Komentář 4. kola šachy.cz Extraligy (2021)", en: "Commentary, round 4 of the Czech Extraliga (2021)" }, url: "https://www.youtube.com/watch?v=zsJukjgxGfo", thumbnail: "https://img.youtube.com/vi/zsJukjgxGfo/hqdefault.jpg" }
     ],
     image: "/images/sports/chess.jpg",
     coaching: {
