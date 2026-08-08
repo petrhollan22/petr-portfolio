@@ -27,7 +27,7 @@ export default async function BlogPage() {
               >
                 {post.coverImage && (
                   <img
-                    src={urlForImage(post.coverImage).width(800).height(400).url()}
+                    src={urlForImage(post.coverImage).width(800).height(450).fit('crop').url()}
                     alt={post.title}
                     className="w-full rounded-lg mb-4"
                     loading="lazy"
