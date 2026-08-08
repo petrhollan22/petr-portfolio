@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { writeClient } from '@/sanity/writeClient';
 import { verifyTurnstile } from '@/lib/verifyTurnstile';
 
 export async function POST(request: NextRequest) {
@@ -28,6 +29,21 @@ export async function POST(request: NextRequest) {
     if (link) fields.push({ name: 'Odkaz', value: String(link), inline: false });
     if (why) fields.push({ name: 'Proč', value: String(why), inline: false });
     if (from) fields.push({ name: 'Od', value: String(from), inline: true });
+
+    try {
+      await writeClient.create({
+        _type: 'inspirationTip',
+        category,
+        name,
+        link: link || undefined,
+        why: why || undefined,
+        from: from || undefined,
+        submittedAt: new Date().toISOString(),
+        usedInDigest: false,
+      });
+    } catch (sanityError) {
+      console.error('Sanity write error:', sanityError);
+    }
 
     const res = await fetch(webhookUrl, {
       method: 'POST',
