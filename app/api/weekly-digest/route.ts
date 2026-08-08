@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { client } from '@/sanity/client';
-import { writeClient } from '@/sanity/writeClient';
 import { siteUrl } from '@/lib/site';
+import { signTipAction } from '@/lib/tipToken';
 
 export async function GET(request: NextRequest) {
   const authHeader = request.headers.get('authorization');
@@ -20,78 +20,37 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ message: 'No new tips this week' });
   }
 
-  const byCategory = new Map<string, any>();
-  for (const tip of tips) {
-    if (!byCategory.has(tip.category)) {
-      byCategory.set(tip.category, tip);
-    }
-  }
-  const selected = Array.from(byCategory.values());
-
-  const bodyBlocks = selected.flatMap((tip) => [
-    {
-      _type: 'block',
-      style: 'h3',
-      children: [{ _type: 'span', text: `${tip.category}: ${tip.name}` }],
-    },
-    {
-      _type: 'block',
-      style: 'normal',
-      children: [
-        { _type: 'span', text: tip.why || 'Bez dalšího komentáře od odesílatele.' },
-      ],
-    },
-    ...(tip.link
-      ? [{
-          _type: 'block',
-          style: 'normal',
-          children: [{ _type: 'span', text: tip.link, marks: ['link'] }],
-          markDefs: [{ _key: 'link', _type: 'link', href: tip.link }],
-        }]
-      : []),
-  ]);
-
-  const today = new Date().toISOString().split('T')[0];
-  const draftId = `drafts.tydenni-souhrn-${today}`;
-
-  const draft = await writeClient.createIfNotExists({
-    _id: draftId,
-    _type: 'post',
-    title: `Tipy od vás — týdenní souhrn (${today})`,
-    slug: { current: `tydenni-souhrn-${today}` },
-    excerpt: 'Vybrané tipy, které mi lidé poslali přes stránku Inspirace tento týden.',
-    publishedAt: new Date().toISOString(),
-    body: bodyBlocks,
-  });
-
-  for (const tip of selected) {
-    await writeClient.patch(tip._id).set({ usedInDigest: true }).commit();
-  }
-
-  const publishUrl = `${siteUrl}/api/publish-digest?id=${draft._id}&token=${process.env.CRON_SECRET}`;
   const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
-
-  if (webhookUrl) {
-    await fetch(webhookUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        content: '📰 **Nový týdenní souhrn čeká na publikaci**',
-        embeds: [{
-          color: 15548997,
-          fields: [
-            { name: 'Titulek', value: draft.title as string, inline: false },
-            { name: 'Počet tipů', value: String(selected.length), inline: true },
-            { name: '📤 Publikovat', value: `[Klikni pro publikaci](${publishUrl})`, inline: false },
-          ],
-        }],
-      }),
-    }).catch((err) => console.error('Discord notify error:', err));
+  if (!webhookUrl) {
+    return NextResponse.json({ error: 'Discord webhook not configured' }, { status: 500 });
   }
 
-  return NextResponse.json({
-    message: 'Draft created — waiting for review in Studio',
-    draftId: draft._id,
-    tipsUsed: selected.length,
+  const fields = tips.map((tip: any) => {
+    const approveUrl = `${siteUrl}/api/approve-tip?token=${signTipAction(tip._id, 'approve')}`;
+    const lines = [
+      `**${tip.category}:** ${tip.name}`,
+      tip.why ? tip.why : null,
+      tip.link ? tip.link : null,
+      `[✅ Zahrnout do souhrnu](${approveUrl})`,
+    ].filter(Boolean);
+    return { name: '\u200b', value: lines.join('\n'), inline: false };
   });
+
+  const buildUrl = `${siteUrl}/api/build-digest?token=${process.env.CRON_SECRET}`;
+  fields.push({
+    name: '\u200b',
+    value: `**📝 [Sestavit článek ze schválených tipů](${buildUrl})**\n(klikni až budeš hotový s výběrem)`,
+    inline: false,
+  });
+
+  await fetch(webhookUrl, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      content: `💡 **Týdenní přehled tipů (${tips.length})**`,
+      embeds: [{ color: 15548997, fields }],
+    }),
+  }).catch((err) => console.error('Discord notify error:', err));
+
+  return NextResponse.json({ message: 'Weekly overview sent to Discord', tipsCount: tips.length });
 }

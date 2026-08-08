@@ -22,5 +22,11 @@ export default defineType({
       type: 'boolean',
       initialValue: false,
     }),
+    defineField({
+      name: 'approved',
+      title: 'Schváleno pro souhrn',
+      type: 'boolean',
+      initialValue: false,
+    }),
   ],
 });
