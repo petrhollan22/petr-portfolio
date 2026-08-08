@@ -44,6 +44,7 @@ export async function generateMetadata({
   return {
     title: post.title,
     description,
+    authors: [{ name: 'Petr Hollan' }],
     alternates: { canonical: url },
     openGraph: {
       type: 'article',
