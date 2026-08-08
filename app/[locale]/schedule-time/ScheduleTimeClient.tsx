@@ -8,6 +8,7 @@ import { pick } from '@/lib/localized';
 import Turnstile from '@/components/Turnstile';
 import ContactForm from '@/components/ContactForm';
 import DatePicker from '@/components/DatePicker';
+import { getAvailableSlotsForDate } from '@/lib/timeSlots';
 
 function BookingForm() {
   const t = useTranslations('schedule');
@@ -67,18 +68,7 @@ function BookingForm() {
 
   const today = new Date().toISOString().split('T')[0];
 
-  const now = new Date();
-  const isToday = b.date === today;
-  const minMinutes = isToday ? now.getHours() * 60 + now.getMinutes() : -1;
-
-  const timeSlots: string[] = [];
-  for (let h = 8; h <= 21; h++) {
-    for (const m of [0, 30]) {
-      if (h === 21 && m === 30) continue;
-      if (h * 60 + m <= minMinutes) continue;
-      timeSlots.push(`${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`);
-    }
-  }
+  const timeSlots: string[] = b.date ? getAvailableSlotsForDate(b.date) : [];
 
   const options = b.type === 'work'
     ? workServices.map((s) => pick(s.name, locale))

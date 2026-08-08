@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { DayPicker } from 'react-day-picker';
 import { cs, enUS } from 'date-fns/locale';
 import { format, parse, startOfDay } from 'date-fns';
+import { hasAvailableSlots } from '@/lib/timeSlots';
 import 'react-day-picker/dist/style.css';
 
 interface Props {
@@ -76,7 +77,10 @@ export default function DatePicker({ value, onChange, locale, placeholder, class
                 setOpen(false);
               }
             }}
-            disabled={{ before: today }}
+            disabled={[
+              { before: today },
+              (date) => !hasAvailableSlots(format(date, 'yyyy-MM-dd')),
+            ]}
             locale={dfnsLocale}
             weekStartsOn={1}
             className="rdp-dark"
