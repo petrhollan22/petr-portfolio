@@ -1,6 +1,12 @@
 import { Link } from '@/i18n/routing';
 import { getAllPosts } from '@/sanity/queries';
 import { urlForImage } from '@/sanity/image';
+import { buildMetadata } from '@/lib/metadata';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return buildMetadata(locale, 'blogTitle', 'blogDescription', '/blog');
+}
 
 export default async function BlogPage() {
   const posts = await getAllPosts();

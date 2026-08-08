@@ -184,6 +184,8 @@
     "hustleTitle": "Hustle",
     "hustleDescription": "Coaching, event organisation and volunteering.",
     "inspirationTitle": "Inspiration",
-    "inspirationDescription": "Got a tip for a book, podcast, event or place? Send it over."
+    "inspirationDescription": "Got a tip for a book, podcast, event or place? Send it over.",
+    "blogTitle": "Blog",
+    "blogDescription": "Notes and updates on what I am working on — data, AI, chess and more."
   }
 }

@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { PortableText } from '@portabletext/react';
 import { getPostBySlug } from '@/sanity/queries';
 import { urlForImage } from '@/sanity/image';
+import { siteUrl } from '@/lib/site';
 
 const components = {
   types: {
@@ -26,6 +27,41 @@ const components = {
     ),
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}) {
+  const { locale, slug } = await params;
+  const post = await getPostBySlug(slug);
+
+  if (!post) return {};
+
+  const url = `${siteUrl}/${locale}/blog/${slug}`;
+  const description = post.excerpt || post.title;
+
+  return {
+    title: post.title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: 'article',
+      title: post.title,
+      description,
+      url,
+      publishedTime: post.publishedAt,
+      images: post.coverImage
+        ? [urlForImage(post.coverImage).width(1200).height(630).url()]
+        : ['/og.jpg'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description,
+    },
+  };
+}
 
 export default async function BlogPostPage({
   params,
