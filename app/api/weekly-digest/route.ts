@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { client } from '@/sanity/client';
 import { writeClient } from '@/sanity/writeClient';
+import { siteUrl } from '@/lib/site';
 
 export async function GET(request: NextRequest) {
   const authHeader = request.headers.get('authorization');
@@ -65,6 +66,27 @@ export async function GET(request: NextRequest) {
 
   for (const tip of selected) {
     await writeClient.patch(tip._id).set({ usedInDigest: true }).commit();
+  }
+
+  const publishUrl = `${siteUrl}/api/publish-digest?id=${draft._id}&token=${process.env.CRON_SECRET}`;
+  const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
+
+  if (webhookUrl) {
+    await fetch(webhookUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        content: '📰 **Nový týdenní souhrn čeká na publikaci**',
+        embeds: [{
+          color: 15548997,
+          fields: [
+            { name: 'Titulek', value: draft.title as string, inline: false },
+            { name: 'Počet tipů', value: String(selected.length), inline: true },
+            { name: '📤 Publikovat', value: `[Klikni pro publikaci](${publishUrl})`, inline: false },
+          ],
+        }],
+      }),
+    }).catch((err) => console.error('Discord notify error:', err));
   }
 
   return NextResponse.json({
