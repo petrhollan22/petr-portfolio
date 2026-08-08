@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyTurnstile } from '@/lib/verifyTurnstile';
+import { signBooking } from '@/lib/bookingToken';
+import { siteUrl } from '@/lib/site';
 
 export async function POST(request: NextRequest) {
   try {
@@ -40,6 +42,9 @@ export async function POST(request: NextRequest) {
 
     const typeLabel = type === 'work' ? '💼 Pracovní aktivita' : '⚽ Sportovní aktivita';
 
+    const confirmToken = signBooking({ name, email, service, date: formattedDate, time });
+    const confirmUrl = `${siteUrl}/api/confirm-booking?token=${confirmToken}`;
+
     // Format message for Discord
     const discordMessage = {
       content: '📅 **Nová rezervace času**',
@@ -56,6 +61,11 @@ export async function POST(request: NextRequest) {
           {
             name: 'Poznámka',
             value: message || 'Žádná poznámka',
+            inline: false,
+          },
+          {
+            name: '✅ Potvrdit rezervaci',
+            value: `[Klikni pro potvrzení](${confirmUrl})`,
             inline: false,
           },
         ],
