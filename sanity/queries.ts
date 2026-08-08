@@ -22,7 +22,9 @@ export async function getAllPosts(): Promise<PostSummary[]> {
       excerpt,
       coverImage,
       publishedAt
-    }`
+    }`,
+    {},
+    { next: { revalidate: 60 } }
   );
 }
 
@@ -37,6 +39,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
       publishedAt,
       body
     }`,
-    { slug }
+    { slug },
+    { next: { revalidate: 60 } }
   );
 }
