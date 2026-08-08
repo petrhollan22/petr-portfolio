@@ -25,27 +25,27 @@ export default function Home() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           <Link href="/work" className="card text-left hover:border-red-500">
-            <h3 className="text-xl font-bold mb-2">{nav('work')}</h3>
+            <h2 className="text-xl font-bold mb-2">{nav('work')}</h2>
             <p className="text-sm text-gray-400">{t('cardWork')}</p>
           </Link>
           <Link href="/free-time" className="card text-left hover:border-red-500">
-            <h3 className="text-xl font-bold mb-2">{nav('freeTime')}</h3>
+            <h2 className="text-xl font-bold mb-2">{nav('freeTime')}</h2>
             <p className="text-sm text-gray-400">{t('cardFreeTime')}</p>
           </Link>
           <Link href="/schedule-time" className="card text-left hover:border-red-500">
-            <h3 className="text-xl font-bold mb-2">{nav('scheduleTime')}</h3>
+            <h2 className="text-xl font-bold mb-2">{nav('scheduleTime')}</h2>
             <p className="text-sm text-gray-400">{t('cardSchedule')}</p>
           </Link>
           <Link href="/hustle" className="card text-left hover:border-red-500">
-            <h3 className="text-xl font-bold mb-2">{nav('hustle')}</h3>
+            <h2 className="text-xl font-bold mb-2">{nav('hustle')}</h2>
             <p className="text-sm text-gray-400">{t('cardHustle')}</p>
           </Link>
           <Link href="/cv" className="card text-left hover:border-red-500">
-            <h3 className="text-xl font-bold mb-2">{nav('cv')}</h3>
+            <h2 className="text-xl font-bold mb-2">{nav('cv')}</h2>
             <p className="text-sm text-gray-400">{t('cardCv')}</p>
           </Link>
           <Link href="/inspiration" className="card text-left hover:border-red-500">
-            <h3 className="text-xl font-bold mb-2">{nav('inspiration')}</h3>
+            <h2 className="text-xl font-bold mb-2">{nav('inspiration')}</h2>
             <p className="text-sm text-gray-400">{t('cardInspiration')}</p>
           </Link>
         </div>
