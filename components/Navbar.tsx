@@ -15,6 +15,7 @@ export default function Navbar() {
     { href: '/free-time', label: t('freeTime') },
     { href: '/schedule-time', label: t('scheduleTime') },
     { href: '/hustle', label: t('hustle') },
+    { href: '/blog', label: 'Blog' },
   ];
 
   return (
