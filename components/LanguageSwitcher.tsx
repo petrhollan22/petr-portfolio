@@ -9,7 +9,7 @@ export default function LanguageSwitcher() {
   const pathname = usePathname();
 
   const base = 'px-2 py-1 rounded text-sm font-semibold transition-colors';
-  const on = 'bg-purple-600 text-white';
+  const on = 'bg-red-600 text-white';
   const off = 'text-gray-400 hover:text-white';
 
   return (

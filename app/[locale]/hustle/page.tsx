@@ -30,7 +30,7 @@ export default function HustlePage() {
             <div key={p.id} className="card">
               <div className="flex items-baseline justify-between gap-4 mb-3 flex-wrap">
                 <h2 className="text-2xl font-bold">{pick(p.title, locale)}</h2>
-                <span className="text-xs font-semibold text-purple-400 uppercase tracking-wider">
+                <span className="text-xs font-semibold text-red-400 uppercase tracking-wider">
                   {typeLabel(p.type)}{p.period ? ` · ${p.period}` : ''}
                 </span>
               </div>
@@ -50,7 +50,7 @@ export default function HustlePage() {
                 <ul className="space-y-2 mb-6">
                   {p.bullets.map((b, i) => (
                     <li key={i} className="text-gray-300 flex items-start gap-3">
-                      <span className="text-purple-400 shrink-0">✓</span>
+                      <span className="text-red-400 shrink-0">✓</span>
                       <span>{pick(b, locale)}</span>
                     </li>
                   ))}

@@ -25,7 +25,7 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
-            <Link key={link.href} href={link.href} className="hover:text-purple-400 transition-colors font-medium">
+            <Link key={link.href} href={link.href} className="hover:text-red-400 transition-colors font-medium">
               {link.label}
             </Link>
           ))}
@@ -46,7 +46,7 @@ export default function Navbar() {
         <div className="md:hidden bg-primary">
           <div className="flex flex-col gap-4 p-4">
             {links.map((link) => (
-              <Link key={link.href} href={link.href} className="hover:text-purple-400 transition-colors font-medium" onClick={() => setIsOpen(false)}>
+              <Link key={link.href} href={link.href} className="hover:text-red-400 transition-colors font-medium" onClick={() => setIsOpen(false)}>
                 {link.label}
               </Link>
             ))}

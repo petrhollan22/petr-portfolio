@@ -39,7 +39,7 @@ export default function WorkPage() {
             <div className="grid md:grid-cols-2 gap-8">
               {items.map((p) => (
                 <div key={p.id} className="card">
-                  <span className="text-sm text-purple-400 font-semibold">{p.year}</span>
+                  <span className="text-sm text-red-400 font-semibold">{p.year}</span>
                   <h3 className="text-2xl font-bold mt-2 mb-4">{pick(p.title, locale)}</h3>
                   <p className="text-gray-400 mb-4">{pick(p.description, locale)}</p>
 
@@ -54,7 +54,7 @@ export default function WorkPage() {
 
                   <div className="flex flex-wrap gap-2 mb-6">
                     {p.tags.map((tag) => (
-                      <span key={tag} className="px-3 py-1 bg-purple-500/20 text-purple-300 text-sm rounded-full">
+                      <span key={tag} className="px-3 py-1 bg-gray-700/50 text-gray-300 text-sm rounded-full">
                         {tag}
                       </span>
                     ))}
@@ -71,7 +71,7 @@ export default function WorkPage() {
                       {p.links.map((l) => (
                         <li key={l.url}>
                           <a href={l.url} target="_blank" rel="noopener noreferrer"
-                            className="block px-4 py-2 bg-primary rounded-lg text-sm text-gray-300 hover:text-purple-400 transition-colors">
+                            className="block px-4 py-2 bg-primary rounded-lg text-sm text-gray-300 hover:text-red-400 transition-colors">
                             {pick(l.label, locale)} ↗
                           </a>
                         </li>

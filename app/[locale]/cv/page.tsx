@@ -32,7 +32,7 @@ export default function CvPage() {
                 <h3 className="text-xl font-bold">{pick(job.title, locale)}</h3>
                 <span className="text-sm text-gray-500 whitespace-nowrap">{sub(job.period)}</span>
               </div>
-              <p className="text-purple-400 text-sm mb-3">{job.org}</p>
+              <p className="text-red-400 text-sm mb-3">{job.org}</p>
               {job.description && (
                 <p className="text-gray-400 text-sm leading-relaxed">{pick(job.description, locale)}</p>
               )}
@@ -48,7 +48,7 @@ export default function CvPage() {
           <p className="text-sm text-gray-400 mb-3">{t('daily')}</p>
           <div className="flex flex-wrap gap-2 mb-8">
             {skillsDaily.map((s) => (
-              <span key={s} className="px-4 py-2 bg-purple-500/20 text-purple-300 text-sm rounded-lg">{s}</span>
+              <span key={s} className="px-4 py-2 bg-red-500/20 text-red-300 text-sm rounded-lg">{s}</span>
             ))}
           </div>
 

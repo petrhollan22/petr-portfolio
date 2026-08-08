@@ -23,7 +23,7 @@ export default async function BlogPage() {
               <Link
                 key={post._id}
                 href={`/blog/${post.slug}`}
-                className="card block hover:border-purple-500 transition-colors"
+                className="card block hover:border-red-500 transition-colors"
               >
                 {post.coverImage && (
                   <img

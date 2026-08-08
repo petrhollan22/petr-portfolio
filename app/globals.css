@@ -31,7 +31,7 @@ button {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #ef4444 0%, #7f1d1d 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -42,7 +42,7 @@ button {
 }
 
 .btn-primary {
-  @apply px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg font-semibold hover:shadow-lg transition-all active:scale-95;
+  @apply px-6 py-3 bg-gradient-to-r from-red-600 to-indigo-600 rounded-lg font-semibold hover:shadow-lg transition-all active:scale-95;
 }
 
 .btn-secondary {
@@ -59,17 +59,17 @@ button {
 
 .rdp-dark {
   --rdp-cell-size: 38px;
-  --rdp-accent-color: #7c3aed;
+  --rdp-accent-color: #dc2626;
   --rdp-background-color: #1e293b;
-  --rdp-outline: 2px solid #7c3aed;
-  --rdp-outline-selected: 2px solid #7c3aed;
+  --rdp-outline: 2px solid #dc2626;
+  --rdp-outline-selected: 2px solid #dc2626;
   margin: 0;
   color: #e2e8f0;
 }
 
 .rdp-dark .rdp-day_selected,
 .rdp-dark .rdp-day_selected:hover {
-  background-color: #7c3aed;
+  background-color: #dc2626;
   color: #fff;
 }
 

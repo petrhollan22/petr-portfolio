@@ -24,27 +24,27 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          <Link href="/work" className="card text-left hover:border-purple-500">
+          <Link href="/work" className="card text-left hover:border-red-500">
             <h3 className="text-xl font-bold mb-2">{nav('work')}</h3>
             <p className="text-sm text-gray-400">{t('cardWork')}</p>
           </Link>
-          <Link href="/free-time" className="card text-left hover:border-purple-500">
+          <Link href="/free-time" className="card text-left hover:border-red-500">
             <h3 className="text-xl font-bold mb-2">{nav('freeTime')}</h3>
             <p className="text-sm text-gray-400">{t('cardFreeTime')}</p>
           </Link>
-          <Link href="/schedule-time" className="card text-left hover:border-purple-500">
+          <Link href="/schedule-time" className="card text-left hover:border-red-500">
             <h3 className="text-xl font-bold mb-2">{nav('scheduleTime')}</h3>
             <p className="text-sm text-gray-400">{t('cardSchedule')}</p>
           </Link>
-          <Link href="/hustle" className="card text-left hover:border-purple-500">
+          <Link href="/hustle" className="card text-left hover:border-red-500">
             <h3 className="text-xl font-bold mb-2">{nav('hustle')}</h3>
             <p className="text-sm text-gray-400">{t('cardHustle')}</p>
           </Link>
-          <Link href="/cv" className="card text-left hover:border-purple-500">
+          <Link href="/cv" className="card text-left hover:border-red-500">
             <h3 className="text-xl font-bold mb-2">{nav('cv')}</h3>
             <p className="text-sm text-gray-400">{t('cardCv')}</p>
           </Link>
-          <Link href="/inspiration" className="card text-left hover:border-purple-500">
+          <Link href="/inspiration" className="card text-left hover:border-red-500">
             <h3 className="text-xl font-bold mb-2">{nav('inspiration')}</h3>
             <p className="text-sm text-gray-400">{t('cardInspiration')}</p>
           </Link>

@@ -47,7 +47,7 @@ export default function InspirationPage() {
     } catch { setStatus('error'); }
   };
 
-  const field = 'w-full px-4 py-2 bg-primary rounded-lg border border-gray-700 focus:border-purple-500 focus:outline-none';
+  const field = 'w-full px-4 py-2 bg-primary rounded-lg border border-gray-700 focus:border-red-500 focus:outline-none';
 
   return (
     <div className="bg-gradient-to-b from-primary to-secondary">

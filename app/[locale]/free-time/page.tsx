@@ -37,11 +37,11 @@ export default function FreeTimePage() {
               )}
 
               <div className="bg-primary rounded-lg p-5 mb-6">
-                <h3 className="text-lg font-semibold mb-3 text-purple-400">{t('achievements')}</h3>
+                <h3 className="text-lg font-semibold mb-3 text-red-400">{t('achievements')}</h3>
                 <ul className="space-y-2">
                   {sport.achievements.map((a, i) => (
                     <li key={i} className="text-gray-300 flex items-start gap-3">
-                      <span className="text-purple-400 shrink-0">✓</span>
+                      <span className="text-red-400 shrink-0">✓</span>
                       <span>{pick(a, locale)}</span>
                     </li>
                   ))}
@@ -49,8 +49,8 @@ export default function FreeTimePage() {
               </div>
 
               {sport.coaching && (
-                <div className="bg-purple-500/10 border border-purple-500/30 rounded-lg p-5 mb-6">
-                  <h3 className="text-lg font-semibold mb-3 text-purple-400">{t('coaching')}</h3>
+                <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-5 mb-6">
+                  <h3 className="text-lg font-semibold mb-3 text-red-400">{t('coaching')}</h3>
                   <p className="text-gray-300 mb-4">{pick(sport.coaching, locale)}</p>
                   <Link href={{ pathname: "/schedule-time", query: { service: "chess-coaching" } }} className="btn-primary text-sm inline-block">
                     {t('coachingCta')} →
@@ -60,12 +60,12 @@ export default function FreeTimePage() {
 
               {sport.links && sport.links.length > 0 && (
                 <div className="mb-6">
-                  <h3 className="text-lg font-semibold mb-3 text-purple-400">{t('links')}</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-red-400">{t('links')}</h3>
                   <ul className="grid sm:grid-cols-2 gap-2">
                     {sport.links.map((l) => (
                       <li key={l.url}>
                         <a href={l.url} target="_blank" rel="noopener noreferrer"
-                          className="block px-4 py-2 bg-primary rounded-lg text-sm text-gray-300 hover:text-purple-400 transition-colors">
+                          className="block px-4 py-2 bg-primary rounded-lg text-sm text-gray-300 hover:text-red-400 transition-colors">
                           {pick(l.label, locale)} ↗
                         </a>
                       </li>
@@ -76,12 +76,12 @@ export default function FreeTimePage() {
 
               {sport.videos && sport.videos.length > 0 && (
                 <div>
-                  <h3 className="text-lg font-semibold mb-3 text-purple-400">{t('videos')}</h3>
+                  <h3 className="text-lg font-semibold mb-3 text-red-400">{t('videos')}</h3>
                   <ul className="space-y-2">
                     {sport.videos.map((v) => (
                       <li key={v.url}>
                         <a href={v.url} target="_blank" rel="noopener noreferrer"
-                          className="block px-4 py-2 bg-primary rounded-lg text-sm text-gray-300 hover:text-purple-400 transition-colors">
+                          className="block px-4 py-2 bg-primary rounded-lg text-sm text-gray-300 hover:text-red-400 transition-colors">
                           ▶ {pick(v.label, locale)}
                         </a>
                       </li>
