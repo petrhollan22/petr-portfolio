@@ -114,7 +114,7 @@ function BookingForm() {
             <label className="block text-sm font-medium mb-2">{t('date')} *</label>
             <DatePicker
               value={b.date}
-              onChange={(v) => setB((p) => ({ ...p, date: v }))}
+              onChange={(v) => setB((p) => ({ ...p, date: v, time: '' }))}
               locale={locale}
               placeholder={t('choose')}
               className={field}
