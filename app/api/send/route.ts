@@ -7,7 +7,7 @@ const BASE = process.env.NEXT_PUBLIC_BASE_URL!;
 
 export async function POST(req: Request) {
   if (req.headers.get("authorization") !== `Bearer ${process.env.SEND_SECRET}`) {
-    return Response.json({ ok: false, error: "unauthorized", serverLen: (process.env.SEND_SECRET || "").length }, { status: 401 });
+    return Response.json({ ok: false, error: "unauthorized" }, { status: 401 });
   }
 
   const { eventId, testEmail } = await req.json();
