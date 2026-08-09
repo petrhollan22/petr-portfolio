@@ -43,14 +43,10 @@ export async function GET(request: NextRequest) {
 
   const bodyBlocks = merged.flatMap((tip: any) => [
     {
-      _type: 'block',
-      style: 'h3',
-      children: [{
-        _type: 'span',
-        text: tip.count > 1
-          ? `${tip.category}: ${tip.name} (doporučeno ${tip.count}x)`
-          : `${tip.category}: ${tip.name}`,
-      }],
+      _type: 'categoryBadge',
+      category: tip.category,
+      itemName: tip.name,
+      count: tip.count,
     },
     {
       _type: 'block',

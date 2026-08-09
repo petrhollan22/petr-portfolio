@@ -45,6 +45,16 @@ export default defineType({
         { type: 'image', options: { hotspot: true } },
         {
           type: 'object',
+          name: 'categoryBadge',
+          title: 'Štítek kategorie',
+          fields: [
+            { name: 'category', title: 'Kategorie', type: 'string' },
+            { name: 'itemName', title: 'Název tipu', type: 'string' },
+            { name: 'count', title: 'Počet doporučení', type: 'number' },
+          ],
+        },
+        {
+          type: 'object',
           name: 'embed',
           title: 'Vložený widget',
           fields: [

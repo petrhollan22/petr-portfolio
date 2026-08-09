@@ -3,6 +3,7 @@ import { PortableText } from '@portabletext/react';
 import { getPostBySlug } from '@/sanity/queries';
 import { urlForImage } from '@/sanity/image';
 import { siteUrl } from '@/lib/site';
+import { getCategoryColor } from '@/lib/categoryColors';
 
 const components = {
   types: {
@@ -25,6 +26,25 @@ const components = {
         )}
       </div>
     ),
+    categoryBadge: ({ value }: any) => {
+      const colors = getCategoryColor(value.category);
+      return (
+        <div className="mt-8 mb-2">
+          <span
+            className="inline-block text-xs font-medium px-3 py-1 rounded-md"
+            style={{ backgroundColor: colors.bg, color: colors.text }}
+          >
+            {value.category}
+          </span>
+          <p className="text-lg font-medium mt-2 mb-0">
+            {value.itemName}
+            {value.count > 1 && (
+              <span className="text-sm text-gray-500 font-normal"> — doporučeno {value.count}×</span>
+            )}
+          </p>
+        </div>
+      );
+    },
   },
 };
 
