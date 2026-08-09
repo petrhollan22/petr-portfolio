@@ -7,6 +7,6 @@ export const config = {
   matcher: [
     '/',
     '/(cs|en)/:path*',
-    '/((?!api|studio|planovac|rsvp|_next|_vercel|.well-known|.*\\..*).*)',
+    '/((?!api|studio|planovac|rsvp|unsubscribe|_next|_vercel|.well-known|.*\\..*).*)',
   ],
 };
