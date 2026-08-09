@@ -23,11 +23,34 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  const bodyBlocks = approved.flatMap((tip: any) => [
+  const grouped = new Map<string, any[]>();
+  for (const tip of approved) {
+    const key = `${tip.category}:${tip.name.toLowerCase().trim()}`;
+    if (!grouped.has(key)) grouped.set(key, []);
+    grouped.get(key)!.push(tip);
+  }
+
+  const merged = Array.from(grouped.values()).map((group) => {
+    const first = group[0];
+    const count = group.length;
+    const whyTexts = group.map((t) => t.why).filter(Boolean);
+    return {
+      ...first,
+      count,
+      why: whyTexts.length > 0 ? whyTexts.join(' · ') : first.why,
+    };
+  });
+
+  const bodyBlocks = merged.flatMap((tip: any) => [
     {
       _type: 'block',
       style: 'h3',
-      children: [{ _type: 'span', text: `${tip.category}: ${tip.name}` }],
+      children: [{
+        _type: 'span',
+        text: tip.count > 1
+          ? `${tip.category}: ${tip.name} (doporučeno ${tip.count}x)`
+          : `${tip.category}: ${tip.name}`,
+      }],
     },
     {
       _type: 'block',
