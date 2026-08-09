@@ -21,7 +21,7 @@ export default function DatePicker({ value, onChange, locale, placeholder, class
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setIsMobile(window.matchMedia('(max-width: 767px)').matches);
+    setIsMobile(window.matchMedia('(max-width: 480px)').matches);
   }, []);
 
   useEffect(() => {
