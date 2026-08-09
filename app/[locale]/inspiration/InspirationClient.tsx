@@ -66,7 +66,7 @@ export default function InspirationClient() {
               <select name="category" value={form.category} onChange={onChange} required className={field}>
                 <option value="">{t('choose')}</option>
                 {inspirationCategories.map((c) => (
-                  <option key={c.id} value={c.id}>{pick(c.name, locale)}</option>
+                  <option key={c.id} value={c.id}>{c.emoji} {pick(c.name, locale)}</option>
                 ))}
               </select>
             </div>
