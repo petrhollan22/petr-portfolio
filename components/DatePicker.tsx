@@ -42,7 +42,13 @@ export default function DatePicker({ value, onChange, locale, placeholder, class
       <input
         type="date"
         value={value}
-        onChange={(e) => onChange(e.target.value)}
+        onChange={(e) => {
+          const v = e.target.value;
+          if (!v) { onChange(v); return; }
+          const picked = parse(v, 'yyyy-MM-dd', new Date());
+          if (picked < today) return;
+          onChange(v);
+        }}
         required
         min={format(today, 'yyyy-MM-dd')}
         className={className}
