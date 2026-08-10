@@ -13,8 +13,23 @@ export default function Home() {
 
   return (
     <div className="bg-gradient-to-b from-primary via-secondary to-primary">
-      <section className="container py-32 text-center">
-        <h1 className="text-6xl md:text-7xl font-black mb-6 gradient-text">Petr Hollan</h1>
+      <section className="relative overflow-hidden container py-32 text-center">
+        <svg
+          className="absolute inset-0 w-full h-full opacity-[0.15] pointer-events-none"
+          viewBox="0 0 400 200"
+          preserveAspectRatio="xMidYMid slice"
+          aria-hidden="true"
+        >
+          <defs>
+            <pattern id="chessPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+              <rect width="20" height="20" fill="#9a9a9a" />
+              <rect x="20" y="20" width="20" height="20" fill="#9a9a9a" />
+            </pattern>
+          </defs>
+          <rect width="400" height="200" fill="url(#chessPattern)" transform="rotate(-8 200 100)" />
+        </svg>
+        <div className="relative z-10">
+          <h1 className="text-6xl md:text-7xl font-black mb-6 gradient-text">Petr Hollan</h1>
         <p className="text-2xl text-gray-300 mb-4">{t('role')}</p>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-12">{t('intro')}</p>
 
@@ -48,6 +63,7 @@ export default function Home() {
             <h2 className="text-xl font-bold mb-2">{nav('inspiration')}</h2>
             <p className="text-sm text-gray-400">{t('cardInspiration')}</p>
           </Link>
+        </div>
         </div>
       </section>
 
