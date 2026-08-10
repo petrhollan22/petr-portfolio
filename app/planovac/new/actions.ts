@@ -43,7 +43,7 @@ export async function createEvent(formData: FormData) {
 
   if (error || !ev) throw new Error(error?.message || "Nepodarilo se zalozit akci");
 
-  if (groupId) {
+  if (groupId && groupId !== "ALL") {
     await supabase.from("event_groups").insert({ event_id: ev.id, group_id: groupId });
   }
 

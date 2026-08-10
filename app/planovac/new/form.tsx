@@ -18,7 +18,7 @@ export default function NewEventForm({
     duration_minutes: 120, capacity: "", plus_one: "no", deadline_hours: 24,
   });
 
-  const visible = people.filter((p) => p.groups.includes(groupId));
+  const visible = groupId === "ALL" ? people : people.filter((p) => p.groups.includes(groupId));
   const selected = visible.filter((p) => !unchecked.has(p.id));
 
   function applyTemplate(t: Template) {
@@ -62,6 +62,7 @@ export default function NewEventForm({
       <label style={lbl}>Skupina</label>
       <select name="group_id" value={groupId} style={inp}
         onChange={(e) => { setGroupId(e.target.value); setUnchecked(new Set()); }}>
+        <option value="ALL">— Vsichni —</option>
         {groups.map((g) => <option key={g.id} value={g.id}>{g.name}</option>)}
       </select>
 
