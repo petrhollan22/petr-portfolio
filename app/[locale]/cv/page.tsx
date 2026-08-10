@@ -25,19 +25,21 @@ export default function CvPage() {
 
       <section className="container pt-16 pb-12">
         <h2 className="section-title">{t('experience')}</h2>
-        <div className="space-y-4">
-          {jobs.map((job, i) => (
-            <div key={i} className="card">
-              <div className="flex justify-between items-baseline gap-4 flex-wrap mb-1">
+        <div className="relative pl-8">
+          <div className="absolute left-[7px] top-2 bottom-2 w-px bg-gray-700" aria-hidden="true" />
+          <div className="space-y-8">
+            {jobs.map((job, i) => (
+              <div key={i} className="relative">
+                <div className="absolute -left-8 top-1.5 w-3.5 h-3.5 rounded-full bg-red-500 border-2 border-primary" aria-hidden="true" />
+                <span className="mono-label text-gray-500 block mb-1">{sub(job.period)}</span>
                 <h3 className="text-xl font-bold">{pick(job.title, locale)}</h3>
-                <span className="text-sm text-gray-500 whitespace-nowrap">{sub(job.period)}</span>
+                <p className="text-red-400 text-sm mb-3">{job.org}</p>
+                {job.description && (
+                  <p className="text-gray-400 text-sm leading-relaxed">{pick(job.description, locale)}</p>
+                )}
               </div>
-              <p className="text-red-400 text-sm mb-3">{job.org}</p>
-              {job.description && (
-                <p className="text-gray-400 text-sm leading-relaxed">{pick(job.description, locale)}</p>
-              )}
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         <p className="text-gray-500 text-sm mt-6">{pick(earlierRoles, locale)}</p>
       </section>

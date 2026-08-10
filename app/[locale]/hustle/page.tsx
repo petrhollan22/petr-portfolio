@@ -30,7 +30,7 @@ export default function HustlePage() {
             <div key={p.id} className="card">
               <div className="flex items-baseline justify-between gap-4 mb-3 flex-wrap">
                 <h2 className="text-2xl font-bold">{pick(p.title, locale)}</h2>
-                <span className="text-xs font-semibold text-red-400 uppercase tracking-wider">
+                <span className="mono-label text-red-400">
                   {typeLabel(p.type)}{p.period ? ` · ${p.period}` : ''}
                 </span>
               </div>

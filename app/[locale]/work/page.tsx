@@ -39,7 +39,7 @@ export default function WorkPage() {
             <div className="grid md:grid-cols-2 gap-8">
               {items.map((p) => (
                 <div key={p.id} className="card">
-                  <span className="text-sm text-red-400 font-semibold">{p.year}</span>
+                  <span className="mono-label text-red-400">{p.year}</span>
                   <h3 className="text-2xl font-bold mt-2 mb-4">{pick(p.title, locale)}</h3>
                   <p className="text-gray-400 mb-4">{pick(p.description, locale)}</p>
 

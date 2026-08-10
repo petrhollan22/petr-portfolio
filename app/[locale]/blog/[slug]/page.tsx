@@ -97,7 +97,7 @@ export default async function BlogPostPage({
   return (
     <div className="bg-gradient-to-b from-primary to-secondary">
       <article className="container pt-20 pb-16 max-w-3xl mx-auto">
-        <p className="text-sm text-gray-500 mb-3">
+        <p className="mono-label text-gray-500 mb-3">
           {new Date(post.publishedAt).toLocaleDateString('cs-CZ', {
             day: 'numeric',
             month: 'long',

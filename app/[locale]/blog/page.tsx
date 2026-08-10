@@ -39,7 +39,7 @@ export default async function BlogPage() {
                     loading="lazy"
                   />
                 )}
-                <p className="text-sm text-gray-500 mb-2">
+                <p className="mono-label text-gray-500 mb-2">
                   {new Date(post.publishedAt).toLocaleDateString('cs-CZ', {
                     day: 'numeric',
                     month: 'long',
