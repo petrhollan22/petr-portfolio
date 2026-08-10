@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useFormStatus } from "react-dom";
 import { createEvent } from "./actions";
 
 type Person = { id: string; full_name: string; groups: string[] };
@@ -36,7 +37,7 @@ export default function NewEventForm({
   function toggle(id: string) {
     setUnchecked((prev) => {
       const n = new Set(prev);
-      n.has(id) ? n.delete(id) : n.add(id);
+      if (n.has(id)) n.delete(id); else n.add(id);
       return n;
     });
   }
@@ -62,7 +63,7 @@ export default function NewEventForm({
       <label style={lbl}>Skupina</label>
       <select name="group_id" value={groupId} style={inp}
         onChange={(e) => { setGroupId(e.target.value); setUnchecked(new Set()); }}>
-        <option value="ALL">— Vsichni —</option>
+        <option value="ALL">- Vsichni -</option>
         {groups.map((g) => <option key={g.id} value={g.id}>{g.name}</option>)}
       </select>
 
@@ -132,14 +133,22 @@ export default function NewEventForm({
 
       <div style={{ position: "fixed", left: 0, right: 0, bottom: 0, padding: 12,
         background: "#fff", borderTop: "1px solid #eee" }}>
-        <button type="submit" disabled={!selected.length}
-          style={{ width: "100%", maxWidth: 536, margin: "0 auto", display: "block",
-            padding: 16, fontSize: 16, color: "#fff",
-            background: selected.length ? "#16a34a" : "#bbb",
-            border: 0, borderRadius: 10, cursor: "pointer" }}>
-          Zalozit akci ({selected.length} lidi)
-        </button>
+        <SubmitButton count={selected.length} />
       </div>
     </form>
+  );
+}
+
+function SubmitButton({ count }: { count: number }) {
+  const { pending } = useFormStatus();
+  const active = count > 0 && !pending;
+  return (
+    <button type="submit" disabled={!active}
+      style={{ width: "100%", maxWidth: 536, margin: "0 auto", display: "block",
+        padding: 16, fontSize: 16, color: "#fff",
+        background: active ? "#16a34a" : "#bbb",
+        border: 0, borderRadius: 10, cursor: pending ? "wait" : "pointer" }}>
+      {pending ? "Zakladam..." : `Zalozit akci (${count} lidi)`}
+    </button>
   );
 }
