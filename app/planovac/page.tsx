@@ -14,6 +14,7 @@ export default async function Planovac() {
     <main style={{ maxWidth: 560, margin: "0 auto", padding: 24, fontFamily: "system-ui", lineHeight: 1.5 }}>
       <h1 style={{ fontSize: 24 }}>Planovac</h1>
       <Link href="/planovac/new" style={{ display: "inline-block", padding: "10px 18px", background: "#16a34a", color: "#fff", borderRadius: 8, textDecoration: "none", marginBottom: 8 }}>+ Nova akce</Link>
+      <Link href="/planovac/lide" style={{ display: "inline-block", padding: "10px 18px", marginLeft: 8, border: "1px solid #ddd", borderRadius: 8, textDecoration: "none", color: "inherit", marginBottom: 8 }}>Lide</Link>
 
       {error && <p style={{ color: "#dc2626", fontSize: 13 }}>Chyba: {error.message}</p>}
       {!events?.length && !error && <p style={{ opacity: 0.6 }}>Zatim zadne akce.</p>}
