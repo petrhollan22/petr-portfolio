@@ -1,6 +1,6 @@
 import { supabase } from "@/lib/supabase";
 import { notFound } from "next/navigation";
-import { deleteEvent, cancelEvent } from "./actions";
+import { deleteEvent, cancelEvent, sendInvites } from "./actions";
 
 export const dynamic = "force-dynamic";
 
@@ -32,6 +32,13 @@ export default async function EventDetail({ params }: { params: { id: string } }
         <Box label="Nejdu" n={by("no").length} c="#dc2626" />
         <Box label="Ticho" n={by("pending").length} c="#6b7280" />
       </div>
+
+      {!ev.is_cancelled && list.some((i: any) => !i.sent_at) && (
+        <form action={sendInvites} style={{ margin: "16px 0" }}>
+          <input type="hidden" name="id" value={ev.id} />
+          <button type="submit" style={{ width: "100%", padding: 14, fontSize: 16, color: "#fff", background: "#16a34a", border: 0, borderRadius: 10, cursor: "pointer" }}>Odeslat pozvanky ({list.filter((i: any) => !i.sent_at).length})</button>
+        </form>
+      )}
 
       <Group title="Jdu" items={by("yes")} />
       <Group title="Mozna" items={by("maybe")} />

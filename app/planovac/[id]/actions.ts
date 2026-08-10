@@ -33,3 +33,18 @@ export async function cancelEvent(formData: FormData) {
   });
   revalidatePath(`/planovac/${id}`);
 }
+
+export async function sendInvites(formData: FormData) {
+  const id = String(formData.get("id"));
+
+  await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/send`, {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${process.env.SEND_SECRET}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ eventId: id }),
+  });
+
+  revalidatePath(`/planovac/${id}`);
+}
