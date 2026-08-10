@@ -9,6 +9,11 @@ module.exports = {
         primary: '#0a0a0a',
         secondary: '#171717',
       },
+      fontFamily: {
+        display: ['var(--font-display)', 'sans-serif'],
+        sans: ['var(--font-body)', 'sans-serif'],
+        mono: ['var(--font-mono)', 'monospace'],
+      },
     },
   },
   plugins: [],
