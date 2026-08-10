@@ -59,5 +59,15 @@ export async function GET(req: Request) {
   });
 
   const sent = await res.json();
+  if (process.env.DISCORD_WEBHOOK_URL) {
+    await fetch(process.env.DISCORD_WEBHOOK_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        content: `**${t.activity}**\n${start.toLocaleString("cs-CZ", { timeZone: "Europe/Prague" })}\nPozvanek: ${rows.length}\n${process.env.NEXT_PUBLIC_BASE_URL}/planovac/${ev.id}`,
+      }),
+    });
+  }
+
   return Response.json({ ok: true, eventId: ev.id, pozvanek: rows.length, sent });
 }
