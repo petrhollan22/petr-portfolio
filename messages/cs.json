@@ -187,5 +187,10 @@
     "inspirationDescription": "Máš tip na knihu, podcast, akci nebo místo? Pošli mi ho.",
     "blogTitle": "Blog",
     "blogDescription": "Novinky a poznámky k tomu, na čem pracuji — data, AI, šachy a další."
+  },
+  "stickyBanner": {
+    "text": "Stále přemýšlíte? Pár minut stačí na to zjistit, jestli má spolupráce smysl.",
+    "cta": "Rezervovat čas",
+    "close": "Zavřít"
   }
 }
