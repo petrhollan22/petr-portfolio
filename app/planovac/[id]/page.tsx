@@ -1,5 +1,6 @@
 import { supabase } from "@/lib/supabase";
 import { notFound } from "next/navigation";
+import { deleteEvent } from "./actions";
 
 export const dynamic = "force-dynamic";
 
@@ -36,6 +37,13 @@ export default async function EventDetail({ params }: { params: { id: string } }
       <Group title="Mozna" items={by("maybe")} />
       <Group title="Zatim neodpovedeli" items={by("pending")} />
       <Group title="Nejdu" items={by("no")} />
+
+      {by("yes").length + by("no").length + by("maybe").length === 0 && (
+        <form action={deleteEvent} style={{ marginTop: 32 }}>
+          <input type="hidden" name="id" value={ev.id} />
+          <button type="submit" style={{ padding: "10px 16px", fontSize: 14, color: "#dc2626", background: "#fff", border: "1px solid #dc2626", borderRadius: 8, cursor: "pointer" }}>Smazat akci</button>
+        </form>
+      )}
     </main>
   );
 }
