@@ -5,6 +5,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { inspirationCategories } from '@/data/inspiration';
 import { pick } from '@/lib/localized';
 import Turnstile from '@/components/Turnstile';
+import CategoryDropdown from '@/components/CategoryDropdown';
 
 export default function InspirationClient() {
   const t = useTranslations('inspiration');
@@ -63,12 +64,14 @@ export default function InspirationClient() {
           <div className="space-y-5">
             <div>
               <label className="block text-sm font-medium mb-2">{t('category')} *</label>
-              <select name="category" value={form.category} onChange={onChange} required className={field}>
-                <option value="">{t('choose')}</option>
-                {inspirationCategories.map((c) => (
-                  <option key={c.id} value={c.id}>{c.emoji} {pick(c.name, locale)}</option>
-                ))}
-              </select>
+              <CategoryDropdown
+                categories={inspirationCategories}
+                value={form.category}
+                onChange={(id) => setForm((p) => ({ ...p, category: id }))}
+                locale={locale}
+                placeholder={t('choose')}
+                className={field}
+              />
             </div>
 
             <div>
