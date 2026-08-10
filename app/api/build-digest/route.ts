@@ -41,7 +41,18 @@ export async function GET(request: NextRequest) {
     };
   });
 
-  const bodyBlocks = merged.flatMap((tip: any) => [
+  const introBlock = {
+    _type: 'block',
+    style: 'normal',
+    children: [
+      {
+        _type: 'span',
+        text: `Tento týden jsem dostal ${approved.length} tip${approved.length === 1 ? '' : approved.length < 5 ? 'y' : 'ů'} a vybral jsem tyto:`,
+      },
+    ],
+  };
+
+  const bodyBlocks = [introBlock, ...merged.flatMap((tip: any) => [
     {
       _type: 'categoryBadge',
       category: tip.category,
@@ -63,7 +74,7 @@ export async function GET(request: NextRequest) {
           markDefs: [{ _key: 'link', _type: 'link', href: tip.link }],
         }]
       : []),
-  ]);
+  ])];
 
   const today = new Date().toISOString().split('T')[0];
   const draftId = `drafts.tydenni-souhrn-${today}`;

@@ -4,6 +4,18 @@ import { getPostBySlug } from '@/sanity/queries';
 import { urlForImage } from '@/sanity/image';
 import { siteUrl } from '@/lib/site';
 import { getCategoryColor } from '@/lib/categoryColors';
+import { BookOpen, Mic, Wrench, GraduationCap, Trophy, MapPin, User, Sparkles } from 'lucide-react';
+
+const categoryIconMap: Record<string, any> = {
+  Kniha: BookOpen, Book: BookOpen,
+  Podcast: Mic,
+  'Web nebo nástroj': Wrench, 'Website or tool': Wrench,
+  'Kurz nebo workshop': GraduationCap, 'Course or workshop': GraduationCap,
+  'Akce nebo soutěž': Trophy, 'Event or competition': Trophy,
+  Místo: MapPin, Place: MapPin,
+  Osoba: User, Person: User,
+  'Něco jiného': Sparkles, 'Something else': Sparkles,
+};
 
 const components = {
   types: {
@@ -28,20 +40,22 @@ const components = {
     ),
     categoryBadge: ({ value }: any) => {
       const colors = getCategoryColor(value.category);
+      const Icon = categoryIconMap[value.category] || Sparkles;
       return (
-        <div className="mt-8 mb-2">
-          <span
-            className="inline-block text-xs font-medium px-3 py-1 rounded-md"
-            style={{ backgroundColor: colors.bg, color: colors.text }}
+        <div className="mt-12 mb-4 text-center">
+          <div
+            className="inline-flex items-center justify-center w-12 h-12 rounded-full mb-3"
+            style={{ backgroundColor: colors.bg }}
           >
-            {value.category}
-          </span>
-          <p className="text-lg font-medium mt-2 mb-0">
+            <Icon className="w-6 h-6" style={{ color: colors.text }} />
+          </div>
+          <p className="mono-label text-gray-500 mb-1">{value.category}</p>
+          <h3 className="text-3xl font-bold mb-0">
             {value.itemName}
             {value.count > 1 && (
-              <span className="text-sm text-gray-500 font-normal"> — doporučeno {value.count}×</span>
+              <span className="block text-sm text-gray-500 font-normal mt-1">doporučeno {value.count}×</span>
             )}
-          </p>
+          </h3>
         </div>
       );
     },
