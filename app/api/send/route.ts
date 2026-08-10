@@ -30,11 +30,15 @@ export async function POST(req: Request) {
 
   const ics = Buffer.from(buildIcs(ev)).toString("base64");
   const results: string[] = [];
+  let first = true;
 
   for (const inv of invites) {
     const p = inv.people as any;
     if (!p?.email || p.unsubscribed_at) continue;
     if (testEmail && p.email !== testEmail) continue;
+
+    if (!first) await new Promise((r) => setTimeout(r, 150));
+    first = false;
 
     const link = `${BASE}/rsvp/${inv.token}`;
     const unsub = `${BASE}/unsubscribe/${p.unsubscribe_token}`;
