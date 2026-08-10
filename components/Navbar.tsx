@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
 import LanguageSwitcher from './LanguageSwitcher';
+import Logo from './Logo';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,7 @@ export default function Navbar() {
   return (
     <nav className="bg-secondary sticky top-0 z-50 shadow-lg">
       <div className="container flex justify-between items-center py-4">
-        <Link href="/" className="text-xl font-bold gradient-text whitespace-nowrap">Petr Hollan</Link>
+        <Logo />
 
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (

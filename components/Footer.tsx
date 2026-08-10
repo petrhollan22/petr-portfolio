@@ -16,7 +16,12 @@ export default function Footer() {
       <div className="container py-12">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-bold mb-4 gradient-text">Petr Hollan</h3>
+            <div className="flex items-center gap-2.5 mb-4">
+              <span className="flex items-center justify-center w-8 h-8 rounded-md bg-red-600 text-white font-display font-bold text-xs shrink-0">
+                PH
+              </span>
+              <h3 className="text-xl font-bold gradient-text">Petr Hollan</h3>
+            </div>
             <p className="text-gray-400 text-sm mb-4">{t('bio')}</p>
             <Link href="/schedule-time" className="text-sm text-red-400 hover:text-red-300 transition-colors font-medium">
               {t('footerCta')} →
