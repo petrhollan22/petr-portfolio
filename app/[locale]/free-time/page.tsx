@@ -3,6 +3,7 @@ import { Link } from '@/i18n/routing';
 import { sports } from '@/data/sports';
 import { pick } from '@/lib/localized';
 import { buildMetadata } from '@/lib/metadata';
+import PageGlow from '@/components/PageGlow';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -15,7 +16,8 @@ export default function FreeTimePage() {
 
   return (
     <div className="bg-gradient-to-b from-primary to-secondary">
-      <section className="container py-20 text-center">
+      <section className="relative overflow-hidden container py-20 text-center">
+        <PageGlow />
         <h1 className="text-5xl font-bold mb-4 gradient-text">{t('title')}</h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">{t('lead')}</p>
       </section>
