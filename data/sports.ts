@@ -77,7 +77,13 @@ export const sports: Sport[] = [
       en: "I played volleyball during my time in the United States. I enjoy the mix of team play and fast decisions."
     },
     achievements: [
-      { cs: "Hráno během pobytu v USA", en: "Played during a stay in the United States" }
+      { cs: "Hráno během pobytu v USA", en: "Played during a stay in the United States" },
+      { cs: "3. místo, Volejbalový turnaj Třebešín 2023", en: "3rd place, Třebešín Volleyball Tournament 2023" },
+      { cs: "3. místo, KPMG Fit Cup 2022", en: "3rd place, KPMG Fit Cup 2022" }
+    ],
+    links: [
+      { label: { cs: "Výsledky — Třebešín 2023", en: "Results — Třebešín 2023" }, url: "https://volejbal.vse.cz/wp-content/uploads/post/8212/volejbalovy-turnaj-trebesin-2023-NV.pdf" },
+      { label: { cs: "Výsledky — KPMG Fit Cup 2022", en: "Results — KPMG Fit Cup 2022" }, url: "https://volejbal.vse.cz/wp-content/uploads/post/7527/KPMG_Fit_Cup_2022-vysledky_nizsi_vykonnost.pdf" }
     ]
   },
   {
