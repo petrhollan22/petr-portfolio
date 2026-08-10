@@ -4,7 +4,7 @@ import Link from "next/link";
 export const dynamic = "force-dynamic";
 
 export default async function Planovac() {
-  const { data: events } = await supabase
+  const { data: events, error } = await supabase
     .from("event_summary")
     .select("*")
     .order("starts_at", { ascending: false })
@@ -15,7 +15,8 @@ export default async function Planovac() {
       <h1 style={{ fontSize: 24 }}>Planovac</h1>
       <Link href="/planovac/new" style={{ display: "inline-block", padding: "10px 18px", background: "#16a34a", color: "#fff", borderRadius: 8, textDecoration: "none", marginBottom: 8 }}>+ Nova akce</Link>
 
-      {!events?.length && <p style={{ opacity: 0.6 }}>Zatim zadne akce.</p>}
+      {error && <p style={{ color: "#dc2626", fontSize: 13 }}>Chyba: {error.message}</p>}
+      {!events?.length && !error && <p style={{ opacity: 0.6 }}>Zatim zadne akce.</p>}
 
       <ul style={{ listStyle: "none", padding: 0 }}>
         {(events ?? []).map((e: any) => {
