@@ -78,12 +78,12 @@ export default function FreeTimePage() {
 
               {sport.blogSlug && (
                 <div className="mb-6">
-                  <a
+                  <Link
                     href={`/blog/${sport.blogSlug}`}
                     className="inline-block px-4 py-2 bg-primary rounded-lg text-sm text-red-400 hover:text-red-300 transition-colors font-medium"
                   >
                     Celý příběh na blogu →
-                  </a>
+                  </Link>
                 </div>
               )}
 
