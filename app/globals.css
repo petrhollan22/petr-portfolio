@@ -46,7 +46,12 @@ h1, h2, h3, h4 {
 }
 
 .card {
-  @apply bg-secondary rounded-lg p-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1;
+  @apply bg-secondary rounded-lg p-6 shadow-lg transition-all duration-150;
+}
+
+.card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
 }
 
 .btn-primary {
