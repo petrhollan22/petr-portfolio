@@ -22,5 +22,14 @@ export async function deleteEvent(formData: FormData) {
 export async function cancelEvent(formData: FormData) {
   const id = String(formData.get("id"));
   await supabase.from("events").update({ is_cancelled: true }).eq("id", id);
+
+  await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/cancel`, {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${process.env.SEND_SECRET}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ eventId: id }),
+  });
   revalidatePath(`/planovac/${id}`);
 }
