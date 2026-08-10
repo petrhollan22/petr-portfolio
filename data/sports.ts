@@ -101,6 +101,6 @@ export const sports: Sport[] = [
     links: [
       { label: { cs: "Zenit Buštěhrad — PSMF", en: "Zenit Buštěhrad — PSMF" }, url: "https://www.psmf.cz/souteze/2021-hanspaulska-liga-podzim/8-a/tymy/zenit-bustehrad/" }
     ],
-    blogSlug: "fotbal-je-o-lidech"
+    blogSlug: "fotbal-je-o-lidech-ne-o-skore"
   }
 ];
