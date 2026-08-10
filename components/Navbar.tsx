@@ -2,12 +2,13 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
+import { Link, usePathname } from '@/i18n/routing';
 import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations('nav');
+  const pathname = usePathname();
 
   const links = [
     { href: '/work', label: t('work') },
@@ -25,7 +26,13 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
-            <Link key={link.href} href={link.href} className="hover:text-red-400 transition-colors font-medium">
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`transition-colors font-medium ${
+                pathname === link.href ? 'text-red-400' : 'hover:text-red-400'
+              }`}
+            >
               {link.label}
             </Link>
           ))}
@@ -46,7 +53,14 @@ export default function Navbar() {
         <div className="md:hidden bg-primary">
           <div className="flex flex-col gap-4 p-4">
             {links.map((link) => (
-              <Link key={link.href} href={link.href} className="hover:text-red-400 transition-colors font-medium" onClick={() => setIsOpen(false)}>
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`transition-colors font-medium ${
+                  pathname === link.href ? 'text-red-400' : 'hover:text-red-400'
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
                 {link.label}
               </Link>
             ))}
