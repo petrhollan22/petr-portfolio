@@ -46,7 +46,7 @@ h1, h2, h3, h4 {
 }
 
 .card {
-  @apply bg-secondary rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow;
+  @apply bg-secondary rounded-lg p-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1;
 }
 
 .btn-primary {
