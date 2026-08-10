@@ -76,6 +76,17 @@ export default function FreeTimePage() {
                 </div>
               )}
 
+              {sport.blogSlug && (
+                <div className="mb-6">
+                  <a
+                    href={`/blog/${sport.blogSlug}`}
+                    className="inline-block px-4 py-2 bg-primary rounded-lg text-sm text-red-400 hover:text-red-300 transition-colors font-medium"
+                  >
+                    Celý příběh na blogu →
+                  </a>
+                </div>
+              )}
+
               {sport.videos && sport.videos.length > 0 && (
                 <div>
                   <h3 className="text-lg font-semibold mb-3 text-red-400">{t('videos')}</h3>

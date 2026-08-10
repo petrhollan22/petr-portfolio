@@ -15,6 +15,7 @@ export interface Sport {
   videos?: SportLink[];
   coaching?: Localized;
   image?: string;
+  blogSlug?: string;
 }
 
 export const sports: Sport[] = [
@@ -90,8 +91,8 @@ export const sports: Sport[] = [
     id: "football",
     name: { cs: "Fotbal", en: "Football" },
     description: {
-      cs: "Fotbal jsem několik sezón hrál v Hanspaulské lize za Zenit Buštěhrad.",
-      en: "I played several seasons of Prague's Hanspaulka league for Zenit Buštěhrad."
+      cs: "Fotbal jsem hrál několik sezón v Hanspaulské lize za Zenit Buštěhrad. Nešlo o góly ani statistiky — nejvíc mi z toho zůstali lidé, se kterými jsem hrál.",
+      en: "I played football for several seasons in Prague's Hanspaulka league with Zenit Buštěhrad. It was never really about goals or stats — what stayed with me most were the people I played with."
     },
     achievements: [
       { cs: "Několik sezón v Hanspaulské lize", en: "Several seasons in the Hanspaulka league" },
@@ -99,6 +100,7 @@ export const sports: Sport[] = [
     ],
     links: [
       { label: { cs: "Zenit Buštěhrad — PSMF", en: "Zenit Buštěhrad — PSMF" }, url: "https://www.psmf.cz/souteze/2021-hanspaulska-liga-podzim/8-a/tymy/zenit-bustehrad/" }
-    ]
+    ],
+    blogSlug: "fotbal-je-o-lidech"
   }
 ];
