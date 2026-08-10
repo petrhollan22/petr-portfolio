@@ -3,7 +3,7 @@ export default function PageGlow() {
     <div
       className="absolute top-[-20%] right-[-10%] w-[60%] h-[140%] pointer-events-none"
       style={{
-        background: 'radial-gradient(circle, rgba(230,57,70,0.08) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(230,57,70,0.18) 0%, transparent 70%)',
       }}
       aria-hidden="true"
     />
