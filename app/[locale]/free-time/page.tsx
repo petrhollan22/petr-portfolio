@@ -1,6 +1,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { sports } from '@/data/sports';
+import { countriesVisited } from '@/data/travel';
 import { pick } from '@/lib/localized';
 import { buildMetadata } from '@/lib/metadata';
 import PageGlow from '@/components/PageGlow';
@@ -122,6 +123,29 @@ export default function FreeTimePage() {
               )}
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="container py-12">
+        <div className="card">
+          <h2 className="text-3xl font-bold mb-3">{t('travelTitle')}</h2>
+          <p className="text-gray-400 mb-6 max-w-2xl">{t('travelLead')}</p>
+          <p className="text-sm font-semibold text-gray-300 mb-4">{t('travelVisited')}</p>
+          <div className="flex flex-wrap gap-4 mb-6">
+            {countriesVisited.map((c) => (
+              <div key={c.name.en} className="flex flex-col items-center w-16">
+                {c.flag ? (
+                  <span className="text-3xl leading-none">{c.flag}</span>
+                ) : (
+                  <span className="text-3xl leading-none">🏳️</span>
+                )}
+                <span className="mono-label text-gray-500 mt-1.5 text-center leading-tight">
+                  {pick(c.name, locale)}
+                </span>
+              </div>
+            ))}
+          </div>
+          <p className="text-gray-400">{t('travelOutro')}</p>
         </div>
       </section>
 

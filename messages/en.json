@@ -56,7 +56,11 @@
     "coachingCta": "Book a lesson",
     "ctaTitle": "Want to play?",
     "ctaLead": "Football, volleyball, bouldering or a chess lesson: we can arrange a time.",
-    "ctaButton": "Book a time"
+    "ctaButton": "Book a time",
+    "travelTitle": "Travel",
+    "travelLead": "For me travel isn't about collecting fridge magnets, but about collecting perspectives. Talking to people from the other side of the world pulls you out of stereotypes and out of your comfort zone, and shows you how many different ways there are to live a life. And when you stumble onto something great, it would be a shame to keep the tip to yourself.",
+    "travelVisited": "A few countries I've been to:",
+    "travelOutro": "And I definitely don't plan on stopping. It's another topic I'm always happy to talk about — not just for small talk."
   },
   "hustle": {
     "title": "Hustle",
