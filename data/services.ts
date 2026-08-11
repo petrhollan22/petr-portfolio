@@ -10,42 +10,42 @@ export interface Service {
 export const workServices: Service[] = [
   {
     id: "web-design",
-    name: { cs: "Web design", en: "Web design" },
+    name: { cs: "Web development", en: "Web development" },
     description: {
-      cs: "Návrh a stavba moderních webových aplikací v Reactu a Next.js, responzivní design, optimalizace pro uživatele.",
-      en: "Design and build of modern web applications in React and Next.js, responsive layouts, user-focused optimisation."
+      cs: "Vývoj moderních webů a aplikací v Reactu a Next.js. Důraz na rychlost, responzivitu a skvělý uživatelský zážitek.",
+      en: "Development of modern websites and applications in React and Next.js. Focus on speed, responsiveness and a great user experience."
     }
   },
   {
     id: "ai-solutions",
     name: { cs: "AI řešení", en: "AI solutions" },
     description: {
-      cs: "Nasazení AI a ML řešení, integrace jazykových modelů, chatboti, automatizace procesů.",
-      en: "Deploying AI and ML solutions, language model integrations, chatbots, process automation."
+      cs: "Praktické nasazení AI a ML do tvého byznysu. Integrace LLM, stavba inteligentních chatbotů a automatizace procesů.",
+      en: "Practical AI and ML deployment for your business. LLM integration, building intelligent chatbots and process automation."
     }
   },
   {
     id: "data-analytics",
     name: { cs: "Datová analytika", en: "Data analytics" },
     description: {
-      cs: "Analýza dat v Databricks a PySparku, vizualizace, business intelligence, optimalizace datových pipeline.",
-      en: "Data analysis in Databricks and PySpark, visualisation, business intelligence, pipeline optimisation."
+      cs: "Zpracování a analýza dat v Databricks a PySparku. Přehledné vizualizace, Business Intelligence a efektivní datové pipeline.",
+      en: "Data processing and analysis in Databricks and PySpark. Clear visualisations, business intelligence and efficient data pipelines."
     }
   },
   {
     id: "ai-audit",
-    name: { cs: "AI audit", en: "AI audit" },
+    name: { cs: "AI audit & Governance", en: "AI Audit & Governance" },
     description: {
-      cs: "Audit AI systémů, soulad s EU AI Act, posouzení modelů, nastavení governance.",
-      en: "Auditing AI systems, EU AI Act compliance, model assessment, governance frameworks."
+      cs: "Posouzení AI systémů a nastavení jejich governance. Zajištění souladu s legislativou (EU AI Act) i bezpečností.",
+      en: "Assessment of AI systems and setting up their governance. Ensuring compliance with legislation (EU AI Act) and security."
     }
   },
   {
     id: "social-media",
     name: { cs: "Sociální sítě", en: "Social media" },
     description: {
-      cs: "Strategie sociálních sítí, plánování obsahu, analýza dosahu a zapojení, správa komunity.",
-      en: "Social media strategy, content planning, reach and engagement analysis, community management."
+      cs: "Tvorba obsahu a růstová strategie pro vaše profily. Správa komunity, plánování a vyhodnocování dosahu.",
+      en: "Content creation and growth strategy for your profiles. Community management, planning and reach analysis."
     }
   },
   {
@@ -61,8 +61,8 @@ export const workServices: Service[] = [
     id: "chess-coaching",
     name: { cs: "Šachový trénink", en: "Chess coaching" },
     description: {
-      cs: "Individuální i skupinové lekce šachu pro všechny úrovně, online i offline.",
-      en: "Individual and group chess lessons for all levels, online or in person."
+      cs: "Individuální i skupinové lekce šachu pro začátečníky i pokročilé. Online formou nebo osobně.",
+      en: "Individual and group chess lessons for beginners and advanced players. Online or in person."
     }
   }
 ];
@@ -76,5 +76,5 @@ export const scheduleActivities: Localized[] = [
   { cs: "Hory a turistika", en: "Hiking" },
   { cs: "Cestování", en: "Travel" },
   { cs: "Společenské akce", en: "Social events" },
-  { cs: "Workshop", en: "Workshop" }
+  { cs: "Workshop", en: "Workshop" },
 ];
