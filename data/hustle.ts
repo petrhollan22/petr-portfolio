@@ -28,17 +28,17 @@ export const hustleProjects: HustleProject[] = [
     id: "sports-events",
     title: { cs: "Organizace sportovních akcí", en: "Sports event coordination" },
     description: {
-      cs: "Jako koordinátor sportovních akcí ve spolku 4FIS zajišťuji volejbal, badminton, bouldering a další aktivity pro studenty VŠE. Komunikuji s účastníky a zařizuji prostory.",
-      en: "As a sports event coordinator at the 4FIS student association I organise volleyball, badminton, bouldering and other activities for VŠE students, handling participant communication and venues."
+      cs: "Staral jsem se o to, aby studenti VŠE měli kde a s kým sportovat. Organizoval jsem turnaje a pravidelné akce ve volejbalu, badmintonu nebo třeba boulderingu.",
+      en: "I made sure VŠE students had somewhere to play sports and people to play with. I organised tournaments and regular sessions in volleyball, badminton and bouldering, among others."
     },
     type: "event",
     period: "2022–2026",
     cta: { cs: "Web 4FIS", en: "4FIS website" },
     ctaLink: "https://4fis.cz/",
     bullets: [
-      { cs: "Koordinace volejbalu, badmintonu, boulderingu a dalších aktivit", en: "Coordinating volleyball, badminton, bouldering and other activities" },
-      { cs: "Komunikace s účastníky a profesionální korespondence", en: "Participant communication and professional correspondence" },
-      { cs: "Zajištění vhodných prostor a vybavení", en: "Securing suitable venues and equipment" },
+      { cs: "Pořádání sportovních turnajů, tréninků a workshopů", en: "Running sports tournaments, training sessions and workshops" },
+      { cs: "Zajištění sportovišť, vybavení a související logistiky", en: "Securing venues, equipment and related logistics" },
+      { cs: "Hladká komunikace s účastníky i partnery akcí", en: "Smooth communication with participants and event partners" },
       { cs: "Vytváření příležitostí k setkávání a osobnímu rozvoji studentů", en: "Creating opportunities for students to connect and grow" }
     ]
   },
