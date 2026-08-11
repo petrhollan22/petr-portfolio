@@ -27,12 +27,14 @@ export const sports: Sport[] = [
       en: "I have played chess since the age of seven and competitively since nine. Along the way I played junior international events, the national top league, and captained teams. These days I stay involved mainly as a coach and organiser."
     },
     achievements: [
-      { cs: "FIDE Master", en: "FIDE Master" },
-      { cs: "Účast na Mistrovství Evropy chlapců do 18 let (2016)", en: "European Youth Championship U18 (2016)" },
-      { cs: "Česká šachová extraliga 2016/2017 za tým Tatran Litovel", en: "Czech Chess Extraliga 2016/2017 with Tatran Litovel" },
-      { cs: "Kapitán vítězného týmu PROMAT OAZA PRAHA na MČR družstev mládeže 2015/2016", en: "Captain of PROMAT OAZA PRAHA, winners of the Czech Youth Team Championship 2015/2016" },
+      { cs: "1. místo na MČR družstev starších žáků v rapid šachu (2014)", en: "1st place, Czech Junior Team Rapid Championship (2014)" },
       { cs: "3. místo na MČR mládeže v kategorii H16 (2015)", en: "3rd place, Czech Youth Championship U16 (2015)" },
-      { cs: "1. místo na MČR družstev starších žáků v rapid šachu", en: "1st place, Czech Junior Team Rapid Championship" },
+      { cs: "Získání titulu FIDE Master (2015)", en: "Awarded the FIDE Master title (2015)" },
+      { cs: "Kapitán vítězného týmu PROMAT OAZA PRAHA na MČR družstev mládeže 2015/2016", en: "Captain of PROMAT OAZA PRAHA, winners of the Czech Youth Team Championship 2015/2016" },
+      { cs: "Účast na Mistrovství Evropy chlapců do 18 let (2016)", en: "European Youth Championship U18 (2016)" },
+      { cs: "První sezóna v české šachové extralize 2016/2017 za tým Tatran Litovel", en: "First season in the Czech Chess Extraliga 2016/2017 with Tatran Litovel" },
+      { cs: "Vícemistr na Mistrovství ČR juniorů a dorostenců (2019)", en: "Runner-up, Czech Junior Championship (2019)" },
+      { cs: "Nejlepší streamer na Otevřeném MČR v online bleskovém šachu (2020)", en: "Best streamer, Czech Open Online Blitz Championship (2020)" },
       { cs: "Kapitán a hráč týmu VŠE v Collegiate Chess League (Fall 2025)", en: "Captain and player for VŠE in the Collegiate Chess League (Fall 2025)" }
     ],
     links: [
@@ -43,11 +45,14 @@ export const sports: Sport[] = [
       { label: { cs: "MČR družstev mládeže 2015/2016", en: "Czech Youth Team Championship 2015/2016" }, url: "https://www.chess.cz/soutez/1511/" },
       { label: { cs: "MČR mládeže H16 (2015)", en: "Czech Youth Championship U16 (2015)" }, url: "http://chess-results.com/tnr158508.aspx?lan=5&art=1" },
       { label: { cs: "MČR družstev v rapid šachu", en: "Czech Junior Team Rapid Championship" }, url: "http://chess-results.com/tnr136062.aspx?lan=5" },
-      { label: { cs: "Collegiate Chess League (Fall 2025)", en: "Collegiate Chess League (Fall 2025)" }, url: "https://www.chess.cz/collegiate-chess-league-fall-2025/" }
+      { label: { cs: "Collegiate Chess League (Fall 2025)", en: "Collegiate Chess League (Fall 2025)" }, url: "https://www.chess.cz/collegiate-chess-league-fall-2025/" },
+      { label: { cs: "Vícemistr ČR juniorů (2019)", en: "Czech Junior Championship runner-up (2019)" }, url: "https://s1.chess-results.com/tnr417722.aspx?lan=5&art=1&turdet=YES&SNode=S0" },
+      { label: { cs: "Nejlepší streamer, Online bleskové MČR (2020)", en: "Best streamer, Online Blitz Championship (2020)" }, url: "https://s1.chess-results.com/tnr526939.aspx?lan=5&art=9&fed=CZE&snr=48&SNode=S0" }
     ],
     videos: [
       { label: { cs: "Komentář 3. kola šachy.cz Extraligy (2021)", en: "Commentary, round 3 of the Czech Extraliga (2021)" }, url: "https://www.youtube.com/watch?v=zazc-USGY5k", thumbnail: "https://img.youtube.com/vi/zazc-USGY5k/hqdefault.jpg" },
-      { label: { cs: "Komentář 4. kola šachy.cz Extraligy (2021)", en: "Commentary, round 4 of the Czech Extraliga (2021)" }, url: "https://www.youtube.com/watch?v=zsJukjgxGfo", thumbnail: "https://img.youtube.com/vi/zsJukjgxGfo/hqdefault.jpg" }
+      { label: { cs: "Komentář 4. kola šachy.cz Extraligy (2021)", en: "Commentary, round 4 of the Czech Extraliga (2021)" }, url: "https://www.youtube.com/watch?v=zsJukjgxGfo", thumbnail: "https://img.youtube.com/vi/zsJukjgxGfo/hqdefault.jpg" },
+      { label: { cs: "Hodinka s mistrem ... s FM Petrem Hollanem", en: "An hour with a master ... with FM Petr Hollan" }, url: "https://www.youtube.com/watch?v=0dPcM4IDOJo", thumbnail: "https://img.youtube.com/vi/0dPcM4IDOJo/hqdefault.jpg" }
     ],
     image: "/images/sports/chess.jpg",
     coaching: {
