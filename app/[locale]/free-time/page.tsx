@@ -31,12 +31,19 @@ export default function FreeTimePage() {
               <p className="text-gray-400 mb-6">{pick(sport.description, locale)}</p>
 
               {sport.image && (
-                <img
-                  src={sport.image}
-                  alt={pick(sport.name, locale)}
-                  className="w-full rounded-lg mb-6"
-                  loading="lazy"
-                />
+                <div className="mb-6">
+                  <img
+                    src={sport.image}
+                    alt={pick(sport.name, locale)}
+                    className="w-full rounded-lg"
+                    loading="lazy"
+                  />
+                  {sport.imageCaption && (
+                    <p className="mono-label text-gray-500 mt-2 text-center">
+                      {pick(sport.imageCaption, locale)}
+                    </p>
+                  )}
+                </div>
               )}
 
               <div className="bg-primary rounded-lg p-5 mb-6">

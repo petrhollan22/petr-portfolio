@@ -15,6 +15,7 @@ export interface Sport {
   videos?: SportLink[];
   coaching?: Localized;
   image?: string;
+  imageCaption?: Localized;
   blogSlug?: string;
 }
 
@@ -55,6 +56,7 @@ export const sports: Sport[] = [
       { label: { cs: "Hodinka s mistrem ... s FM Petrem Hollanem", en: "An hour with a master ... with FM Petr Hollan" }, url: "https://www.youtube.com/watch?v=0dPcM4IDOJo", thumbnail: "https://img.youtube.com/vi/0dPcM4IDOJo/hqdefault.jpg" }
     ],
     image: "/images/sports/chess.jpg",
+    imageCaption: { cs: "Rilton Cup 2025/2026 · Stockholm", en: "Rilton Cup 2025/2026 · Stockholm" },
     coaching: {
       cs: "Šachy trénuji přes patnáct let. Nezáleží na věku, pohlaví ani na tom, jak daleko jste. Důležitý je zájem se něco dozvědět. Mám zkušenosti se skupinovými i individuálními tréninky a vedu je offline i online podle domluvy.",
       en: "I have been coaching chess for over fifteen years. Age, gender and current level do not matter. What matters is the willingness to learn. I work with both groups and individuals, in person or online."
