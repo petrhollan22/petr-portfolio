@@ -46,8 +46,8 @@ export const hustleProjects: HustleProject[] = [
     id: "university-ambassador",
     title: { cs: "Ambasador fakulty", en: "University ambassador" },
     description: {
-      cs: "Ambasador Fakulty informatiky a statistiky VŠE a člen studentského spolku Stačí se zeptat. Propaguji studijní programy na středních školách, na dnech otevřených dveří a na veletrzích Gaudeamus v Praze a Brně.",
-      en: "Ambassador for the Faculty of Informatics and Statistics at VŠE and member of the Stačí se zeptat student association. I promote study programmes at secondary schools, open days and the Gaudeamus education fairs in Prague and Brno."
+      cs: "Pomáhal jsem středoškolákům s výběrem vysoké školy a představoval jim život na Fakultě informatiky a statistiky. Propojoval jsem uchazeče se světem dat a IT.",
+      en: "I helped secondary school students choose their university and showed them what life at the Faculty of Informatics and Statistics is like, connecting applicants with the world of data and IT."
     },
     type: "volunteer",
     period: "2021–2026",
@@ -55,11 +55,9 @@ export const hustleProjects: HustleProject[] = [
     ctaLink: "https://cz.linkedin.com/school/fisvse/",
     image: "/images/hustle/plakat.jpg",
     bullets: [
-      { cs: "Člen studentské organizace Stačí se zeptat", en: "Member of the Stačí se zeptat student association" },
-      { cs: "Návštěvy středních škol s informacemi o studiu", en: "School visits presenting study information" },
-      { cs: "Digitální i fyzická propagace studijních materiálů", en: "Digital and physical promotion of study materials" },
-      { cs: "Přednášky na dnech otevřených dveří", en: "Talks at open days" },
-      { cs: "Prezentace fakulty a konzultace s uchazeči na veletrzích Gaudeamus v Praze a Brně", en: "Representing the faculty and advising applicants at the Gaudeamus fairs in Prague and Brno" }
+      { cs: "Reprezentace fakulty: přednášky na Dnech otevřených dveří a veletrzích Gaudeamus (Praha a Brno)", en: "Representing the faculty: talks at Open Days and the Gaudeamus fairs (Prague and Brno)" },
+      { cs: "Středoškolské výjezdy: osobní prezentace studijních programů na středních školách (přes 30 realizovaných přednášek)", en: "Secondary school visits: presenting study programmes at schools in person (30+ talks delivered)" },
+      { cs: "Konzultace a mentoring: osobní i online poradenství pro budoucí studenty a uchazeče", en: "Consultations and mentoring: in-person and online guidance for prospective students and applicants" }
     ]
   },
   {
