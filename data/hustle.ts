@@ -15,19 +15,18 @@ export interface HustleProject {
 export const hustleProjects: HustleProject[] = [
   {
     id: "chess-coaching",
-    title: { cs: "♟️ Šachový trénink & mentoring", en: "♟️ Chess coaching & mentoring" },
+    title: { cs: "Šachový trénink & mentoring", en: "Chess coaching & mentoring" },
     description: {
-      cs: "Za šachovnicí jsem pracoval s různorodými skupinami — od začátečníků a juniorů až po ambiciózní hráče, kteří se chtěli výrazně posunout. Vedl jsem individuální i skupinové tréninky, přednášky, besedy i simultánky. Trénoval jsem v češtině 🇨🇿, angličtině 🇬🇧 a několik svěřenců dokonce i ve španělštině 🇪🇸. Pomoci dokážu také s přípravou na turnaje, důležité partie nebo konkrétní soupeře.",
-      en: "Over the board I have worked with a wide range of groups — from beginners and juniors to ambitious players wanting to make a real leap forward. I have run individual and group lessons, talks, discussions and simultaneous exhibitions. I coach in Czech 🇨🇿, English 🇬🇧, and have taught a few students in Spanish 🇪🇸 as well. I can also help with tournament preparation, key games or specific opponents."
+      cs: "Za šachovnicí jsem pracoval s různorodými skupinami — od začátečníků a juniorů až po ambiciózní hráče, kteří se chtěli výrazně posunout. Vedl jsem individuální i skupinové tréninky, přednášky, besedy i simultánky. Trénoval jsem v češtině, angličtině a několik svěřenců dokonce i ve španělštině. Dokážu pomoct také s přípravou na turnaje nebo se změnou mindsetu.",
+      en: "Over the board I have worked with a wide range of groups — from beginners and juniors to ambitious players wanting to make a real leap forward. I have run individual and group lessons, talks, discussions and simultaneous exhibitions. I coach in Czech, English, and have taught a few students in Spanish as well. I can also help with tournament preparation or with a shift in mindset."
     },
     type: "coaching",
     cta: { cs: "Domluvit lekci", en: "Book a lesson" },
     ctaLink: "/schedule-time",
     bullets: [
-      { cs: "Zapálení jednotlivci s chutí na sobě opravdu pracovat", en: "Committed individuals who genuinely want to put in the work" },
-      { cs: "Ambice posunout svou hru výrazně dál", en: "Ambition to move their game significantly forward" },
-      { cs: "Individuální příprava na partie a soupeře", en: "Individual preparation for games and opponents" },
-      { cs: "Přístup, disciplína a chuť růst", en: "Attitude, discipline and a drive to grow" }
+      { cs: "Zapálení jedinci s ambicí se šachově významně zlepšit", en: "Committed individuals aiming for a real leap in their chess" },
+      { cs: "Individuální příprava a plnění zadaných (ne)šachových úkolů", en: "Individual preparation and completing assigned chess (and non-chess) tasks" },
+      { cs: "Přístup, disciplína a velké cíle", en: "Attitude, discipline and big goals" }
     ]
   },
   {
