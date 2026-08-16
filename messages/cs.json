@@ -191,7 +191,9 @@
     "inspirationTitle": "Inspirace",
     "inspirationDescription": "Máš tip na knihu, podcast, akci nebo místo? Pošli mi ho.",
     "blogTitle": "Blog",
-    "blogDescription": "Novinky a poznámky k tomu, na čem pracuji — data, AI, šachy a další."
+    "blogDescription": "Novinky a poznámky k tomu, na čem pracuji — data, AI, šachy a další.",
+    "privacyTitle": "Ochrana soukromí",
+    "privacyDescription": "Jak nakládám s údaji z formulářů na tomto webu."
   },
   "stickyBanner": {
     "text": "Stále přemýšlíte? Pár minut stačí na to zjistit, jestli má spolupráce smysl.",

@@ -191,7 +191,9 @@
     "inspirationTitle": "Inspiration",
     "inspirationDescription": "Got a tip for a book, podcast, event or place? Send it over.",
     "blogTitle": "Blog",
-    "blogDescription": "Notes and updates on what I am working on — data, AI, chess and more."
+    "blogDescription": "Notes and updates on what I am working on — data, AI, chess and more.",
+    "privacyTitle": "Privacy",
+    "privacyDescription": "How I handle data submitted through forms on this site."
   },
   "stickyBanner": {
     "text": "Still thinking it over? A few minutes is enough to find out if it's worth talking.",
