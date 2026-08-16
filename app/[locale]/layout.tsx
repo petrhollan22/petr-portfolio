@@ -29,6 +29,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StickyBanner from "@/components/StickyBanner";
 import ScrollToTop from "@/components/ScrollToTop";
+import GrainOverlay from "@/components/GrainOverlay";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
@@ -64,6 +65,7 @@ export default async function LocaleLayout({
           <Footer />
           <StickyBanner />
           <ScrollToTop />
+          <GrainOverlay />
         </NextIntlClientProvider>
       </body>
     </html>
