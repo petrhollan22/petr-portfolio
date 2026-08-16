@@ -75,7 +75,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container py-20 border-t border-gray-800">
+      <section className="container pt-16 pb-20 border-t border-gray-800">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl font-bold mb-6">{t('aboutTitle')}</h2>

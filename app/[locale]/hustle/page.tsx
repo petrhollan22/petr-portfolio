@@ -20,7 +20,7 @@ export default function HustlePage() {
 
   return (
     <div className="bg-gradient-to-b from-primary to-secondary">
-      <section className="relative overflow-hidden container py-20 text-center">
+      <section className="relative overflow-hidden container pt-16 pb-20 text-center">
         <PageGlow />
         <h1 className="text-5xl font-bold mb-4 gradient-text">{t('title')}</h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">{t('lead')}</p>
