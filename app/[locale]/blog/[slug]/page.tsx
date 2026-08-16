@@ -4,6 +4,7 @@ import { getPostBySlug } from '@/sanity/queries';
 import { urlForImage } from '@/sanity/image';
 import { siteUrl } from '@/lib/site';
 import { getCategoryColor } from '@/lib/categoryColors';
+import CopyLinkButton from '@/components/CopyLinkButton';
 import { BookOpen, Mic, Wrench, GraduationCap, Trophy, MapPin, User, Sparkles } from 'lucide-react';
 
 const categoryIconMap: Record<string, any> = {
@@ -108,16 +109,25 @@ export default async function BlogPostPage({
 
   if (!post) notFound();
 
+  const plainText = (post.body || []).filter((block: any) => block._type === "block").map((block: any) => (block.children || []).map((c: any) => c.text || "").join(" ")).join(" ");
+  const wordCount = plainText.split(/\s+/).filter(Boolean).length;
+  const readingMinutes = Math.max(1, Math.round(wordCount / 200));
+  const articleUrl = `${siteUrl}/blog/${slug}`;
+
   return (
     <div className="bg-gradient-to-b from-primary to-secondary">
       <article className="container pt-20 pb-16 max-w-3xl mx-auto">
-        <p className="mono-label text-gray-500 mb-3">
-          {new Date(post.publishedAt).toLocaleDateString('cs-CZ', {
-            day: 'numeric',
-            month: 'long',
-            year: 'numeric',
-          })}
-        </p>
+        <div className="flex items-center gap-4 mb-3 flex-wrap">
+          <p className="mono-label text-gray-500">
+            {new Date(post.publishedAt).toLocaleDateString('cs-CZ', {
+              day: 'numeric',
+              month: 'long',
+              year: 'numeric',
+            })}
+            {' · '}{readingMinutes} min čtení
+          </p>
+          <CopyLinkButton url={articleUrl} />
+        </div>
         <h1 className="text-4xl font-bold mb-8 gradient-text">{post.title}</h1>
 
         {post.coverImage && (
