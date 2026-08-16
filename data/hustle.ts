@@ -15,14 +15,20 @@ export interface HustleProject {
 export const hustleProjects: HustleProject[] = [
   {
     id: "chess-coaching",
-    title: { cs: "Šachový trénink", en: "Chess coaching" },
+    title: { cs: "♟️ Šachový trénink & mentoring", en: "♟️ Chess coaching & mentoring" },
     description: {
-      cs: "Trénuji začínající šachisty i juniory. Zaměřuji se na zahájení, taktiku a strategii. Lekce vedu individuálně i skupinově, online nebo osobně.",
-      en: "I coach beginners and junior players, focusing on openings, tactics and strategy. Lessons run one-on-one or in groups, online or in person."
+      cs: "Za šachovnicí jsem pracoval s různorodými skupinami — od začátečníků a juniorů až po ambiciózní hráče, kteří se chtěli výrazně posunout. Vedl jsem individuální i skupinové tréninky, přednášky, besedy i simultánky. Trénoval jsem v češtině 🇨🇿, angličtině 🇬🇧 a několik svěřenců dokonce i ve španělštině 🇪🇸. Pomoci dokážu také s přípravou na turnaje, důležité partie nebo konkrétní soupeře.",
+      en: "Over the board I have worked with a wide range of groups — from beginners and juniors to ambitious players wanting to make a real leap forward. I have run individual and group lessons, talks, discussions and simultaneous exhibitions. I coach in Czech 🇨🇿, English 🇬🇧, and have taught a few students in Spanish 🇪🇸 as well. I can also help with tournament preparation, key games or specific opponents."
     },
     type: "coaching",
     cta: { cs: "Domluvit lekci", en: "Book a lesson" },
-    ctaLink: "/schedule-time"
+    ctaLink: "/schedule-time",
+    bullets: [
+      { cs: "Zapálení jednotlivci s chutí na sobě opravdu pracovat", en: "Committed individuals who genuinely want to put in the work" },
+      { cs: "Ambice posunout svou hru výrazně dál", en: "Ambition to move their game significantly forward" },
+      { cs: "Individuální příprava na partie a soupeře", en: "Individual preparation for games and opponents" },
+      { cs: "Přístup, disciplína a chuť růst", en: "Attitude, discipline and a drive to grow" }
+    ]
   },
   {
     id: "sports-events",
