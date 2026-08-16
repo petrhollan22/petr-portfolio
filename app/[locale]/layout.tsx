@@ -28,6 +28,7 @@ const monoFont = IBM_Plex_Mono({
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StickyBanner from "@/components/StickyBanner";
+import ScrollToTop from "@/components/ScrollToTop";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
@@ -62,6 +63,7 @@ export default async function LocaleLayout({
           <main className="min-h-screen">{children}</main>
           <Footer />
           <StickyBanner />
+          <ScrollToTop />
         </NextIntlClientProvider>
       </body>
     </html>
