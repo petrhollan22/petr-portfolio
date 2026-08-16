@@ -45,8 +45,6 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400 text-sm">
               <li><a href="mailto:petr@hollan.eu" className="hover:text-red-400 transition-colors">petr@hollan.eu</a></li>
               <li><a href="https://cz.linkedin.com/in/petr-hollan" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">LinkedIn ↗</a></li>
-              <li><a href="https://www.chess.com/cs/member/pedroholly22" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">Chess.com ↗</a></li>
-              <li><a href="https://www.triatlony.com/bezecke-tabulky/zavodnici/286167-hollan-petr" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">{t('running')} ↗</a></li>
             </ul>
           </div>
         </div>
