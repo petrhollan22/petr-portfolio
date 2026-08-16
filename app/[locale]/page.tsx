@@ -29,6 +29,10 @@ export default function Home() {
           <rect width="400" height="200" fill="url(#chessPattern)" transform="rotate(-8 200 100)" />
         </svg>
         <div className="relative z-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/60 border border-gray-700 mb-6">
+            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+            <span className="mono-label text-gray-300">{t('availableBadge')}</span>
+          </div>
           <h1 className="text-6xl md:text-7xl font-black mb-6 gradient-text">Petr Hollan</h1>
         <p className="text-2xl text-gray-300 mb-4">{t('role')}</p>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-12">{t('intro')}</p>
