@@ -51,7 +51,7 @@ export default function FreeTimePage() {
                 <ul className="space-y-2">
                   {sport.achievements.map((a, i) => (
                     <li key={i} className="text-gray-300 flex items-start gap-3">
-                      <span className="text-red-400 shrink-0">✓</span>
+                      <span className="text-red-400 shrink-0 font-mono">—</span>
                       <span>{pick(a, locale)}</span>
                     </li>
                   ))}

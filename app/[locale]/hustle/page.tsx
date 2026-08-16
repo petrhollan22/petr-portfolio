@@ -52,7 +52,7 @@ export default function HustlePage() {
                 <ul className="space-y-2 mb-6">
                   {p.bullets.map((b, i) => (
                     <li key={i} className="text-gray-300 flex items-start gap-3">
-                      <span className="text-red-400 shrink-0">✓</span>
+                      <span className="text-red-400 shrink-0 font-mono">—</span>
                       <span>{pick(b, locale)}</span>
                     </li>
                   ))}
