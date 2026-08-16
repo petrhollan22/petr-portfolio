@@ -2,20 +2,20 @@
 
 import { useState, useRef, useEffect } from 'react';
 import {
-  BookOpen, Mic, Wrench, GraduationCap, Trophy, MapPin, User, Sparkles, ChevronDown,
-} from 'lucide-react';
+  BookOpen, Microphone, Wrench, GraduationCap, Trophy, MapPin, User, Sparkle, CaretDown,
+} from '@phosphor-icons/react';
 import type { InspirationCategory } from '@/data/inspiration';
 import { pick } from '@/lib/localized';
 
 const iconMap = {
   book: BookOpen,
-  podcast: Mic,
+  podcast: Microphone,
   wrench: Wrench,
   graduation: GraduationCap,
   trophy: Trophy,
   pin: MapPin,
   user: User,
-  sparkles: Sparkles,
+  sparkles: Sparkle,
 };
 
 interface Props {
@@ -51,12 +51,12 @@ export default function CategoryDropdown({ categories, value, onChange, locale, 
         className={`${className} flex items-center justify-between text-left`}
       >
         <span className="flex items-center gap-2">
-          {SelectedIcon && <SelectedIcon className="w-4 h-4 text-red-400 shrink-0" />}
+          {SelectedIcon && <SelectedIcon weight="regular" className="w-4 h-4 text-red-400 shrink-0" />}
           <span className={selected ? '' : 'text-gray-500'}>
             {selected ? pick(selected.name, locale) : placeholder}
           </span>
         </span>
-        <ChevronDown className="w-4 h-4 text-gray-400 shrink-0" />
+        <CaretDown weight="regular" className="w-4 h-4 text-gray-400 shrink-0" />
       </button>
 
       {open && (
@@ -70,7 +70,7 @@ export default function CategoryDropdown({ categories, value, onChange, locale, 
                 onClick={() => { onChange(c.id); setOpen(false); }}
                 className="w-full flex items-center gap-3 px-4 py-2 text-left text-sm hover:bg-primary transition-colors"
               >
-                <Icon className="w-4 h-4 text-red-400 shrink-0" />
+                <Icon weight="regular" className="w-4 h-4 text-red-400 shrink-0" />
                 <span>{pick(c.name, locale)}</span>
               </button>
             );

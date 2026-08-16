@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Link2, Check } from 'lucide-react';
+import { LinkSimple, Check } from '@phosphor-icons/react';
 
 export default function CopyLinkButton({ url }: { url: string }) {
   const [copied, setCopied] = useState(false);
@@ -23,12 +23,12 @@ export default function CopyLinkButton({ url }: { url: string }) {
     >
       {copied ? (
         <>
-          <Check className="w-4 h-4" />
+          <Check weight="regular" className="w-4 h-4" />
           <span>Zkopírováno</span>
         </>
       ) : (
         <>
-          <Link2 className="w-4 h-4" />
+          <LinkSimple weight="regular" className="w-4 h-4" />
           <span>Sdílet odkaz</span>
         </>
       )}

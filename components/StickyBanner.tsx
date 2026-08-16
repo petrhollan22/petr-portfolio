@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
-import { X } from 'lucide-react';
+import { X } from '@phosphor-icons/react';
 
 export default function StickyBanner() {
   const t = useTranslations('stickyBanner');
@@ -38,7 +38,7 @@ export default function StickyBanner() {
             aria-label={t('close')}
             className="text-gray-500 hover:text-white transition-colors p-1"
           >
-            <X className="w-5 h-5" />
+            <X weight="regular" className="w-5 h-5" />
           </button>
         </div>
       </div>
