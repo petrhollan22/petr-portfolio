@@ -197,5 +197,18 @@
     "text": "Stále přemýšlíte? Pár minut stačí na to zjistit, jestli má spolupráce smysl.",
     "cta": "Rezervovat čas",
     "close": "Zavřít"
+  },
+  "privacy": {
+    "title": "Ochrana soukromí",
+    "intro": "Tenhle web provozuji jako soukromá osoba, ne firma. Tady je stručně, jak nakládám s údaji, které mi přes web pošlete.",
+    "formsTitle": "Formuláře na webu",
+    "formsText": "Web má tři formuláře — rezervaci, kontaktní zprávu a tip na Inspiraci. Vyplněné údaje (jméno, e-mail, případně zpráva) se odešlou jako notifikace do mého Discordu a uloží se do databáze, ze které je čtu a na které pracuji.",
+    "storageTitle": "Kde se data ukládají",
+    "storageText": "Data z formulářů se ukládají u Sanity (CMS) a posílají přes Discord (notifikace) a Resend (potvrzovací e-maily u rezervací). Žádnému z těchto poskytovatelů data neprodávám ani nesdílím pro reklamní účely.",
+    "protectionTitle": "Ochrana proti zneužití",
+    "protectionText": "Formuláře jsou chráněné službou Cloudflare Turnstile proti automatizovanému spamu. Web běží přes zabezpečené HTTPS připojení.",
+    "rightsTitle": "Tvoje možnosti",
+    "rightsText": "Pokud chceš, abych smazal údaje, které jsi mi poslal/a přes některý z formulářů, napiš mi na petr@hollan.eu a vyřídím to.",
+    "disclaimer": "Nejsem právník a tahle stránka není právní poradenství — je to věcné shrnutí toho, jak web funguje."
   }
 }

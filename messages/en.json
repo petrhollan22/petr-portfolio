@@ -197,5 +197,18 @@
     "text": "Still thinking it over? A few minutes is enough to find out if it's worth talking.",
     "cta": "Book a time",
     "close": "Close"
+  },
+  "privacy": {
+    "title": "Privacy",
+    "intro": "I run this website as a private individual, not a company. Here's a plain summary of how I handle information you send me through it.",
+    "formsTitle": "Forms on this site",
+    "formsText": "The site has three forms — booking, contact, and an inspiration tip. Submitted details (name, email, and message where relevant) are sent as a notification to my Discord and stored in a database I use to read and work with them.",
+    "storageTitle": "Where data is stored",
+    "storageText": "Form data is stored with Sanity (CMS) and sent via Discord (notifications) and Resend (booking confirmation emails). I don't sell or share this data with any of these providers for advertising purposes.",
+    "protectionTitle": "Protection against misuse",
+    "protectionText": "Forms are protected by Cloudflare Turnstile against automated spam. The site runs over a secure HTTPS connection.",
+    "rightsTitle": "Your options",
+    "rightsText": "If you'd like me to delete information you submitted through any of the forms, email me at petr@hollan.eu and I'll take care of it.",
+    "disclaimer": "I'm not a lawyer and this page isn't legal advice — it's a plain-language summary of how the site works."
   }
 }

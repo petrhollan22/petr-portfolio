@@ -9,4 +9,5 @@ export const routes = [
   '/schedule-time',
   '/hustle',
   '/inspiration',
+  '/privacy',
 ] as const;
