@@ -54,7 +54,7 @@ export default function Footer() {
         <div className="border-t border-gray-700 pt-8 text-center text-gray-500 text-sm flex flex-col sm:flex-row items-center justify-center gap-2">
           <p>&copy; 2026 Petr Hollan</p>
           <span className="hidden sm:inline">·</span>
-          <a href="/privacy" className="hover:text-red-400 transition-colors">Ochrana soukromí</a>
+          <Link href="/privacy" className="hover:text-red-400 transition-colors">Ochrana soukromí</Link>
         </div>
       </div>
     </footer>
