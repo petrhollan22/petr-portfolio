@@ -62,8 +62,8 @@ export const projects: Project[] = [
     id: "bizsim-cup",
     category: "competition" as const,
     title: {
-      cs: "BIZ SIM CUP 2023 — 6. místo",
-      en: "BIZ SIM CUP 2023 — 6th place"
+      cs: "BIZ SIM CUP 2023, 6. místo",
+      en: "BIZ SIM CUP 2023, 6th place"
     },
     description: {
       cs: "Republikové finále manažersko-ekonomické soutěže v centrále Škoda Auto v Kosmonosech. V týmu VALENTYNKY jsme za VŠE obsadili 6. místo v mezinárodní konkurenci. Deset kol simulace ERPsim v prostředí SAP S/4HANA, kde jsme řídili obchodní a logistické operace, tvořili cenovou strategii a modelovali tržní trendy.",

@@ -17,8 +17,8 @@ export const hustleProjects: HustleProject[] = [
     id: "chess-coaching",
     title: { cs: "Šachový trénink & mentoring", en: "Chess coaching & mentoring" },
     description: {
-      cs: "Za šachovnicí jsem pracoval s různorodými skupinami — od začátečníků a juniorů až po ambiciózní hráče, kteří se chtěli výrazně posunout. Vedl jsem individuální i skupinové tréninky, přednášky, besedy i simultánky. Trénoval jsem v češtině, angličtině a několik svěřenců dokonce i ve španělštině. Dokážu pomoct také s přípravou na turnaje nebo se změnou mindsetu.",
-      en: "Over the board I have worked with a wide range of groups — from beginners and juniors to ambitious players wanting to make a real leap forward. I have run individual and group lessons, talks, discussions and simultaneous exhibitions. I coach in Czech, English, and have taught a few students in Spanish as well. I can also help with tournament preparation or with a shift in mindset."
+      cs: "Za šachovnicí jsem pracoval s různorodými skupinami, od začátečníků a juniorů až po ambiciózní hráče, kteří se chtěli výrazně posunout. Vedl jsem individuální i skupinové tréninky, přednášky, besedy i simultánky. Trénoval jsem v češtině, angličtině a několik svěřenců dokonce i ve španělštině. Dokážu pomoct také s přípravou na turnaje nebo se změnou mindsetu.",
+      en: "Over the board I have worked with a wide range of groups, from beginners and juniors to ambitious players wanting to make a real leap forward. I have run individual and group lessons, talks, discussions and simultaneous exhibitions. I coach in Czech, English, and have taught a few students in Spanish as well. I can also help with tournament preparation or with a shift in mindset."
     },
     type: "coaching",
     cta: { cs: "Domluvit lekci", en: "Book a lesson" },
@@ -67,7 +67,7 @@ export const hustleProjects: HustleProject[] = [
   },
   {
     id: "profinit-ai-hotspot",
-    title: { cs: "Profinit AI Talents — finalista", en: "Profinit AI Talents — finalist" },
+    title: { cs: "Profinit AI Talents, finalista", en: "Profinit AI Talents, finalist" },
     description: {
       cs: "Finalista soutěže Profinit AI Talents. S Kristiánem Mellešem a Samuelem Čandíkem jsme se s projektem Online Meetings Optimization probojovali mezi deset nejlepších a představili ho ve finále na konferenci AI HotSpot.",
       en: "Finalist in the Profinit AI Talents competition. Together with Kristián Melleš and Samuel Čandík, our Online Meetings Optimization project reached the top ten and was presented at the AI HotSpot conference finals."

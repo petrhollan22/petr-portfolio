@@ -33,7 +33,7 @@ export const jobs: Job[] = [
     }
   },
   {
-    title: { cs: "Stáž — implementace interního chatbota", en: "Internship — internal chatbot implementation" },
+    title: { cs: "Stáž: implementace interního chatbota", en: "Internship: internal chatbot implementation" },
     org: "Albert Česká republika",
     period: "06/2023 – 09/2023",
     description: {

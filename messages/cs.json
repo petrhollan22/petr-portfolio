@@ -176,7 +176,7 @@
   },
   "meta": {
     "siteName": "Petr Hollan",
-    "defaultTitle": "Petr Hollan — Data a AI",
+    "defaultTitle": "Petr Hollan: Data a AI",
     "defaultDescription": "Pracuji s daty a umělou inteligencí v retailu. Nabízím konzultace k datům, AI a sociálním sítím, šachový trénink i společný sport.",
     "workTitle": "Práce",
     "workDescription": "Projekty, závěrečné práce a služby v oblasti dat, AI a web developmentu.",
@@ -191,7 +191,7 @@
     "inspirationTitle": "Inspirace",
     "inspirationDescription": "Máš tip na knihu, podcast, akci nebo místo? Pošli mi ho.",
     "blogTitle": "Blog",
-    "blogDescription": "Novinky a poznámky k tomu, na čem pracuji — data, AI, šachy a další.",
+    "blogDescription": "Novinky a poznámky k tomu, na čem pracuji: data, AI, šachy a další.",
     "privacyTitle": "Ochrana soukromí",
     "privacyDescription": "Jak nakládám s údaji z formulářů na tomto webu."
   },
@@ -204,13 +204,13 @@
     "title": "Ochrana soukromí",
     "intro": "Tenhle web provozuji jako soukromá osoba, ne firma. Tady je stručně, jak nakládám s údaji, které mi přes web pošlete.",
     "formsTitle": "Formuláře na webu",
-    "formsText": "Web má tři formuláře — rezervaci, kontaktní zprávu a tip na Inspiraci. Vyplněné údaje (jméno, e-mail, případně zpráva) se odešlou jako notifikace do mého Discordu a uloží se do databáze, ze které je čtu a na které pracuji.",
+    "formsText": "Web má tři formuláře: rezervaci, kontaktní zprávu a tip na Inspiraci. Vyplněné údaje (jméno, e-mail, případně zpráva) se odešlou jako notifikace do mého Discordu a uloží se do databáze, ze které je čtu a na které pracuji.",
     "storageTitle": "Kde se data ukládají",
     "storageText": "Data z formulářů se ukládají u Sanity (CMS) a posílají přes Discord (notifikace) a Resend (potvrzovací e-maily u rezervací). Žádnému z těchto poskytovatelů data neprodávám ani nesdílím pro reklamní účely.",
     "protectionTitle": "Ochrana proti zneužití",
     "protectionText": "Formuláře jsou chráněné službou Cloudflare Turnstile proti automatizovanému spamu. Web běží přes zabezpečené HTTPS připojení.",
     "rightsTitle": "Tvoje možnosti",
     "rightsText": "Pokud chceš, abych smazal údaje, které jsi mi poslal/a přes některý z formulářů, napiš mi na petr@hollan.eu a vyřídím to.",
-    "disclaimer": "Nejsem právník a tahle stránka není právní poradenství — je to věcné shrnutí toho, jak web funguje."
+    "disclaimer": "Nejsem právník a tahle stránka není právní poradenství, je to věcné shrnutí toho, jak web funguje."
   }
 }

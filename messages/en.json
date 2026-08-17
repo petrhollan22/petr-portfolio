@@ -49,7 +49,7 @@
   },
   "freeTime": {
     "title": "Free time",
-    "lead": "Sport is my best way to recharge and clear my mind. I'm not about to crack the world's top 10 in any single one of these — but combine them all together, and maybe I'd have a shot. Below you'll find what I actually do, plus concrete tips and links.",
+    "lead": "Sport is my best way to recharge and clear my mind. I'm not about to crack the world's top 10 in any single one of these, but combine them all together, and maybe I'd have a shot. Below you'll find what I actually do, plus concrete tips and links.",
     "achievements": "Achievements",
     "coaching": "Coaching",
     "links": "Links",
@@ -61,7 +61,7 @@
     "travelTitle": "Travel",
     "travelLead": "For me travel isn't about collecting fridge magnets, but about collecting perspectives. Talking to people from the other side of the world pulls you out of stereotypes and out of your comfort zone, and shows you how many different ways there are to live a life. And when you stumble onto something great, it would be a shame to keep the tip to yourself.",
     "travelVisited": "A few countries I've been to:",
-    "travelOutro": "And I definitely don't plan on stopping. It's another topic I'm always happy to talk about — not just for small talk."
+    "travelOutro": "And I definitely don't plan on stopping. It's another topic I'm always happy to talk about, not just for small talk."
   },
   "hustle": {
     "title": "Hustle",
@@ -176,7 +176,7 @@
   },
   "meta": {
     "siteName": "Petr Hollan",
-    "defaultTitle": "Petr Hollan — Data and AI",
+    "defaultTitle": "Petr Hollan: Data and AI",
     "defaultDescription": "I work with data and artificial intelligence in retail. Consulting on data, AI and social media, chess coaching and sports activities.",
     "workTitle": "Work",
     "workDescription": "Projects, theses and services in data, AI and web development.",
@@ -191,7 +191,7 @@
     "inspirationTitle": "Inspiration",
     "inspirationDescription": "Got a tip for a book, podcast, event or place? Send it over.",
     "blogTitle": "Blog",
-    "blogDescription": "Notes and updates on what I am working on — data, AI, chess and more.",
+    "blogDescription": "Notes and updates on what I am working on: data, AI, chess and more.",
     "privacyTitle": "Privacy",
     "privacyDescription": "How I handle data submitted through forms on this site."
   },
@@ -204,13 +204,13 @@
     "title": "Privacy",
     "intro": "I run this website as a private individual, not a company. Here's a plain summary of how I handle information you send me through it.",
     "formsTitle": "Forms on this site",
-    "formsText": "The site has three forms — booking, contact, and an inspiration tip. Submitted details (name, email, and message where relevant) are sent as a notification to my Discord and stored in a database I use to read and work with them.",
+    "formsText": "The site has three forms: booking, contact, and an inspiration tip. Submitted details (name, email, and message where relevant) are sent as a notification to my Discord and stored in a database I use to read and work with them.",
     "storageTitle": "Where data is stored",
     "storageText": "Form data is stored with Sanity (CMS) and sent via Discord (notifications) and Resend (booking confirmation emails). I don't sell or share this data with any of these providers for advertising purposes.",
     "protectionTitle": "Protection against misuse",
     "protectionText": "Forms are protected by Cloudflare Turnstile against automated spam. The site runs over a secure HTTPS connection.",
     "rightsTitle": "Your options",
     "rightsText": "If you'd like me to delete information you submitted through any of the forms, email me at petr@hollan.eu and I'll take care of it.",
-    "disclaimer": "I'm not a lawyer and this page isn't legal advice — it's a plain-language summary of how the site works."
+    "disclaimer": "I'm not a lawyer and this page isn't legal advice, it's a plain-language summary of how the site works."
   }
 }

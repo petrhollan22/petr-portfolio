@@ -42,7 +42,7 @@ export const sports: Sport[] = [
       { label: { cs: "Profil na Chess.com", en: "Chess.com profile" }, url: "https://www.chess.com/cs/member/pedroholly22" },
       { label: { cs: "FIDE profil", en: "FIDE profile" }, url: "https://ratings.fide.com/profile/360945" },
       { label: { cs: "ME chlapců do 18 let (2016)", en: "European Youth U18 (2016)" }, url: "http://chess-results.com/tnr233629.aspx?lan=5&art=9&fed=CZE&flag=30&snr=40" },
-      { label: { cs: "Extraliga 2016/2017 — Tatran Litovel", en: "Extraliga 2016/2017 — Tatran Litovel" }, url: "https://www.chess.cz/soutez/2002/" },
+      { label: { cs: "Extraliga 2016/2017, Tatran Litovel", en: "Extraliga 2016/2017, Tatran Litovel" }, url: "https://www.chess.cz/soutez/2002/" },
       { label: { cs: "MČR družstev mládeže 2015/2016", en: "Czech Youth Team Championship 2015/2016" }, url: "https://www.chess.cz/soutez/1511/" },
       { label: { cs: "MČR mládeže H16 (2015)", en: "Czech Youth Championship U16 (2015)" }, url: "http://chess-results.com/tnr158508.aspx?lan=5&art=1" },
       { label: { cs: "MČR družstev v rapid šachu", en: "Czech Junior Team Rapid Championship" }, url: "http://chess-results.com/tnr136062.aspx?lan=5" },
@@ -90,23 +90,23 @@ export const sports: Sport[] = [
       { cs: "3. místo, KPMG Fit Cup 2022", en: "3rd place, KPMG Fit Cup 2022" }
     ],
     links: [
-      { label: { cs: "Výsledky — Třebešín 2023", en: "Results — Třebešín 2023" }, url: "https://volejbal.vse.cz/wp-content/uploads/post/8212/volejbalovy-turnaj-trebesin-2023-NV.pdf" },
-      { label: { cs: "Výsledky — KPMG Fit Cup 2022", en: "Results — KPMG Fit Cup 2022" }, url: "https://volejbal.vse.cz/wp-content/uploads/post/7527/KPMG_Fit_Cup_2022-vysledky_nizsi_vykonnost.pdf" }
+      { label: { cs: "Výsledky Třebešín 2023", en: "Results Třebešín 2023" }, url: "https://volejbal.vse.cz/wp-content/uploads/post/8212/volejbalovy-turnaj-trebesin-2023-NV.pdf" },
+      { label: { cs: "Výsledky KPMG Fit Cup 2022", en: "Results KPMG Fit Cup 2022" }, url: "https://volejbal.vse.cz/wp-content/uploads/post/7527/KPMG_Fit_Cup_2022-vysledky_nizsi_vykonnost.pdf" }
     ]
   },
   {
     id: "football",
     name: { cs: "Fotbal", en: "Football" },
     description: {
-      cs: "Fotbal jsem hrál několik sezón v Hanspaulské lize za Zenit Buštěhrad. Nešlo o góly ani statistiky — nejvíc mi z toho zůstali lidé, se kterými jsem hrál.",
-      en: "I played football for several seasons in Prague's Hanspaulka league with Zenit Buštěhrad. It was never really about goals or stats — what stayed with me most were the people I played with."
+      cs: "Fotbal jsem hrál několik sezón v Hanspaulské lize za Zenit Buštěhrad. Nešlo o góly ani statistiky, nejvíc mi z toho zůstali lidé, se kterými jsem hrál.",
+      en: "I played football for several seasons in Prague's Hanspaulka league with Zenit Buštěhrad. It was never really about goals or stats. What stayed with me most were the people I played with."
     },
     achievements: [
       { cs: "Několik sezón v Hanspaulské lize", en: "Several seasons in the Hanspaulka league" },
       { cs: "Tým Zenit Buštěhrad", en: "Zenit Buštěhrad" }
     ],
     links: [
-      { label: { cs: "Zenit Buštěhrad — PSMF", en: "Zenit Buštěhrad — PSMF" }, url: "https://www.psmf.cz/souteze/2021-hanspaulska-liga-podzim/8-a/tymy/zenit-bustehrad/" }
+      { label: { cs: "Zenit Buštěhrad, PSMF", en: "Zenit Buštěhrad, PSMF" }, url: "https://www.psmf.cz/souteze/2021-hanspaulska-liga-podzim/8-a/tymy/zenit-bustehrad/" }
     ],
     blogSlug: "fotbal-je-o-lidech-ne-o-skore"
   }
