@@ -81,7 +81,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-6">{t('aboutTitle')}</h2>
             <p className="text-gray-400 mb-4">{t('aboutP1')}</p>
             <p className="text-gray-400 mb-6">{t('aboutP2')}</p>
-            <Link href="/work" className="btn-primary">{t('aboutCta')} →</Link>
+            <Link href="/about" className="btn-primary">{t('aboutCta')} →</Link>
           </div>
           <div className="flex justify-center md:justify-end">
             <img

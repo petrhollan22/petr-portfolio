@@ -10,4 +10,5 @@ export const routes = [
   '/hustle',
   '/inspiration',
   '/privacy',
+  '/about',
 ] as const;

@@ -193,7 +193,9 @@
     "blogTitle": "Blog",
     "blogDescription": "Notes and updates on what I am working on: data, AI, chess and more.",
     "privacyTitle": "Privacy",
-    "privacyDescription": "How I handle data submitted through forms on this site."
+    "privacyDescription": "How I handle data submitted through forms on this site.",
+    "aboutTitle": "About",
+    "aboutDescription": "Chess, school, work and volunteering on one timeline."
   },
   "stickyBanner": {
     "text": "Still thinking it over? A few minutes is enough to find out if it's worth talking.",
@@ -212,5 +214,14 @@
     "rightsTitle": "Your options",
     "rightsText": "If you'd like me to delete information you submitted through any of the forms, email me at petr@hollan.eu and I'll take care of it.",
     "disclaimer": "I'm not a lawyer and this page isn't legal advice, it's a plain-language summary of how the site works."
+  },
+  "about": {
+    "title": "About",
+    "lead": "Data and AI are my profession. Here's the rest of the story, and how it all fits together over time.",
+    "timelineEyebrow": "My journey",
+    "timelineTitle": "Timeline",
+    "ctaTitle": "Want to know more?",
+    "ctaLead": "Feel free to reach out, I'm happy to talk about any part of this story.",
+    "ctaButton": "Book a time"
   }
 }

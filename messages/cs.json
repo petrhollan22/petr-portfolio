@@ -193,7 +193,9 @@
     "blogTitle": "Blog",
     "blogDescription": "Novinky a poznámky k tomu, na čem pracuji: data, AI, šachy a další.",
     "privacyTitle": "Ochrana soukromí",
-    "privacyDescription": "Jak nakládám s údaji z formulářů na tomto webu."
+    "privacyDescription": "Jak nakládám s údaji z formulářů na tomto webu.",
+    "aboutTitle": "O mně",
+    "aboutDescription": "Šachy, škola, práce a dobrovolnictví na jedné časové ose."
   },
   "stickyBanner": {
     "text": "Stále přemýšlíte? Pár minut stačí na to zjistit, jestli má spolupráce smysl.",
@@ -212,5 +214,14 @@
     "rightsTitle": "Tvoje možnosti",
     "rightsText": "Pokud chceš, abych smazal údaje, které jsi mi poslal/a přes některý z formulářů, napiš mi na petr@hollan.eu a vyřídím to.",
     "disclaimer": "Nejsem právník a tahle stránka není právní poradenství, je to věcné shrnutí toho, jak web funguje."
+  },
+  "about": {
+    "title": "O mně",
+    "lead": "Data a AI jsou moje profese. Tady je zbytek příběhu, jak k sobě všechno pasuje v čase.",
+    "timelineEyebrow": "Moje cesta",
+    "timelineTitle": "Časová osa",
+    "ctaTitle": "Chceš vědět víc?",
+    "ctaLead": "Klidně se ozvi, rád si popovídám o čemkoli z tohohle příběhu.",
+    "ctaButton": "Rezervuj si čas"
   }
 }
