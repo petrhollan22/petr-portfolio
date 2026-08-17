@@ -1,0 +1,3 @@
+Contact: mailto:petr@hollan.eu
+Preferred-Languages: cs, en
+Canonical: https://petr.hollan.cz/.well-known/security.txt
