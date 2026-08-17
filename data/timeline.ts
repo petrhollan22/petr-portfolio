@@ -12,31 +12,31 @@ export const timeline: TimelineEntry[] = [
     year: "2014",
     icon: "trophy",
     title: { cs: "První velký titul", en: "First big title" },
-    text: { cs: "1. místo na MČR družstev v rapid šachu.", en: "1st place, Czech Junior Team Rapid Championship." }
+    text: { cs: "Obsadil jsem 1. místo na MČR družstev v rapid šachu.", en: "I took 1st place at the Czech Junior Team Rapid Championship." }
   },
   {
     year: "2015",
     icon: "crown",
     title: { cs: "FIDE Master", en: "FIDE Master" },
-    text: { cs: "Získal jsem titul FIDE Master.", en: "Awarded the FIDE Master title." }
+    text: { cs: "Získal jsem titul FIDE Master.", en: "I was awarded the FIDE Master title." }
   },
   {
     year: "2016",
     icon: "flag",
     title: { cs: "Reprezentace na Mistrovství Evropy", en: "Representing the country at the European Championship" },
-    text: { cs: "Účast na Mistrovství Evropy U18 v šachu.", en: "Competed at the European Youth U18 Chess Championship." }
+    text: { cs: "Reprezentoval jsem Českou republiku na Mistrovství Evropy U18 v šachu.", en: "I represented the Czech Republic at the European Youth U18 Chess Championship." }
   },
   {
     year: "2017–2018",
     icon: "airplane",
     title: { cs: "Rok v USA", en: "A year in the US" },
-    text: { cs: "Výměnný rok v Pensylvánii, senior year na Elizabethtown Area High School. Vedle školy volejbal pětkrát týdně.", en: "Exchange year in Pennsylvania, senior year at Elizabethtown Area High School. Played volleyball five times a week alongside school." }
+    text: { cs: "Strávil jsem rok v Pensylvánii a dokončil senior year na Elizabethtown Area High School. Vedle školy jsem pětkrát týdně trénoval volejbal.", en: "I spent a year in Pennsylvania and finished my senior year at Elizabethtown Area High School. Alongside school I trained volleyball five times a week." }
   },
   {
     year: "2019",
     icon: "medal",
     title: { cs: "Vícemistr České republiky", en: "Czech Republic runner-up" },
-    text: { cs: "2. místo na MČR juniorů v šachu.", en: "2nd place, Czech Junior Chess Championship." }
+    text: { cs: "Obsadil jsem 2. místo na MČR juniorů v šachu.", en: "I took 2nd place at the Czech Junior Chess Championship." }
   },
   {
     year: "2020",
@@ -48,36 +48,36 @@ export const timeline: TimelineEntry[] = [
     year: "2021",
     icon: "briefcase",
     title: { cs: "První větší krok do businessu", en: "First real step into business" },
-    text: { cs: "ALM Specialist v UniCredit a zároveň ambasador fakulty.", en: "ALM Specialist at UniCredit, and became a faculty ambassador at the same time." }
+    text: { cs: "Nastoupil jsem jako ALM Specialist do UniCredit a zároveň jsem začal působit jako ambasador fakulty.", en: "I joined UniCredit as an ALM Specialist and became a faculty ambassador at the same time." }
   },
   {
     year: "2022",
     icon: "users",
     title: { cs: "Od účastníka k organizátorovi", en: "From participant to organiser" },
-    text: { cs: "Koordinátor sportovních akcí ve 4FIS.", en: "Sports event coordinator at 4FIS." }
+    text: { cs: "Stal jsem se součástí 4FISu jako koordinátor sportovních akcí.", en: "I joined 4FIS as a sports event coordinator." }
   },
   {
     year: "2023",
     icon: "graduation",
     title: { cs: "Data, AI a dokončený bakalář", en: "Data, AI and a finished bachelor's degree" },
-    text: { cs: "Bakalářský titul na VŠE, Data Analyst v Samsungu a finále Profinit AI Talents.", en: "Bachelor's degree from VŠE, Data Analyst at Samsung, and finalist at Profinit AI Talents." }
+    text: { cs: "Dokončil jsem bakalářské studium na VŠE, pracoval jako Data Analyst v Samsungu a dostal se do finále Profinit AI Talents.", en: "I finished my bachelor's degree at VŠE, worked as a Data Analyst at Samsung, and reached the finals of Profinit AI Talents." }
   },
   {
     year: "2024",
     icon: "pin",
     title: { cs: "Erasmus+ v Lichtenštejnsku", en: "Erasmus+ in Liechtenstein" },
-    text: { cs: "Semestr na Universität Liechtenstein, který propojil mezinárodní prostředí, technologie a business.", en: "A semester at the University of Liechtenstein, bridging international environment, technology and business." }
+    text: { cs: "Strávil jsem semestr na Universität Liechtenstein, kde se propojilo mezinárodní prostředí, technologie a business.", en: "I spent a semester at the University of Liechtenstein, where international environment, technology and business came together." }
   },
   {
     year: "2025",
     icon: "chart",
     title: { cs: "Business Intelligence & šachový leadership", en: "Business Intelligence & chess leadership" },
-    text: { cs: "BI Analyst v Albertu a kapitán týmu VŠE v Collegiate Chess League.", en: "BI Analyst at Albert and captain of the VŠE team in the Collegiate Chess League." }
+    text: { cs: "Nastoupil jsem jako BI Analyst v Albertu a zároveň vedl tým VŠE jako kapitán v Collegiate Chess League.", en: "I joined Albert as a BI Analyst and captained the VŠE team in the Collegiate Chess League." }
   },
   {
     year: "2026",
     icon: "certificate",
     title: { cs: "Ing.", en: "Ing." },
-    text: { cs: "Další velký milník splněn. Získal jsem titul inženýr.", en: "Another big milestone reached. Earned my engineering degree (Ing.)." }
+    text: { cs: "Další velký milník splněn. Dokončil jsem inženýrské studium.", en: "Another big milestone reached. I completed my engineering degree (Ing.)." }
   }
 ];
