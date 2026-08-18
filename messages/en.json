@@ -3,7 +3,7 @@
     "work": "Work",
     "freeTime": "Free time",
     "scheduleTime": "Schedule",
-    "hustle": "Hustle",
+    "hustle": "Side quests",
     "cv": "CV",
     "inspiration": "Inspiration"
   },
@@ -15,7 +15,7 @@
     "cardWork": "Projects and services",
     "cardFreeTime": "Sports and activities",
     "cardSchedule": "Book a time",
-    "cardHustle": "Projects and events",
+    "cardHustle": "Side quests",
     "aboutTitle": "About me",
     "aboutP1": "I work in data and artificial intelligence. I studied at the Prague University of Economics and Business, where my master's thesis examined how Czech companies adopt AI in practice.",
     "aboutP2": "Outside work I'm a FIDE Master in chess, I run marathons, and for over four years I organised sports events for students at VŠE with the 4FIS association while serving as a student ambassador. I enjoy bringing people together, whether it's a tournament or a workshop. I like to travel and see how things are done elsewhere.",
@@ -64,7 +64,7 @@
     "travelOutro": "And I definitely don't plan on stopping. It's another topic I'm always happy to talk about, not just for small talk."
   },
   "hustle": {
-    "title": "Hustle",
+    "title": "Side quests",
     "lead": "Alongside work and sport I coach, organise events and volunteer.",
     "typeCoaching": "Coaching",
     "typeEvent": "Events",
@@ -187,7 +187,7 @@
     "freeTimeDescription": "Chess, running, volleyball and football. Achievements and links.",
     "scheduleTitle": "Schedule",
     "scheduleDescription": "Book a consultation, a chess lesson or a game together.",
-    "hustleTitle": "Hustle",
+    "hustleTitle": "Side quests",
     "hustleDescription": "Coaching, event organisation and volunteering.",
     "inspirationTitle": "Inspiration",
     "inspirationDescription": "Got a tip for a book, podcast, event or place? Send it over.",

@@ -3,7 +3,7 @@
     "work": "Práce",
     "freeTime": "Volný čas",
     "scheduleTime": "Rezervace",
-    "hustle": "Projekty",
+    "hustle": "Side quests",
     "cv": "Životopis",
     "inspiration": "Inspirace"
   },
@@ -15,7 +15,7 @@
     "cardWork": "Projekty a služby",
     "cardFreeTime": "Sport a aktivity",
     "cardSchedule": "Rezervace času",
-    "cardHustle": "Projekty a akce",
+    "cardHustle": "Side quests",
     "aboutTitle": "O mně",
     "aboutP1": "Věnuji se datům a umělé inteligenci. Vystudoval jsem VŠE, kde jsem se v diplomové práci zabýval tím, jak české firmy zavádějí AI do praxe.",
     "aboutP2": "Mimo práci jsem FIDE Master v šachu, běhám maratony a přes čtyři roky jsem na VŠE organizoval sportovní akce pro studenty v rámci spolku 4FIS a působil jako studentský ambasador. Baví mě dávat lidi dohromady, ať jde o turnaje nebo workshopy. Rád cestuji a poznávám, jak se věci dělají jinde.",
@@ -64,7 +64,7 @@
     "travelOutro": "A rozhodně se nehodlám zastavit. O cestování a zážitcích si vždycky rád popovídám."
   },
   "hustle": {
-    "title": "Projekty",
+    "title": "Side quests",
     "lead": "Vedle práce a sportu se věnuji trénování, organizaci akcí a dobrovolnictví.",
     "typeCoaching": "Koučování",
     "typeEvent": "Akce",
@@ -187,8 +187,8 @@
     "freeTimeDescription": "Šachy, běh, volejbal a fotbal. Úspěchy a odkazy.",
     "scheduleTitle": "Rezervace",
     "scheduleDescription": "Domluv si konzultaci, šachový trénink nebo společný sport.",
-    "hustleTitle": "Projekty",
-    "hustleDescription": "Trénování, organizace akcí a dobrovolnictví.",
+    "hustleTitle": "Side quests",
+    "hustleDescription": "Koučování, organizace akcí a dobrovolnictví.",
     "inspirationTitle": "Inspirace",
     "inspirationDescription": "Máš tip na knihu, podcast, akci nebo místo? Pošli mi ho.",
     "blogTitle": "Blog",
