@@ -4,6 +4,7 @@ import { buildMetadata } from '@/lib/metadata';
 import { timeline } from '@/data/timeline';
 import { pick } from '@/lib/localized';
 import TimelineIcon from '@/components/TimelineIcon';
+import Reveal from '@/components/Reveal';
 import PageGlow from '@/components/PageGlow';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -32,14 +33,14 @@ export default function AboutPage() {
             <div className="absolute left-[15px] top-2 bottom-2 w-px bg-gray-700" aria-hidden="true" />
             <div className="space-y-8">
               {timeline.map((entry, i) => (
-                <div key={i} className="relative">
+                <Reveal key={i} delay={Math.min(i * 60, 400)} className="relative">
                   <div className="absolute -left-10 top-0 w-8 h-8 rounded-full bg-primary border border-gray-700 flex items-center justify-center">
                     <TimelineIcon icon={entry.icon} />
                   </div>
                   <span className="mono-label text-gray-500 block mb-1">{entry.year}</span>
                   <h3 className="text-lg font-bold mb-1">{pick(entry.title, locale)}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">{pick(entry.text, locale)}</p>
-                </div>
+                </Reveal>
               ))}
             </div>
           </div>
