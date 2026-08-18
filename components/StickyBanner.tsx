@@ -30,7 +30,7 @@ export default function StickyBanner() {
       <div className="container flex items-center justify-between gap-4 py-3 flex-wrap">
         <p className="text-sm text-gray-300 flex-1 min-w-[200px]">{t('text')}</p>
         <div className="flex items-center gap-3 shrink-0">
-          <Link href="/schedule-time" className="btn-primary text-sm py-2">
+          <Link href="/schedule-time" className="text-sm text-red-400 hover:text-red-300 transition-colors font-medium whitespace-nowrap">
             {t('cta')} →
           </Link>
           <button

@@ -55,9 +55,9 @@
     "links": "Odkazy",
     "videos": "Videa",
     "coachingCta": "Domluvit trénink",
-    "ctaTitle": "Chceš si zahrát?",
-    "ctaLead": "Ať už jde o fotbal, volejbal, bouldering nebo šachovou lekci, dá se se mnou domluvit čas.",
-    "ctaButton": "Rezervuj si čas",
+    "ctaTitle": "Tvůj tah.",
+    "ctaLead": "Šachy, běh, bouldering, nebo jen kafe a povídání o cestování. Ozvi se.",
+    "ctaButton": "Ozvat se",
     "travelTitle": "Cestování",
     "travelLead": "Cestování pro mě není o sbírání magnetek na ledničku, ale o sbírání perspektiv. Bavit se s lidmi z druhého konce světa vás okamžitě vytáhne ze stereotypu i komfortní zóny a ukáže vám, kolik různých způsobů existuje, jak žít život. A když pak objevíte něco skvělého, byla by škoda si ty tipy nechat jen pro sebe.",
     "travelVisited": "A když už to někoho zajímá, tady je ta sbírka:",
@@ -71,7 +71,7 @@
     "typeVolunteer": "Dobrovolnictví",
     "ctaTitle": "Chceš se zapojit?",
     "ctaLead": "Šachová lekce, společný sport nebo pozvánka na akci. Napiš mi.",
-    "ctaButton": "Rezervuj si čas"
+    "ctaButton": "Napsat"
   },
   "schedule": {
     "title": "Rezervuj si čas",
@@ -223,6 +223,6 @@
     "timelineTitle": "Časová osa",
     "ctaTitle": "Chceš vědět víc?",
     "ctaLead": "Klidně se ozvi, rád si popovídám o čemkoli z tohohle příběhu.",
-    "ctaButton": "Rezervuj si čas"
+    "ctaButton": "Ozvat se"
   }
 }

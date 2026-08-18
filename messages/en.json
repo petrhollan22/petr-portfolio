@@ -55,9 +55,9 @@
     "links": "Links",
     "videos": "Videos",
     "coachingCta": "Book a lesson",
-    "ctaTitle": "Want to play?",
-    "ctaLead": "Football, volleyball, bouldering or a chess lesson: we can arrange a time.",
-    "ctaButton": "Book a time",
+    "ctaTitle": "Your move.",
+    "ctaLead": "Chess, running, bouldering, or just coffee and travel talk. Get in touch.",
+    "ctaButton": "Get in touch",
     "travelTitle": "Travel",
     "travelLead": "For me travel isn't about collecting fridge magnets, but about collecting perspectives. Talking to people from the other side of the world pulls you out of stereotypes and out of your comfort zone, and shows you how many different ways there are to live a life. And when you stumble onto something great, it would be a shame to keep the tip to yourself.",
     "travelVisited": "And in case anyone's curious, here's the collection:",
@@ -71,7 +71,7 @@
     "typeVolunteer": "Volunteering",
     "ctaTitle": "Want to get involved?",
     "ctaLead": "A chess lesson, a game together or an event invitation. Drop me a line.",
-    "ctaButton": "Book a time"
+    "ctaButton": "Message me"
   },
   "schedule": {
     "title": "Book a time",
@@ -223,6 +223,6 @@
     "timelineTitle": "Timeline",
     "ctaTitle": "Want to know more?",
     "ctaLead": "Feel free to reach out, I'm happy to talk about any part of this story.",
-    "ctaButton": "Book a time"
+    "ctaButton": "Get in touch"
   }
 }
