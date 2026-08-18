@@ -224,5 +224,13 @@
     "ctaTitle": "Chceš vědět víc?",
     "ctaLead": "Klidně se ozvi, rád si popovídám o čemkoli z tohohle příběhu.",
     "ctaButton": "Ozvat se"
+  },
+  "notFound": {
+    "title": "404: Model nenašel shodu",
+    "lead": "Tady nic není. Hledaný endpoint má stoprocentní míru halucinace a na šachovnici právě chybí figurky.",
+    "option1": "1. Zkontroluj překlep v URL.",
+    "option2": "2. Předstírej, že šlo o promyšlenou oběť.",
+    "option3": "3. Klikni níž a vrať se do bezpečí.",
+    "cta": "Zpět na pevnou půdu"
   }
 }

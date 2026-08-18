@@ -224,5 +224,13 @@
     "ctaTitle": "Want to know more?",
     "ctaLead": "Feel free to reach out, I'm happy to talk about any part of this story.",
     "ctaButton": "Get in touch"
+  },
+  "notFound": {
+    "title": "404: No match found",
+    "lead": "There's nothing here. The endpoint you're looking for has a 100% hallucination rate, and the chessboard is missing its pieces.",
+    "option1": "1. Check the URL for a typo.",
+    "option2": "2. Pretend it was a calculated sacrifice.",
+    "option3": "3. Click below and return to safety.",
+    "cta": "Back to solid ground"
   }
 }
