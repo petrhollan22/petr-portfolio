@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { buildMetadata } from '@/lib/metadata';
+import PhotoStrip from '@/components/PhotoStrip';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -75,6 +76,10 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="container pb-16">
+        <PhotoStrip />
+      </section>
+
       <section className="container pt-16 pb-20 border-t border-gray-800">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
@@ -83,7 +88,7 @@ export default function Home() {
             <p className="text-gray-400 mb-6">{t('aboutP2')}</p>
             <Link href="/about" className="btn-primary">{t('aboutCta')}<span className="btn-arrow">→</span></Link>
           </div>
-          <div className="flex justify-center md:justify-end">
+          <div className="flex flex-col items-center md:items-end">
             <img
               src="/portret.jpg"
               alt="Petr Hollan"
@@ -91,6 +96,7 @@ export default function Home() {
               height={900}
               className="w-full max-w-sm rounded-2xl shadow-xl"
             />
+            <p className="mono-label text-gray-500 mt-3">FIDE Master · Praha</p>
           </div>
         </div>
       </section>
