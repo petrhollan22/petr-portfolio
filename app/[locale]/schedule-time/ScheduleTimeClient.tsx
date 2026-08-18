@@ -16,6 +16,7 @@ function BookingForm() {
   const locale = useLocale();
   const params = useSearchParams();
   const preselected = params.get('service');
+  const preType = params.get('type');
 
   const [b, setB] = useState({
     name: '', email: '', type: 'work' as 'work' | 'activity',
@@ -26,6 +27,10 @@ function BookingForm() {
   const [resetKey, setResetKey] = useState(0);
 
   useEffect(() => {
+    if (preType === 'activity' && !preselected) {
+      setB((p) => ({ ...p, type: 'activity' }));
+      return;
+    }
     if (!preselected) return;
     const byId = workServices.find((s) => s.id === preselected);
     if (byId) {
@@ -41,7 +46,7 @@ function BookingForm() {
     if (work) {
       setB((p) => ({ ...p, type: 'work', service: pick(work.name, locale) }));
     }
-  }, [preselected, locale]);
+  }, [preselected, preType, locale]);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
