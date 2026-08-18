@@ -38,7 +38,7 @@ export default function Home() {
               <p className="text-2xl text-gray-300 mb-4">{t('role')}</p>
               <p className="text-xl text-gray-400 max-w-xl mb-10">{t('intro')}</p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/work" className="btn-primary">{t('ctaWork')} →</Link>
+                <Link href="/work" className="btn-primary">{t('ctaWork')}<span className="btn-arrow">→</span></Link>
                 <Link href="/schedule-time" className="btn-secondary">{t('ctaSchedule')}</Link>
               </div>
             </div>
@@ -81,7 +81,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-6">{t('aboutTitle')}</h2>
             <p className="text-gray-400 mb-4">{t('aboutP1')}</p>
             <p className="text-gray-400 mb-6">{t('aboutP2')}</p>
-            <Link href="/about" className="btn-primary">{t('aboutCta')} →</Link>
+            <Link href="/about" className="btn-primary">{t('aboutCta')}<span className="btn-arrow">→</span></Link>
           </div>
           <div className="flex justify-center md:justify-end">
             <img

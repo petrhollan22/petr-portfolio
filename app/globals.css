@@ -56,11 +56,29 @@ h1, h2, h3, h4 {
 }
 
 .btn-primary {
-  @apply px-6 py-3 bg-gradient-to-r from-red-600 to-red-800 rounded-lg font-semibold hover:shadow-lg transition-all active:scale-95;
+  @apply inline-flex items-center gap-3 pl-6 pr-2 py-2 bg-gradient-to-r from-red-600 to-red-800 rounded-full font-semibold hover:shadow-lg transition-all active:scale-95;
 }
 
 .btn-secondary {
-  @apply px-6 py-3 bg-gray-700 rounded-lg font-semibold hover:bg-gray-600 transition-all;
+  @apply inline-flex items-center gap-3 pl-6 pr-2 py-2 bg-transparent border border-gray-700 rounded-full font-semibold hover:border-gray-500 transition-all;
+}
+
+.btn-primary .btn-arrow,
+.btn-secondary .btn-arrow {
+  @apply inline-flex items-center justify-center w-8 h-8 rounded-full text-sm shrink-0 transition-transform;
+}
+
+.btn-primary .btn-arrow {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.btn-secondary .btn-arrow {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.btn-primary:hover .btn-arrow,
+.btn-secondary:hover .btn-arrow {
+  transform: translateX(2px);
 }
 
 .section-title {

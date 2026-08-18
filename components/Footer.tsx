@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="container py-14 border-b border-gray-700 text-center">
         <h2 className="text-2xl md:text-3xl font-bold mb-3">{t('bannerTitle')}</h2>
         <p className="text-gray-400 mb-6 max-w-xl mx-auto">{t('bannerLead')}</p>
-        <Link href="/schedule-time" className="btn-primary">{t('bannerButton')} →</Link>
+        <Link href="/schedule-time" className="btn-primary">{t('bannerButton')}<span className="btn-arrow">→</span></Link>
       </div>
 
       <div className="container py-12">

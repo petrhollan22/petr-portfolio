@@ -49,7 +49,7 @@ export default function AboutPage() {
       <section className="container py-16 text-center border-t border-gray-800">
         <h2 className="text-3xl font-bold mb-4">{t('ctaTitle')}</h2>
         <p className="text-gray-400 mb-8 max-w-2xl mx-auto">{t('ctaLead')}</p>
-        <Link href="/schedule-time" className="btn-primary">{t('ctaButton')} →</Link>
+        <Link href="/schedule-time" className="btn-primary">{t('ctaButton')}<span className="btn-arrow">→</span></Link>
       </section>
     </div>
   );
