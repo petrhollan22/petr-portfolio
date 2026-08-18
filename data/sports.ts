@@ -85,26 +85,25 @@ export const sports: Sport[] = [
       en: "I played volleyball during my time in the United States. I enjoy the mix of team play and fast decisions."
     },
     achievements: [
-      { cs: "Hráno během pobytu v USA", en: "Played during a stay in the United States" },
-      { cs: "3. místo, Volejbalový turnaj Třebešín 2023", en: "3rd place, Třebešín Volleyball Tournament 2023" },
-      { cs: "3. místo, KPMG Fit Cup 2022", en: "3rd place, KPMG Fit Cup 2022" }
+      { cs: "1. místo, Buckskin Classic 2018 (Conestoga Valley High School, USA)", en: "1st place, Buckskin Classic 2018 (Conestoga Valley High School, USA)" },
+      { cs: "3. místo, KPMG Fit Cup 2022", en: "3rd place, KPMG Fit Cup 2022" },
+      { cs: "3. místo, Volejbalový turnaj Třebešín 2023", en: "3rd place, Třebešín Volleyball Tournament 2023" }
     ],
     links: [
-      { label: { cs: "Výsledky Třebešín 2023", en: "Results Třebešín 2023" }, url: "https://volejbal.vse.cz/wp-content/uploads/post/8212/volejbalovy-turnaj-trebesin-2023-NV.pdf" },
-      { label: { cs: "Výsledky KPMG Fit Cup 2022", en: "Results KPMG Fit Cup 2022" }, url: "https://volejbal.vse.cz/wp-content/uploads/post/7527/KPMG_Fit_Cup_2022-vysledky_nizsi_vykonnost.pdf" }
-    ]
+      { label: { cs: "Výsledky KPMG Fit Cup 2022", en: "Results KPMG Fit Cup 2022" }, url: "https://volejbal.vse.cz/wp-content/uploads/post/7527/KPMG_Fit_Cup_2022-vysledky_nizsi_vykonnost.pdf" },
+      { label: { cs: "Výsledky Třebešín 2023", en: "Results Třebešín 2023" }, url: "https://volejbal.vse.cz/wp-content/uploads/post/8212/volejbalovy-turnaj-trebesin-2023-NV.pdf" }
+    ],
+    image: "/images/sports/volejbal.jpg",
+    imageCaption: { cs: "Buckskin Classic 2018 · Pensylvánie", en: "Buckskin Classic 2018 · Pennsylvania" }
   },
   {
     id: "football",
     name: { cs: "Fotbal", en: "Football" },
     description: {
-      cs: "Fotbal jsem hrál několik sezón v Hanspaulské lize za Zenit Buštěhrad. Nešlo o góly ani statistiky, nejvíc mi z toho zůstali lidé, se kterými jsem hrál.",
-      en: "I played football for several seasons in Prague's Hanspaulka league with Zenit Buštěhrad. It was never really about goals or stats. What stayed with me most were the people I played with."
+      cs: "Fotbal jsem hrál několik sezón v Hanspaulské lize za Zenit Buštěhrad, většinou v bráně. Kromě toho pár přátelských turnajů, kde jsem získal medaile. Svůj fotbalový um nejčastěji uplatňuju na turnajích se šachisty, kde je konkurence… řekněme přiměřená.",
+      en: "I played football for several seasons in Prague's Hanspaulka league with Zenit Buštěhrad, mostly in goal. Plus a few friendly tournaments where I picked up some medals. These days I mostly deploy my footballing skills at tournaments with chess players, where the competition is… let's say manageable."
     },
-    achievements: [
-      { cs: "Několik sezón v Hanspaulské lize", en: "Several seasons in the Hanspaulka league" },
-      { cs: "Tým Zenit Buštěhrad", en: "Zenit Buštěhrad" }
-    ],
+    achievements: [],
     links: [
       { label: { cs: "Zenit Buštěhrad, PSMF", en: "Zenit Buštěhrad, PSMF" }, url: "https://www.psmf.cz/souteze/2021-hanspaulska-liga-podzim/8-a/tymy/zenit-bustehrad/" }
     ],

@@ -9,6 +9,12 @@ export interface TimelineEntry {
 
 export const timeline: TimelineEntry[] = [
   {
+    year: "Základní škola",
+    icon: "users",
+    title: { cs: "První kariérní rozhodnutí", en: "First career decision" },
+    text: { cs: "Na základce jsem zjistil, že se rukama živit nebudu. Umřel bych hlady.", en: "In primary school I figured out I wouldn't make a living with my hands. I'd starve." }
+  },
+  {
     year: "2014",
     icon: "trophy",
     title: { cs: "První velký titul", en: "First big title" },
@@ -33,6 +39,12 @@ export const timeline: TimelineEntry[] = [
     text: { cs: "Strávil jsem rok v Pensylvánii a dokončil senior year na Elizabethtown Area High School. Vedle školy jsem pětkrát týdně trénoval volejbal.", en: "I spent a year in Pennsylvania and finished my senior year at Elizabethtown Area High School. Alongside school I trained volleyball five times a week." }
   },
   {
+    year: "2017",
+    icon: "graduation",
+    title: { cs: "Čtyřka z informatiky", en: "A D in computer science" },
+    text: { cs: "Na gymnáziu jsem dostal čtyřku z informatiky. Fakulta informatiky a statistiky pak byla jasná volba.", en: "I got a D in computer science at grammar school. The Faculty of Informatics and Statistics was then an obvious choice." }
+  },
+  {
     year: "2019",
     icon: "medal",
     title: { cs: "Vícemistr České republiky", en: "Czech Republic runner-up" },
@@ -43,6 +55,12 @@ export const timeline: TimelineEntry[] = [
     icon: "video",
     title: { cs: "Šachy se přesunuly online", en: "Chess moved online" },
     text: { cs: "S příchodem covidu se změnil i šachový svět. Na Otevřeném MČR v online bleskovém šachu jsem získal ocenění pro nejlepšího streamera.", en: "With COVID, the chess world shifted online. I was named best streamer at the Czech Open Online Blitz Championship." }
+  },
+  {
+    year: "2020",
+    icon: "graduation",
+    title: { cs: "Maturita a jedna dvojka", en: "Graduation and one B" },
+    text: { cs: "Odmaturoval jsem se samými jedničkami, kromě jedné dvojky z ekonomie. Šel jsem tedy na VŠE, abych si to doučil.", en: "I graduated with straight A's, except one B in economics. So I went to the University of Economics to catch up." }
   },
   {
     year: "2021",

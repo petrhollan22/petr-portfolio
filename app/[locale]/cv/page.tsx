@@ -92,7 +92,8 @@ export default function CvPage() {
               ))}
             </div>
 
-            <h2 className="text-2xl font-bold mb-4">{t('certificates')}</h2>
+            <h2 className="text-2xl font-bold mb-2">{t('certificates')}</h2>
+            <p className="text-sm text-gray-500 mb-4">{t('certificatesNote')}</p>
             <ul className="space-y-1 text-sm text-gray-400">
               {certificates.map((c) => <li key={c}>{c}</li>)}
             </ul>

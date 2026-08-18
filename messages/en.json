@@ -60,7 +60,7 @@
     "ctaButton": "Book a time",
     "travelTitle": "Travel",
     "travelLead": "For me travel isn't about collecting fridge magnets, but about collecting perspectives. Talking to people from the other side of the world pulls you out of stereotypes and out of your comfort zone, and shows you how many different ways there are to live a life. And when you stumble onto something great, it would be a shame to keep the tip to yourself.",
-    "travelVisited": "A few countries I've been to:",
+    "travelVisited": "And in case anyone's curious, here's the collection:",
     "travelOutro": "And I definitely don't plan on stopping. It's another topic I'm always happy to talk about, not just for small talk."
   },
   "hustle": {
@@ -130,7 +130,8 @@
     "ctaLead": "Drop me a message and I'll send it over.",
     "ctaButton": "Get in touch",
     "present": "present",
-    "minor": "minor"
+    "minor": "minor",
+    "certificatesNote": "In case anyone in HR is curious, I also have these certificates. Personally I don't think they say all that much about actual skills."
   },
   "inspiration": {
     "title": "Inspiration",
