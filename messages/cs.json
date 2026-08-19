@@ -223,7 +223,10 @@
     "timelineTitle": "Časová osa",
     "ctaTitle": "Chceš vědět víc?",
     "ctaLead": "Klidně se ozvi, rád si popovídám o čemkoli z tohohle příběhu.",
-    "ctaButton": "Ozvat se"
+    "ctaButton": "Ozvat se",
+    "note1": "Tenhle web je hlavně o zábavě a inspiraci, ne obchodní prezentace. Vznikl i proto, abych si vyzkoušel nové nástroje a něco se přitom naučil. Není dokonalý a nemá být.",
+    "note2": "Všechno, co tu najdete, je veřejně dohledatelné. Jen jsem vám chtěl ulehčit práci.",
+    "note3": "Kdybyste měli zpětnou vazbu nebo nápad, co doplnit, napište mi."
   },
   "notFound": {
     "title": "404: Model nenašel shodu",

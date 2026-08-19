@@ -223,7 +223,10 @@
     "timelineTitle": "Timeline",
     "ctaTitle": "Want to know more?",
     "ctaLead": "Feel free to reach out, I'm happy to talk about any part of this story.",
-    "ctaButton": "Get in touch"
+    "ctaButton": "Get in touch",
+    "note1": "This site is mostly about fun and inspiration, not a sales pitch. I also built it to try out some new tools and learn something along the way. It isn't perfect, and it isn't meant to be.",
+    "note2": "Everything here is publicly available anyway. I just wanted to save you the search.",
+    "note3": "If you have feedback or an idea for something to add, drop me a line."
   },
   "notFound": {
     "title": "404: No match found",

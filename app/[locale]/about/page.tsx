@@ -46,6 +46,13 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      <section className="container pt-16 pb-4">
+        <div className="max-w-2xl mx-auto space-y-4 text-gray-400 leading-relaxed">
+          <p>{t("note1")}</p>
+          <p>{t("note2")}</p>
+          <p>{t("note3")}</p>
+        </div>
+      </section>
 
       <section className="container py-16 text-center border-t border-gray-800">
         <h2 className="text-3xl font-bold mb-4">{t('ctaTitle')}</h2>
