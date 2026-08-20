@@ -23,7 +23,7 @@ export async function GET(request: NextRequest) {
 
   try {
     await resend.emails.send({
-      from: 'Petr Hollan <onboarding@resend.dev>',
+      from: 'Petr Hollan <petr@send.hollan.cz>',
       to: booking.email,
       subject: 'Rezervace potvrzena',
       html: `
