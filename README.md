@@ -1,218 +1,89 @@
-# Petr Hollan — Portfolio Website
+# petr.hollan.cz
 
-Next.js aplikace s kontaktem, rezervacemi, sportovními aktivitami a pracovními projekty.
+Osobní portfolio a brand hub. Postaveno na Next.js 14, nasazeno na Vercel, obsah spravován přes Sanity CMS.
 
-## ✨ Funkce
+## Stack
 
-- **Work** — projekty, akademické práce, pracovní služby
-- **Free time** — sporty, úspěchy, galerie fotek
-- **Schedule time** — rezervace času (Google Calendar integration ready)
-- **Hustle** — koučování šachu, organizování eventů, dobrovolnictví
-- **Contact form** — odesílá zprávy na Discord
-- **Responsive design** — Tailwind CSS, mobilní optimalizace
+- **Framework:** Next.js 14 (App Router)
+- **Styling:** Tailwind CSS + vlastní CSS (grain texture, reveal animace)
+- **CMS:** Sanity (blog, inspirace)
+- **i18n:** next-intl (cs/en)
+- **Email:** Resend (petr@send.hollan.cz)
+- **Notifikace:** Discord webhooks
+- **Ochrana formulářů:** Cloudflare Turnstile
+- **Databáze:** Supabase (plánovač akcí)
+- **Deployment:** Vercel → petr.hollan.cz
+- **Ikony:** Phosphor Icons
+- **Fonty:** Bricolage Grotesque, IBM Plex Sans, IBM Plex Mono
 
-## 🚀 Quick Start
+## Stránky
 
-### 1. Klonuj projekt a nainstaluj závislosti
+| Route | Popis |
+|-------|-------|
+| `/` | Homepage s bento gridem |
+| `/work` | Projekty, závěrečné práce, služby |
+| `/about` | Životní timeline |
+| `/free-time` | Sport, šachy, cestování |
+| `/hustle` | Side quests — koučování, organizace akcí |
+| `/cv` | Životopis |
+| `/blog` | Blog (Sanity) |
+| `/inspiration` | Inspirace od návštěvníků |
+| `/schedule-time` | Rezervace času |
+| `/planovac` | Interní plánovač akcí s RSVP (chráněno basic auth) |
 
-```bash
-git clone <repo-url>
-cd petr-portfolio
-npm install
-```
+## Lokální vývoj
 
-### 2. Nastav Discord Webhook
+npm install a spuštění dev serveru:
 
-Discord webhook slouží k odesílání kontaktů a rezervací. Nastavení:
+    git clone https://github.com/petrhollan22/petr-portfolio
+    cd petr-portfolio
+    npm install
+    cp .env.example .env.local
+    npm run dev
 
-#### A) Vytvoř Discord server (nebo použij existující)
-Pokud nemáš, vytvoř server na [Discord](https://discord.com)
+## Environment variables
 
-#### B) Vytvoř webhook
-1. Přejdi na **Server Settings** (ozubené kolo)
-2. Jdi do **Integrations** → **Webhooks**
-3. Klikni **New Webhook**
-4. Nastavte:
-   - Name: `Portfolio Bot`
-   - Channel: vyber kanál (např. #notifications)
-   - Zkopíruj **Webhook URL**
+    NEXT_PUBLIC_SANITY_PROJECT_ID=
+    NEXT_PUBLIC_SANITY_DATASET=
+    SANITY_API_TOKEN=
+    RESEND_API_KEY=
+    NEXT_PUBLIC_BASE_URL=
+    DISCORD_WEBHOOK_URL=
+    DISCORD_WEBHOOK_WEEKLY=
+    NEXT_PUBLIC_TURNSTILE_SITE_KEY=
+    TURNSTILE_SECRET_KEY=
+    SUPABASE_URL=
+    SUPABASE_SECRET_KEY=
+    SEND_SECRET=
+    BOOKING_SECRET=
+    TIP_SECRET=
+    BASIC_AUTH_USER=
+    BASIC_AUTH_PASS=
 
-#### C) Přidej URL do .env.local
-```bash
-cp .env.example .env.local
-```
+## Deployment
 
-V `.env.local`:
-```
-DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/YOUR_ID/YOUR_TOKEN
-```
+Produkční větev je main. Každý push spustí automatický deploy na Vercel.
 
-### 3. Spusť dev server
+    git add -A && git commit -m "popis změny" && git push
 
-```bash
-npm run dev
-```
+Pokud se změny neprojeví kvůli cache:
 
-Otevři http://localhost:3000
+    git commit --allow-empty -m "Force redeploy" && git push
 
-## 📁 Projekt struktura
+## Struktura projektu
 
-```
-app/
-├── layout.tsx           # Root layout
-├── page.tsx             # Home page
-├── work/page.tsx        # Projekty a služby
-├── free-time/page.tsx   # Sporty a aktivity
-├── schedule-time/page.tsx  # Rezervace
-├── hustle/page.tsx      # Koučování, eventy
-└── api/
-    ├── contact/route.ts # Kontakt na Discord
-    └── booking/route.ts # Rezervace na Discord
+    app/
+    ├── [locale]/          # Lokalizované stránky (cs/en)
+    ├── planovac/          # Interní plánovač (bez i18n)
+    ├── api/               # API routes
+    └── studio/            # Sanity Studio
+    components/            # Sdílené komponenty
+    data/                  # Statická data (timeline, sports, services...)
+    messages/              # Překlady (cs.json, en.json)
+    lib/                   # Utility funkce
+    public/                # Statické soubory
+    sanity/                # Sanity schema
 
-components/
-├── Navbar.tsx           # Navigace
-├── Footer.tsx           # Footer
-└── ContactForm.tsx      # Kontaktní formulář
+## Licence
 
-data/
-├── projects.ts          # Akademické práce
-├── services.ts          # Pracovní služby
-├── sports.ts            # Sporty a úspěchy
-└── hustle.ts            # Hustle projekty
-```
-
-## 🎨 Personalizace
-
-### 1. Změní data v `data/` složce
-
-#### `data/projects.ts`
-```typescript
-export const projects: Project[] = [
-  {
-    id: "project-id",
-    title: "Název projektu",
-    description: "Popis...",
-    url: "link",
-    tags: ["tag1", "tag2"],
-    year: "2024",
-  },
-  // Přidej další...
-];
-```
-
-#### `data/sports.ts`
-```typescript
-export const sports: Sport[] = [
-  {
-    id: "sport-id",
-    name: "Běh",
-    description: "Popis tvého sportu...",
-    achievements: ["Maraton sub 4:20", "Half marathon sub 1:45"],
-    link: "https://ratings.fide.com/...", // optional
-  },
-];
-```
-
-#### `data/hustle.ts`
-Přidej své koučovací projekty, eventy, dobrovolnictví
-
-### 2. Přidej fotky
-Vytvoř `public/images/` složku a přidej fotky:
-```
-public/images/
-├── sports/
-│   ├── running.jpg
-│   └── chess.jpg
-├── projects/
-├── hustle/
-└── gallery/
-```
-
-V komponentách pak odkazuj:
-```tsx
-<img src="/images/sports/running.jpg" alt="Running" />
-```
-
-### 3. Změň barvy a styling
-Tailwind config je v `tailwind.config.ts`.
-
-Update v `components/Navbar.tsx`, `app/globals.css` atd.
-
-## 🌐 Deployment na Vercel
-
-### 1. Push na GitHub
-
-```bash
-git add .
-git commit -m "Initial commit"
-git push origin main
-```
-
-### 2. Deploy na Vercel
-
-Přejdi na [vercel.com](https://vercel.com):
-1. Klikni **Import Project**
-2. Vyber svůj GitHub repo
-3. V **Environment Variables** přidej:
-   ```
-   DISCORD_WEBHOOK_URL = https://discord.com/api/webhooks/...
-   ```
-4. Klikni **Deploy**
-
-Tvoje stránka bude live za < 1 minutu!
-
-## 🔗 Vlastní doména
-
-Po deployu na Vercel:
-1. Přejdi na **Domains** v Vercel project settings
-2. Přidej svou doménu (např. petr-hollan.com)
-3. Aktualizuj DNS records (instrukce v Vercel)
-
-Nebo kup doménu na [Namecheap](https://namecheap.com), [GoDaddy](https://godaddy.com), [Wedos](https://wedos.cz)
-
-## 📅 Google Calendar Integration (Future)
-
-Google Calendar booking bude připraveno později. Prozatím si rezervace odesílají přes Discord.
-
-Setup Google Calendar:
-1. Vytvoř Google Cloud project
-2. Enable Google Calendar API
-3. Vytvoř OAuth 2.0 credentials
-4. Přidej `GOOGLE_CALENDAR_API_KEY` do `.env.local`
-
-## 🐛 Troubleshooting
-
-### Discord zprávy se neposílají
-- ✅ Zkontroluj `DISCORD_WEBHOOK_URL` v `.env.local`
-- ✅ Webhook musí být pro správný kanál
-- ✅ Restartuj dev server (`npm run dev`)
-
-### Fotky se nenačítají
-- ✅ Zkontroluj cesty v `public/images/`
-- ✅ Soubory musí být `.jpg`, `.png`, `.webp`
-
-### Stránka se nenačítá po deployu
-- ✅ Zkontroluj Vercel build logs
-- ✅ Zkontroluj `next.config.js`
-
-## 📞 Support
-
-Máš dotazy? Kontaktuj mě:
-- 💼 Work: petr@example.com
-- 📱 Discord: [link na Discord server]
-- 🔗 LinkedIn: linkedin.com/in/petrhollan
-
-## 📝 License
-
-© 2025 Petr Hollan. All rights reserved.
-
----
-
-**Příští kroky:**
-1. ✅ Spusť `npm install` a `npm run dev`
-2. ✅ Nastav Discord webhook
-3. ✅ Personalizuj data v `data/` složce
-4. ✅ Přidej fotky do `public/images/`
-5. ✅ Deploy na Vercel a kup doménu
-
-Hotovo! 🚀
+© 2026 Petr Hollan. All rights reserved.
