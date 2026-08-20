@@ -57,7 +57,7 @@ export async function POST(req: Request) {
       </div>`;
 
     const { error } = await resend.emails.send({
-      from: "Petr <onboarding@resend.dev>",
+      from: "Petr <petr@send.hollan.cz>",
       to: p.email,
       subject: `${ev.activity} — dorazíš?`,
       html,
