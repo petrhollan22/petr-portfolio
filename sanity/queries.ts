@@ -43,3 +43,22 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     { next: { revalidate: 60 } }
   );
 }
+
+export async function getRecommendationPosts() {
+  return client.fetch(
+    `*[_type == "recommendationPost"] | order(publishedAt desc) {
+      _id,
+      category,
+      emoji,
+      intro,
+      items[] {
+        title,
+        author,
+        url,
+        note
+      },
+      question,
+      publishedAt
+    }`
+  );
+}
