@@ -33,16 +33,16 @@ export const timeline: TimelineEntry[] = [
     text: { cs: "Reprezentoval jsem Českou republiku na Mistrovství Evropy U18 v šachu.", en: "I represented the Czech Republic at the European Youth U18 Chess Championship." }
   },
   {
-    year: "2017–2018",
-    icon: "airplane",
-    title: { cs: "Rok v USA", en: "A year in the US" },
-    text: { cs: "Strávil jsem rok v Pensylvánii a dokončil senior year na Elizabethtown Area High School. Vedle školy jsem pětkrát týdně trénoval volejbal.", en: "I spent a year in Pennsylvania and finished my senior year at Elizabethtown Area High School. Alongside school I trained volleyball five times a week." }
-  },
-  {
     year: "2017",
     icon: "graduation",
     title: { cs: "Čtyřka z informatiky", en: "A D in computer science" },
     text: { cs: "Na gymnáziu jsem dostal čtyřku z informatiky. Fakulta informatiky a statistiky pak byla jasná volba.", en: "I got a D in computer science at grammar school. The Faculty of Informatics and Statistics was then an obvious choice." }
+  },
+  {
+    year: "2017–2018",
+    icon: "airplane",
+    title: { cs: "Rok v USA", en: "A year in the US" },
+    text: { cs: "Strávil jsem rok v Pensylvánii a dokončil senior year na Elizabethtown Area High School. Vedle školy jsem pětkrát týdně trénoval volejbal.", en: "I spent a year in Pennsylvania and finished my senior year at Elizabethtown Area High School. Alongside school I trained volleyball five times a week." }
   },
   {
     year: "2019",
