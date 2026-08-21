@@ -170,3 +170,37 @@ p {
   opacity: 1;
   transform: none;
 }
+
+.prose h2 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  border-left: 3px solid #dc2626;
+  padding-left: 0.75rem;
+}
+
+.prose p {
+  color: #d1d5db;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.prose a {
+  color: #f87171;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose a:hover {
+  color: #dc2626;
+}
+
+.prose h3 {
+  color: #e5e7eb;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
