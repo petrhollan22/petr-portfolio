@@ -26,7 +26,31 @@ export default function WorkPage() {
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">{t('lead')}</p>
       </section>
 
-      {categories.map((cat) => {
+      <section className="container py-12">
+        <h2 className="section-title">{t('servicesTitle')}</h2>
+        <p className="text-gray-400 mb-12 text-center max-w-2xl mx-auto">{t('servicesLead')}</p>
+        <div className="max-w-3xl mx-auto mb-12 border-t border-gray-800">
+          {workServices.filter((s) => !s.hidden).map((s) => (
+            <Link
+              key={s.id}
+              href={`/schedule-time?service=${s.id}`}
+              className="group flex items-center justify-between gap-6 py-5 border-b border-gray-800 hover:border-gray-600 transition-colors"
+            >
+              <div>
+                <h3 className="text-lg font-bold mb-1 group-hover:text-red-400 transition-colors">{pick(s.name, locale)}</h3>
+                <p className="text-gray-400 text-sm">{pick(s.description, locale)}</p>
+              </div>
+              <span className="text-gray-600 group-hover:text-red-400 transition-all duration-200 text-xl rotate-[-45deg] shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1">→</span>
+            </Link>
+          ))}
+        </div>
+        <div className="text-center">
+          <Link href="/schedule-time" className="btn-primary">{t('bookCta')}<span className="btn-arrow">→</span></Link>
+        </div>
+      </section>
+
+      <section className="container py-16">
+        {categories.map((cat) => {
         const items = projects
           .filter((p) => p.category === cat)
           .sort((a, b) => b.year.localeCompare(a.year));
@@ -87,31 +111,7 @@ export default function WorkPage() {
         );
       })}
 
-      <section className="container py-12">
-        <h2 className="section-title">{t('servicesTitle')}</h2>
-        <p className="text-gray-400 mb-12 text-center max-w-2xl mx-auto">{t('servicesLead')}</p>
-        <div className="max-w-3xl mx-auto mb-12 border-t border-gray-800">
-          {workServices.filter((s) => !s.hidden).map((s) => (
-            <Link
-              key={s.id}
-              href={`/schedule-time?service=${s.id}`}
-              className="group flex items-center justify-between gap-6 py-5 border-b border-gray-800 hover:border-gray-600 transition-colors"
-            >
-              <div>
-                <h3 className="text-lg font-bold mb-1 group-hover:text-red-400 transition-colors">{pick(s.name, locale)}</h3>
-                <p className="text-gray-400 text-sm">{pick(s.description, locale)}</p>
-              </div>
-              <span className="text-gray-600 group-hover:text-red-400 transition-all duration-200 text-xl rotate-[-45deg] shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1">→</span>
-            </Link>
-          ))}
-        </div>
-        <div className="text-center">
-          <Link href="/schedule-time" className="btn-primary">{t('bookCta')}<span className="btn-arrow">→</span></Link>
-        </div>
-      </section>
-
-      <section className="container py-16">
-        <ContactForm />
+      <ContactForm />
       </section>
     </div>
   );
