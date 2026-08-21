@@ -16,7 +16,7 @@ export async function addPerson(formData: FormData) {
   const { data: p, error } = await supabase
     .from("people").insert({ full_name, email, phone, note }).select("id").single();
 
-  if (error || !p) throw new Error(error?.message || "Nepodarilo se pridat");
+  if (error || !p) throw new Error(error?.code === "23505" ? "Clovek s timto emailem uz existuje" : error?.message || "Nepodarilo se pridat");
 
   if (groups.length) {
     await supabase.from("memberships").insert(
