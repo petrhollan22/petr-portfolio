@@ -60,8 +60,8 @@ export const sports: Sport[] = [
     image: "/images/sports/chess.jpg",
     imageCaption: { cs: "Rilton Cup 2025/2026 · Stockholm", en: "Rilton Cup 2025/2026 · Stockholm" },
     coaching: {
-      cs: "Šachy trénuji přes patnáct let. Nezáleží na věku, pohlaví ani na tom, jak daleko jste. Důležitý je zájem se něco dozvědět. Mám zkušenosti se skupinovými i individuálními tréninky a vedu je offline i online podle domluvy.",
-      en: "I have been coaching chess for over fifteen years. Age, gender and current level do not matter. What matters is the willingness to learn. I work with both groups and individuals, in person or online."
+      cs: "Šachům se věnuji přes patnáct let, v šachové škole Vávra & Černoušek trénuji od roku 2020. Nezáleží na věku, pohlaví ani na tom, jak daleko jste. Důležitý je zájem se něco dozvědět. Mám zkušenosti se skupinovými i individuálními tréninky a vedu je offline i online podle domluvy.",
+      en: "I have been playing and coaching chess for over fifteen years, with the Vávra & Černoušek chess school since 2020. Age, gender and current level do not matter. What matters is the willingness to learn. I work with both groups and individuals, in person or online."
     }
   },
   {
@@ -79,7 +79,7 @@ export const sports: Sport[] = [
       { label: { cs: "Běžecké tabulky na triatlony.com", en: "Race results on triatlony.com" }, url: "https://www.triatlony.com/bezecke-tabulky/zavodnici/286167-hollan-petr" }
     ],
     image: "/images/sports/maraton.jpeg",
-    imageCaption: { cs: "Praha 2025", en: "Prague 2025" },
+    imageCaption: { cs: "Vodafone Prague Marathon 2026", en: "Vodafone Prague Marathon 2026" },
     image2: "/images/sports/pulmaraton.jpeg",
     image2Caption: { cs: "Půlmaraton 1:44:32", en: "Half marathon 1:44:32" }
   },

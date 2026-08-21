@@ -63,7 +63,7 @@ export default function FreeTimePage() {
                 </div>
               )}
 
-              <div className="bg-primary rounded-lg p-5 mb-6">
+              {sport.achievements.length > 0 && <div className="bg-primary rounded-lg p-5 mb-6">
                 <h3 className="text-lg font-semibold mb-3 text-red-400">{t('achievements')}</h3>
                 <ul className="space-y-2">
                   {sport.achievements.map((a, i) => (
@@ -73,7 +73,7 @@ export default function FreeTimePage() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div>}
 
               {sport.coaching && (
                 <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-5 mb-6">
@@ -107,7 +107,7 @@ export default function FreeTimePage() {
                     href={`/blog/${sport.blogSlug}`}
                     className="inline-block px-4 py-2 bg-primary rounded-lg text-sm text-red-400 hover:text-red-300 transition-colors font-medium"
                   >
-                    Celý příběh na blogu →
+                    {locale === "cs" ? "Celý příběh na blogu →" : "Full story on the blog →"}
                   </Link>
                 </div>
               )}

@@ -12,8 +12,8 @@ export const workServices: Service[] = [
     id: "web-design",
     name: { cs: "Web development", en: "Web development" },
     description: {
-      cs: "Vývoj moderních webů a aplikací v Reactu a Next.js. Důraz na rychlost, responzivitu a skvělý uživatelský zážitek.",
-      en: "Development of modern websites and applications in React and Next.js. Focus on speed, responsiveness and a great user experience."
+      cs: "Osobní weby a menší aplikace v Next.js. Stavím vlastní projekty a pomáhám s weby přátelům a známým.",
+      en: "Personal sites and smaller apps in Next.js. I build my own projects and help friends and people I know."
     }
   },
   {
