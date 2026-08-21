@@ -101,7 +101,7 @@ export default function WorkPage() {
                 <h3 className="text-lg font-bold mb-1 group-hover:text-red-400 transition-colors">{pick(s.name, locale)}</h3>
                 <p className="text-gray-400 text-sm">{pick(s.description, locale)}</p>
               </div>
-              <span className="text-gray-600 group-hover:text-red-400 transition-colors text-xl rotate-[-45deg] shrink-0">→</span>
+              <span className="text-gray-600 group-hover:text-red-400 transition-all duration-200 text-xl rotate-[-45deg] shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1">→</span>
             </Link>
           ))}
         </div>
