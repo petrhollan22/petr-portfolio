@@ -41,3 +41,15 @@ export async function toggleMembership(formData: FormData) {
 
   revalidatePath("/planovac/lide");
 }
+export async function updatePerson(formData: FormData) {
+  const id = String(formData.get("id"));
+  const full_name = String(formData.get("full_name") || "").trim();
+  const email = String(formData.get("email") || "").trim() || null;
+  const phone = String(formData.get("phone") || "").trim() || null;
+  const note = String(formData.get("note") || "").trim() || null;
+  if (!full_name) throw new Error("Chybi jmeno");
+  const { error } = await supabase
+    .from("people").update({ full_name, email, phone, note }).eq("id", id);
+  if (error) throw new Error(error.code === "23505" ? "Clovek s timto emailem uz existuje" : error.message);
+  revalidatePath("/planovac/lide");
+}
