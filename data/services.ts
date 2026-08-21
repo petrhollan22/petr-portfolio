@@ -36,8 +36,8 @@ export const workServices: Service[] = [
     id: "ai-audit",
     name: { cs: "AI audit & Governance", en: "AI Audit & Governance" },
     description: {
-      cs: "Posouzení AI systémů a nastavení jejich governance. Zajištění souladu s legislativou (EU AI Act) i bezpečností.",
-      en: "Assessment of AI systems and setting up their governance. Ensuring compliance with legislation (EU AI Act) and security."
+      cs: "Analýza AI use cases, rizik a governance s ohledem na požadavky EU AI Act. Vychází z diplomové práce o zavádění AI v českých firmách.",
+      en: "Analysis of AI use cases, risks and governance with regard to EU AI Act requirements. Based on my thesis research on AI adoption in Czech companies."
     }
   },
   {
