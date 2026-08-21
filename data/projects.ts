@@ -33,7 +33,7 @@ export const projects: Project[] = [
     category: "thesis" as const,
     title: {
       cs: "Implementace umělé inteligence ve firmách: Přínosy, výzvy a strategie",
-      en: "Implementation of artificial intelligence in companies: Benefits,challenges and strategies"
+      en: "Implementation of artificial intelligence in companies: Benefits, challenges and strategies"
     },
     description: {
       cs: "Diplomová práce o zralosti a strategiích adopce AI v českých firmách. Kvalitativní výzkum formou osmi srovnávacích případových studií od technologických startupů po nadnárodní korporace, s důrazem na governance a rámec EU AI Act.",
