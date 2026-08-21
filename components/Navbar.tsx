@@ -21,17 +21,17 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-secondary sticky top-0 z-50 shadow-lg">
-      <div className="container flex justify-between items-center py-4">
+    <nav className="bg-primary sticky top-0 z-50 border-b border-gray-800">
+      <div className="container flex justify-between items-center py-5">
         <Logo />
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-12">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`transition-colors font-medium ${
-                pathname === link.href ? 'text-red-400' : 'hover:text-red-400'
+              className={`text-sm transition-colors font-medium tracking-wide ${
+                pathname === link.href ? 'text-red-500' : 'text-gray-400 hover:text-white'
               }`}
             >
               {link.label}
@@ -40,7 +40,7 @@ export default function Navbar() {
           <LanguageSwitcher />
         </div>
 
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-4 md:hidden">
           <LanguageSwitcher />
           <button onClick={() => setIsOpen(!isOpen)} aria-label="Menu">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -51,14 +51,14 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-primary">
-          <div className="flex flex-col gap-4 p-4">
+        <div className="md:hidden bg-primary border-t border-gray-800">
+          <div className="flex flex-col gap-4 p-6 container">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`transition-colors font-medium ${
-                  pathname === link.href ? 'text-red-400' : 'hover:text-red-400'
+                className={`text-sm transition-colors font-medium tracking-wide ${
+                  pathname === link.href ? 'text-red-500' : 'text-gray-400 hover:text-white'
                 }`}
                 onClick={() => setIsOpen(false)}
               >

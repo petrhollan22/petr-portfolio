@@ -6,53 +6,49 @@ export default function Footer() {
   const nav = useTranslations('nav');
 
   return (
-    <footer className="bg-secondary mt-20 border-t border-gray-700">
-      <div className="container py-14 border-b border-gray-700 text-center">
-        <h2 className="text-2xl md:text-3xl font-bold mb-3">{t('bannerTitle')}</h2>
-        <p className="text-gray-400 mb-6 max-w-xl mx-auto">{t('bannerLead')}</p>
-        <Link href="/schedule-time" className="btn-primary">{t('bannerButton')}<span className="btn-arrow">→</span></Link>
+    <footer className="bg-primary mt-32 border-t border-gray-800">
+      <div className="container py-20 border-b border-gray-800">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl mb-6">{t('bannerTitle')}</h2>
+          <p className="text-gray-400 mb-10 leading-relaxed">{t('bannerLead')}</p>
+          <Link href="/schedule-time" className="btn-primary">{t('bannerButton')}</Link>
+        </div>
       </div>
 
-      <div className="container py-12">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+      <div className="container py-16">
+        <div className="grid md:grid-cols-3 gap-20 mb-16">
           <div>
-            <div className="flex items-center gap-2.5 mb-4">
-              <span className="flex items-center justify-center w-8 h-8 rounded-md bg-red-600 text-white font-display font-bold text-xs shrink-0">
-                PH
-              </span>
-              <h3 className="text-xl font-bold gradient-text">Petr Hollan</h3>
-            </div>
-            <p className="text-gray-400 text-sm mb-4">{t('bio')}</p>
-            <Link href="/schedule-time" className="text-sm text-red-400 hover:text-red-300 transition-colors font-medium">
+            <h3 className="text-lg font-bold mb-6">Petr Hollan</h3>
+            <p className="text-gray-400 text-sm mb-6 leading-relaxed">{t('bio')}</p>
+            <Link href="/schedule-time" className="text-sm text-white hover:opacity-75 transition-opacity font-medium">
               {t('footerCta')} →
             </Link>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">{t('navTitle')}</h3>
-            <ul className="space-y-2 text-gray-400 text-sm">
-              <li><Link href="/work" className="hover:text-red-400 transition-colors">{nav('work')}</Link></li>
-              <li><Link href="/cv" className="hover:text-red-400 transition-colors">{nav('cv')}</Link></li>
-              <li><Link href="/free-time" className="hover:text-red-400 transition-colors">{nav('freeTime')}</Link></li>
-              <li><Link href="/schedule-time" className="hover:text-red-400 transition-colors">{nav('scheduleTime')}</Link></li>
-              <li><Link href="/hustle" className="hover:text-red-400 transition-colors">{nav('hustle')}</Link></li>
-              <li><Link href="/inspiration" className="hover:text-red-400 transition-colors">{nav('inspiration')}</Link></li>
+            <h3 className="text-lg font-bold mb-6">{t('navTitle')}</h3>
+            <ul className="space-y-3 text-gray-400 text-sm">
+              <li><Link href="/work" className="hover:text-white transition-colors">{nav('work')}</Link></li>
+              <li><Link href="/cv" className="hover:text-white transition-colors">{nav('cv')}</Link></li>
+              <li><Link href="/free-time" className="hover:text-white transition-colors">{nav('freeTime')}</Link></li>
+              <li><Link href="/schedule-time" className="hover:text-white transition-colors">{nav('scheduleTime')}</Link></li>
+              <li><Link href="/hustle" className="hover:text-white transition-colors">{nav('hustle')}</Link></li>
+              <li><Link href="/inspiration" className="hover:text-white transition-colors">{nav('inspiration')}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">{t('contactTitle')}</h3>
-            <ul className="space-y-2 text-gray-400 text-sm">
-              <li><a href="mailto:petr@hollan.eu" className="hover:text-red-400 transition-colors">petr@hollan.eu</a></li>
-              <li><a href="https://cz.linkedin.com/in/petr-hollan" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">LinkedIn ↗</a></li>
+            <h3 className="text-lg font-bold mb-6">{t('contactTitle')}</h3>
+            <ul className="space-y-3 text-gray-400 text-sm">
+              <li><a href="mailto:petr@hollan.eu" className="hover:text-white transition-colors">petr@hollan.eu</a></li>
+              <li><a href="https://cz.linkedin.com/in/petr-hollan" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn ↗</a></li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-700 pt-8 text-center text-gray-500 text-sm flex flex-col sm:flex-row items-center justify-center gap-2">
+        <div className="border-t border-gray-800 pt-12 text-center text-gray-600 text-xs space-y-3">
           <p>&copy; 2026 Petr Hollan</p>
-          <span className="hidden sm:inline">·</span>
-          <Link href="/privacy" className="hover:text-red-400 transition-colors">Ochrana soukromí</Link>
+          <Link href="/privacy" className="hover:text-gray-400 transition-colors">Ochrana soukromí</Link>
         </div>
       </div>
     </footer>
