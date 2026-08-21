@@ -16,6 +16,8 @@ export interface Sport {
   coaching?: Localized;
   image?: string;
   imageCaption?: Localized;
+  image2?: string;
+  image2Caption?: Localized;
   blogSlug?: string;
 }
 
@@ -70,12 +72,16 @@ export const sports: Sport[] = [
       en: "Running balances out desk work: measurable progress and time alone. I mix race pace with easy runs outdoors."
     },
     achievements: [
-      { cs: "Maraton pod 4:20", en: "Marathon under 4:20" },
-      { cs: "Půlmaraton pod 1:45", en: "Half marathon under 1:45" }
+      { cs: "Maraton 4:17:59", en: "Marathon 4:17:59" },
+      { cs: "Půlmaraton 1:44:32", en: "Half marathon 1:44:32" }
     ],
     links: [
       { label: { cs: "Běžecké tabulky na triatlony.com", en: "Race results on triatlony.com" }, url: "https://www.triatlony.com/bezecke-tabulky/zavodnici/286167-hollan-petr" }
-    ]
+    ],
+    image: "/images/sports/maraton.jpeg",
+    imageCaption: { cs: "Praha 2025", en: "Prague 2025" },
+    image2: "/images/sports/pulmaraton.jpeg",
+    image2Caption: { cs: "Půlmaraton 1:44:32", en: "Half marathon 1:44:32" }
   },
   {
     id: "volleyball",

@@ -31,17 +31,34 @@ export default function FreeTimePage() {
               <p className="text-gray-400 mb-6">{pick(sport.description, locale)}</p>
 
               {sport.image && (
-                <div className="mb-6">
-                  <img
-                    src={sport.image}
-                    alt={pick(sport.name, locale)}
-                    className="w-full rounded-lg"
-                    loading="lazy"
-                  />
-                  {sport.imageCaption && (
-                    <p className="mono-label text-gray-500 mt-2 text-center">
-                      {pick(sport.imageCaption, locale)}
-                    </p>
+                <div className="mb-6 grid grid-cols-1 gap-4">
+                  <div>
+                    <img
+                      src={sport.image}
+                      alt={pick(sport.name, locale)}
+                      className="w-full rounded-lg"
+                      loading="lazy"
+                    />
+                    {sport.imageCaption && (
+                      <p className="mono-label text-gray-500 mt-2 text-center">
+                        {pick(sport.imageCaption, locale)}
+                      </p>
+                    )}
+                  </div>
+                  {(sport as any).image2 && (
+                    <div>
+                      <img
+                        src={(sport as any).image2}
+                        alt={pick(sport.name, locale)}
+                        className="w-full rounded-lg"
+                        loading="lazy"
+                      />
+                      {(sport as any).image2Caption && (
+                        <p className="mono-label text-gray-500 mt-2 text-center">
+                          {pick((sport as any).image2Caption, locale)}
+                        </p>
+                      )}
+                    </div>
                   )}
                 </div>
               )}
