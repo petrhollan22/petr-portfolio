@@ -34,16 +34,11 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <div className="relative z-10">
           <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-center mb-16">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/60 border border-gray-700 mb-6">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                <span className="mono-label text-gray-300">{t('availableBadge')}</span>
-              </div>
               <h1 className="text-6xl md:text-7xl font-black mb-6 gradient-text">Petr Hollan</h1>
               <p className="text-2xl text-gray-300 mb-4">{t('role')}</p>
               <p className="text-xl text-gray-400 max-w-xl mb-10">{t('intro')}</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/work" className="btn-primary">{t('ctaWork')}<span className="btn-arrow">→</span></Link>
-                <Link href="/schedule-time" className="btn-secondary">{t('ctaSchedule')}</Link>
               </div>
             </div>
             <div className="hidden lg:flex items-center justify-center">

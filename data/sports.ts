@@ -87,8 +87,8 @@ export const sports: Sport[] = [
     id: "volleyball",
     name: { cs: "Volejbal", en: "Volleyball" },
     description: {
-      cs: "Volejbal jsem hrál během svého pobytu v USA. Baví mě na něm kombinace týmové souhry a rychlého rozhodování.",
-      en: "I played volleyball during my time in the United States. I enjoy the mix of team play and fast decisions."
+      cs: "Volejbal jsem začal hrát pořádně až během roku v Pensylvánii. Pořád jeden ze sportů, u kterých jsem ochotný brát to zbytečně vážně.",
+      en: "Started playing properly during my year in Pennsylvania. Still one of the sports I am most willing to take unnecessarily seriously."
     },
     achievements: [
       { cs: "1. místo, Buckskin Classic 2018 (Conestoga Valley High School, USA)", en: "1st place, Buckskin Classic 2018 (Conestoga Valley High School, USA)" },
@@ -106,8 +106,8 @@ export const sports: Sport[] = [
     id: "football",
     name: { cs: "Fotbal", en: "Football" },
     description: {
-      cs: "Fotbal jsem hrál několik sezón v Hanspaulské lize za Zenit Buštěhrad, většinou v bráně. Kromě toho pár přátelských turnajů, kde jsem získal medaile. Svůj fotbalový um nejčastěji uplatňuju na turnajích se šachisty, kde je konkurence… řekněme přiměřená.",
-      en: "I played football for several seasons in Prague's Hanspaulka league with Zenit Buštěhrad, mostly in goal. Plus a few friendly tournaments where I picked up some medals. These days I mostly deploy my footballing skills at tournaments with chess players, where the competition is… let's say manageable."
+      cs: "Průměrný hráč s nadprůměrnou docházkou. Nejčastěji chytám na přátelských turnajích se šachisty, kde je konkurence… řekněme přiměřená.",
+      en: "Very average player. Very above-average attendance. Mostly in goal at friendly tournaments with chess players, where the competition is… let's say manageable."
     },
     achievements: [],
     links: [
