@@ -196,7 +196,9 @@
     "privacyTitle": "Ochrana soukromí",
     "privacyDescription": "Jak nakládám s údaji z formulářů na tomto webu.",
     "aboutTitle": "O mně",
-    "aboutDescription": "Šachy, škola, práce a dobrovolnictví na jedné časové ose."
+    "aboutDescription": "Šachy, škola, práce a dobrovolnictví na jedné časové ose.",
+    "nowTitle": "Teď",
+    "nowDescription": "Co právě dělám, čtu, plánuju a řeším."
   },
   "stickyBanner": {
     "text": "Stále přemýšlíte? Pár minut stačí na to zjistit, jestli má spolupráce smysl.",

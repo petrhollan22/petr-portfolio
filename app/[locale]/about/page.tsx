@@ -52,6 +52,9 @@ export default function AboutPage() {
           <p>{t("note2")}</p>
           <p>{t("note3")}</p>
         </div>
+      <section className="container pb-8 text-center">
+        <Link href="/now" className="text-red-400 hover:text-red-300 transition-colors text-sm">Co právě dělám →</Link>
+      </section>
       </section>
 
       <section className="container py-16 text-center border-t border-gray-800">

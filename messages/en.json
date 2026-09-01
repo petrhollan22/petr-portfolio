@@ -196,7 +196,9 @@
     "privacyTitle": "Privacy",
     "privacyDescription": "How I handle data submitted through forms on this site.",
     "aboutTitle": "About",
-    "aboutDescription": "Chess, school, work and volunteering on one timeline."
+    "aboutDescription": "Chess, school, work and volunteering on one timeline.",
+    "nowTitle": "Now",
+    "nowDescription": "What I am currently working on, reading, planning and thinking about."
   },
   "stickyBanner": {
     "text": "Still thinking it over? A few minutes is enough to find out if it's worth talking.",
