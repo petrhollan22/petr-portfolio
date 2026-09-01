@@ -32,7 +32,7 @@ export const sports: Sport[] = [
     achievements: [
       { cs: "1. místo na MČR družstev starších žáků v rapid šachu (2014)", en: "1st place, Czech Junior Team Rapid Championship (2014)" },
       { cs: "3. místo na MČR mládeže v kategorii H16 (2015)", en: "3rd place, Czech Youth Championship U16 (2015)" },
-      { cs: "Získání titulu FIDE Master (2015)", en: "Awarded the FIDE Master title (2015)" },
+      { cs: "Získání titulu FIDE Master (2015) — top 1 % šachistů na světě", en: "Awarded the FIDE Master title (2015) — top 1% of chess players worldwide" },
       { cs: "Kapitán vítězného týmu PROMAT OAZA PRAHA na MČR družstev mládeže 2015/2016", en: "Captain of PROMAT OAZA PRAHA, winners of the Czech Youth Team Championship 2015/2016" },
       { cs: "Účast na Mistrovství Evropy chlapců do 18 let (2016)", en: "European Youth Championship U18 (2016)" },
       { cs: "První sezóna v české šachové extralize 2016/2017 za tým Tatran Litovel", en: "First season in the Czech Chess Extraliga 2016/2017 with Tatran Litovel" },
