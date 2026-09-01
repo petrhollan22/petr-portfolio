@@ -2,6 +2,7 @@
 
 import { supabase } from "@/lib/supabase";
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 export async function addPerson(formData: FormData) {
   const full_name = String(formData.get("full_name") || "").trim();
@@ -24,7 +25,7 @@ export async function addPerson(formData: FormData) {
     );
   }
 
-  revalidatePath("/planovac/lide");
+  redirect("/planovac/lide?toast=Člověk+přidán");
 }
 
 export async function toggleMembership(formData: FormData) {
@@ -51,5 +52,5 @@ export async function updatePerson(formData: FormData) {
   const { error } = await supabase
     .from("people").update({ full_name, email, phone, note }).eq("id", id);
   if (error) throw new Error(error.code === "23505" ? "Clovek s timto emailem uz existuje" : error.message);
-  revalidatePath("/planovac/lide");
+  redirect("/planovac/lide?toast=Změny+uloženy");
 }

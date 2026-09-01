@@ -4,7 +4,7 @@ import { addPerson, toggleMembership, updatePerson } from "./actions";
 
 export const dynamic = "force-dynamic";
 
-export default async function LidePage() {
+export default async function LidePage({ searchParams }: { searchParams: { toast?: string } }) {
   const { data: groups } = await supabase.from("groups").select("id, name").order("sort_order");
   const { data: people } = await supabase
     .from("people").select("id, full_name, email, phone, note, memberships(group_id)")
@@ -17,6 +17,11 @@ export default async function LidePage() {
 
   return (
     <main style={{ maxWidth: 560, margin: "0 auto", padding: 24, fontFamily: "system-ui", lineHeight: 1.5 }}>
+      {searchParams.toast && (
+        <div style={{ padding: 12, marginBottom: 16, background: "#f0fdf4", color: "#16a34a", borderRadius: 8, border: "1px solid #bbf7d0", fontSize: 14 }}>
+          ✓ {decodeURIComponent(searchParams.toast)}
+        </div>
+      )}
       <Link href="/planovac" style={{ fontSize: 14, opacity: 0.6, textDecoration: "none", color: "inherit" }}>
         &larr; Zpet
       </Link>
