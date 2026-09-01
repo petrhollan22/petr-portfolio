@@ -39,6 +39,16 @@ export default async function RsvpPage({ params }: { params: { token: string } }
         <button name="status" value="maybe" style={btn("#ca8a04")}>Mozna</button>
         <button name="status" value="no" style={btn("#dc2626")}>Nejdu</button>
       </form>
+      {inv.status === "yes" && (
+        <a
+          href={`/api/ics?token=${params.token}`}
+          style={{ display: "inline-block", marginTop: 16, padding: "12px 20px",
+            background: "#1e40af", color: "#fff", borderRadius: 8,
+            textDecoration: "none", fontSize: 15 }}
+        >
+          📅 Přidat do kalendáře
+        </a>
+      )}
     </main>
   );
 }
