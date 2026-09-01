@@ -45,6 +45,7 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400 text-sm">
               <li><a href="mailto:petr@hollan.eu" className="hover:text-red-400 transition-colors">petr@hollan.eu</a></li>
               <li><a href="https://cz.linkedin.com/in/petr-hollan" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">LinkedIn ↗</a></li>
+              <li><a href="https://strava.app.link/vDsxY1WUI0b" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">Strava ↗</a></li>
             </ul>
           </div>
         </div>
