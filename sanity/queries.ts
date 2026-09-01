@@ -62,3 +62,15 @@ export async function getRecommendationPosts() {
     }`
   );
 }
+
+export async function getLatestPost() {
+  return client.fetch(
+    `*[_type == "post"] | order(publishedAt desc) [0] {
+      title,
+      slug,
+      excerpt,
+      publishedAt,
+      "coverImage": coverImage.asset->url
+    }`
+  );
+}

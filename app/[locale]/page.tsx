@@ -1,16 +1,19 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { buildMetadata } from '@/lib/metadata';
 import PhotoStrip from '@/components/PhotoStrip';
+import { getLatestPost } from '@/sanity/queries';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   return buildMetadata(locale, 'defaultTitle', 'defaultDescription', '');
 }
 
-export default function Home() {
-  const t = useTranslations('home');
-  const nav = useTranslations('nav');
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'home' });
+  const nav = await getTranslations({ locale, namespace: 'nav' });
+  const latestPost = await getLatestPost();
   return (
     <div className="bg-gradient-to-b from-primary via-secondary to-primary">
       <section className="relative overflow-hidden container py-32">
@@ -80,6 +83,28 @@ export default function Home() {
         <PhotoStrip />
       </section>
 
+      {latestPost && (
+        <section className="container py-12 border-t border-gray-800">
+          <p className="mono-label text-red-400 mb-6">Z blogu</p>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 className="text-2xl font-bold mb-3 hover:text-red-400 transition-colors">
+                <Link href={'/blog/' + latestPost.slug.current}>{latestPost.title}</Link>
+              </h2>
+              {latestPost.excerpt && <p className="text-gray-400 mb-4 leading-relaxed">{latestPost.excerpt}</p>}
+              <Link href={'/blog/' + latestPost.slug.current} className="mono-label text-red-400 hover:text-red-300 transition-colors">Číst článek →</Link>
+            </div>
+            {latestPost.coverImage && (
+              <img
+                src={latestPost.coverImage}
+                alt={latestPost.title}
+                className="w-full rounded-lg aspect-video object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                loading="lazy"
+              />
+            )}
+          </div>
+        </section>
+      )}
       <section className="container pt-16 pb-20 border-t border-gray-800">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
