@@ -25,7 +25,7 @@ export async function addPerson(formData: FormData) {
     );
   }
 
-  redirect("/planovac/lide?toast=Člověk+přidán");
+  redirect("/planovac/lide?toast=Clovek+pridan");
 }
 
 export async function toggleMembership(formData: FormData) {
@@ -52,5 +52,5 @@ export async function updatePerson(formData: FormData) {
   const { error } = await supabase
     .from("people").update({ full_name, email, phone, note }).eq("id", id);
   if (error) throw new Error(error.code === "23505" ? "Clovek s timto emailem uz existuje" : error.message);
-  redirect("/planovac/lide?toast=Změny+uloženy");
+  redirect("/planovac/lide?toast=Zmeny+ulozeny");
 }
