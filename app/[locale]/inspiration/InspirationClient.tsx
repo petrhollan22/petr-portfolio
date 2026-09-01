@@ -52,10 +52,6 @@ export default function InspirationClient() {
 
   return (
     <div className="bg-gradient-to-b from-primary to-secondary">
-      <section className="container pt-20 pb-4 text-center">
-        <h1 className="text-5xl font-bold mb-4 gradient-text">{t('title')}</h1>
-        <p className="text-xl text-gray-400 max-w-2xl mx-auto">{t('lead')}</p>
-      </section>
 
       <section className="container py-12">
         <form onSubmit={onSubmit} className="card max-w-2xl mx-auto">
