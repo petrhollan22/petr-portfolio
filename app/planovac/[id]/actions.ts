@@ -31,7 +31,7 @@ export async function cancelEvent(formData: FormData) {
     },
     body: JSON.stringify({ eventId: id }),
   });
-  revalidatePath(`/planovac/${id}`);
+  redirect(`/planovac/${id}?toast=pozvánky+odeslány`);
 }
 
 export async function sendInvites(formData: FormData) {
@@ -46,5 +46,5 @@ export async function sendInvites(formData: FormData) {
     body: JSON.stringify({ eventId: id }),
   });
 
-  revalidatePath(`/planovac/${id}`);
+  redirect(`/planovac/${id}?toast=akce+zrušena`);
 }

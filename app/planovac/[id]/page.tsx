@@ -4,7 +4,7 @@ import { deleteEvent, cancelEvent, sendInvites } from "./actions";
 
 export const dynamic = "force-dynamic";
 
-export default async function EventDetail({ params }: { params: { id: string } }) {
+export default async function EventDetail({ params, searchParams }: { params: { id: string }, searchParams: { toast?: string } }) {
   const { data: ev } = await supabase.from("events").select("*").eq("id", params.id).single();
   if (!ev) notFound();
 
@@ -23,6 +23,11 @@ export default async function EventDetail({ params }: { params: { id: string } }
 
   return (
     <main style={{ maxWidth: 560, margin: "0 auto", padding: 24, fontFamily: "system-ui", lineHeight: 1.5 }}>
+      {searchParams.toast && (
+        <div style={{ padding: 12, marginBottom: 16, background: '#f0fdf4', color: '#16a34a', borderRadius: 8, border: '1px solid #bbf7d0', fontSize: 14 }}>
+          ✓ {decodeURIComponent(searchParams.toast)}
+        </div>
+      )}
       <h1 style={{ fontSize: 24, marginBottom: 4 }}>{ev.activity}</h1>
       <p style={{ margin: 0, opacity: 0.7 }}>{kdy}{ev.place ? " - " + ev.place : ""}</p>
 
