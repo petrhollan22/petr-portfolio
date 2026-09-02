@@ -52,6 +52,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 pt-8 text-center text-gray-500 text-sm flex flex-col sm:flex-row items-center justify-center gap-2">
           <p>&copy; 2026 Petr Hollan</p>
+              <p className="text-xs text-gray-600 mt-1">Web jsem si postavil sám. Případné chyby tedy nemám na koho svést.</p>
           <span className="hidden sm:inline">·</span>
           <Link href="/privacy" className="hover:text-red-400 transition-colors">Ochrana soukromí</Link>
         </div>

@@ -37,7 +37,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
               <h1 className="text-6xl md:text-7xl font-black mb-6 gradient-text">Petr Hollan</h1>
               <p className="text-2xl text-gray-300 mb-2">{t('role')}</p>
               <p className="text-lg text-gray-500 mb-8 max-w-xl">{t('tagline')}</p>
-              <p className="text-xl text-gray-400 max-w-xl mb-10">{t('intro')}</p>
+              <p className="text-base text-gray-500 mb-10 max-w-xl">{t('heroNote')}</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/work" className="btn-primary">{t('ctaWork')}<span className="btn-arrow">→</span></Link>
               </div>
