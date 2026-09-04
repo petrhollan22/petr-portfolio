@@ -33,7 +33,7 @@ export const hustleProjects: HustleProject[] = [
   },
   {
     id: "sports-events",
-    status: "ONGOING",
+    status: "COMPLETED",
     title: { cs: "Organizace sportovních akcí", en: "Sports event coordination" },
     description: {
       cs: "Staral jsem se o to, aby studenti VŠE měli kde a s kým sportovat. Organizoval jsem turnaje a pravidelné akce ve volejbalu, badmintonu nebo třeba boulderingu.",
