@@ -32,9 +32,16 @@ export default function HustlePage() {
             <div key={p.id} className="card">
               <div className="flex items-baseline justify-between gap-4 mb-3 flex-wrap">
                 <h2 className="text-2xl font-bold">{pick(p.title, locale)}</h2>
-                <span className="mono-label text-red-400">
-                  {typeLabel(p.type)}{p.period ? ` · ${p.period}` : ''}
-                </span>
+                <div className="flex items-center gap-3 flex-wrap">
+                  <span className="mono-label text-red-400">
+                    {typeLabel(p.type)}{p.period ? ` · ${p.period}` : ''}
+                  </span>
+                  {p.status && (
+                    <span className={"mono-label px-2 py-0.5 rounded text-xs " + (p.status === 'ONGOING' ? 'bg-green-500/10 text-green-400' : p.status === 'COMPLETED' ? 'bg-gray-700/50 text-gray-400' : 'bg-yellow-500/10 text-yellow-400')}>
+                      {p.status}
+                    </span>
+                  )}
+                </div>
               </div>
 
               <p className="text-gray-400 mb-4">{pick(p.description, locale)}</p>

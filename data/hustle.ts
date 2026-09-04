@@ -7,6 +7,7 @@ export interface HustleProject {
   type: "coaching" | "event" | "volunteer";
   cta: Localized;
   ctaLink: string;
+  status?: "ONGOING" | "COMPLETED" | "QUESTIONABLE DECISION";
   period?: string;
   bullets?: Localized[];
   image?: string;
@@ -15,6 +16,7 @@ export interface HustleProject {
 export const hustleProjects: HustleProject[] = [
   {
     id: "chess-coaching",
+    status: "ONGOING",
     title: { cs: "Šachový trénink & mentoring", en: "Chess coaching & mentoring" },
     description: {
       cs: "Za šachovnicí jsem pracoval s různorodými skupinami, od začátečníků a juniorů až po ambiciózní hráče, kteří se chtěli výrazně posunout. Vedl jsem individuální i skupinové tréninky, přednášky, besedy i simultánky. Trénoval jsem v češtině, angličtině a několik svěřenců dokonce i ve španělštině. Dokážu pomoct také s přípravou na turnaje nebo se změnou mindsetu.",
@@ -31,6 +33,7 @@ export const hustleProjects: HustleProject[] = [
   },
   {
     id: "sports-events",
+    status: "ONGOING",
     title: { cs: "Organizace sportovních akcí", en: "Sports event coordination" },
     description: {
       cs: "Staral jsem se o to, aby studenti VŠE měli kde a s kým sportovat. Organizoval jsem turnaje a pravidelné akce ve volejbalu, badmintonu nebo třeba boulderingu.",
@@ -49,6 +52,7 @@ export const hustleProjects: HustleProject[] = [
   },
   {
     id: "university-ambassador",
+    status: "COMPLETED",
     title: { cs: "Ambasador fakulty", en: "University ambassador" },
     description: {
       cs: "Pomáhal jsem středoškolákům s výběrem vysoké školy a představoval jim život na Fakultě informatiky a statistiky. Propojoval jsem uchazeče se světem dat a IT.",
@@ -67,6 +71,7 @@ export const hustleProjects: HustleProject[] = [
   },
   {
     id: "profinit-ai-hotspot",
+    status: "COMPLETED",
     title: { cs: "Profinit AI Talents, finalista", en: "Profinit AI Talents, finalist" },
     description: {
       cs: "Finalista soutěže Profinit AI Talents. S Kristiánem Mellešem a Samuelem Čandíkem jsme se s projektem Online Meetings Optimization probojovali mezi deset nejlepších a představili ho ve finále na konferenci AI HotSpot.",
@@ -79,6 +84,7 @@ export const hustleProjects: HustleProject[] = [
   },
   {
     id: "sales-management-video",
+    status: "COMPLETED",
     title: { cs: "Jak se dostat na Sales Management", en: "Getting into Sales Management" },
     description: {
       cs: "Sales Management je nejžádanější vedlejší specializace na VŠE a přijímací řízení stojí na jednominutovém videu. Nikde nebyla dostupná ukázka, jak takové video vypadá, tak jsem zveřejnil to svoje, se kterým jsem uspěl.",
@@ -87,5 +93,17 @@ export const hustleProjects: HustleProject[] = [
     type: "volunteer",
     cta: { cs: "Podívat se na video", en: "Watch the video" },
     ctaLink: "https://www.linkedin.com/posts/petr-hollan_chcete-zv%C3%BD%C5%A1it-svoji-%C5%A1anci-se-dostat-na-ugcPost-7246797614686384129-8zq6/"
-  }
+  },
+  {
+    id: "sub4-marathon",
+    status: "QUESTIONABLE DECISION",
+    title: { cs: "Maraton pod 4 hodiny", en: "Sub-4 marathon" },
+    description: {
+      cs: "Cíl existuje. Trénink méně. Závod brzy. Kolena zatím nesouhlasí.",
+      en: "The goal exists. Training less so. Race coming up. Knees yet to be convinced."
+    },
+    type: "event",
+    cta: { cs: "Sledovat na Stravě", en: "Follow on Strava" },
+    ctaLink: "https://strava.app.link/vDsxY1WUI0b",
+  },
 ];
