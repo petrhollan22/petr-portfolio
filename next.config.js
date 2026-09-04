@@ -26,7 +26,7 @@ const nextConfig = {
               "img-src 'self' data: https: blob:",
               "font-src 'self' data:",
               "frame-src https://challenges.cloudflare.com",
-              "connect-src 'self' https://*.sanity.io https://challenges.cloudflare.com",
+              "connect-src 'self' https://*.sanity.io https://*.supabase.co https://challenges.cloudflare.com",
             ].join('; '),
           },
         ],
