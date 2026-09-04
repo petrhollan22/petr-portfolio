@@ -2,6 +2,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { buildMetadata } from '@/lib/metadata';
 import { timeline } from '@/data/timeline';
+import { countriesVisited } from '@/data/travel';
 import { pick } from '@/lib/localized';
 import TimelineIcon from '@/components/TimelineIcon';
 import Reveal from '@/components/Reveal';
@@ -35,12 +36,12 @@ export default function AboutPage() {
             <div className="text-5xl font-black gradient-text mb-2 group-hover:text-red-400 transition-colors">4:17</div>
             <div className="mono-label text-gray-500">Maraton PB</div>
           </a>
-          <div>
-            <div className="text-5xl font-black gradient-text mb-2">31</div>
+          <Link href="/free-time" className="group">
+            <div className="text-5xl font-black gradient-text mb-2 group-hover:text-red-400 transition-colors">{countriesVisited.length}</div>
             <div className="mono-label text-gray-500">Zemí</div>
-          </div>
+          </Link>
           <div>
-            <div className="text-5xl font-black gradient-text mb-2">15+</div>
+            <div className="text-5xl font-black gradient-text mb-2">20+</div>
             <div className="mono-label text-gray-500">Let šachy</div>
           </div>
         </div>
