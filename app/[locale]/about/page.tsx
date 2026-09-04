@@ -24,6 +24,27 @@ export default function AboutPage() {
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">{t('lead')}</p>
       </section>
 
+      <section className="container pb-12">
+        <p className="mono-label text-red-400 text-center mb-8">{t('statsTitle')}</p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto text-center">
+          <a href="https://ratings.fide.com/profile/360945" target="_blank" rel="noopener noreferrer" className="group">
+            <div className="text-5xl font-black gradient-text mb-2 group-hover:text-red-400 transition-colors">2300+</div>
+            <div className="mono-label text-gray-500">FIDE rating</div>
+          </a>
+          <a href="https://www.triatlony.com/bezecke-tabulky/zavodnici/286167-hollan-petr" target="_blank" rel="noopener noreferrer" className="group">
+            <div className="text-5xl font-black gradient-text mb-2 group-hover:text-red-400 transition-colors">4:17</div>
+            <div className="mono-label text-gray-500">Maraton PB</div>
+          </a>
+          <div>
+            <div className="text-5xl font-black gradient-text mb-2">31</div>
+            <div className="mono-label text-gray-500">Zemí</div>
+          </div>
+          <div>
+            <div className="text-5xl font-black gradient-text mb-2">15+</div>
+            <div className="mono-label text-gray-500">Let šachy</div>
+          </div>
+        </div>
+      </section>
       <section className="container py-16">
         <div className="max-w-2xl mx-auto">
           <p className="mono-label text-red-400 mb-2">{t('timelineEyebrow')}</p>
