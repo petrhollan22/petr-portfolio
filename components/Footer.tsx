@@ -44,8 +44,8 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">{t('contactTitle')}</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li><a href="mailto:petr@hollan.eu" className="hover:text-red-400 transition-colors">petr@hollan.eu</a></li>
-              <li><a href="https://cz.linkedin.com/in/petr-hollan" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">LinkedIn ↗</a></li>
-              <li><a href="https://strava.app.link/vDsxY1WUI0b" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors">Strava ↗</a></li>
+              <li><a href="https://cz.linkedin.com/in/petr-hollan" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors"title="pro ty, co preferují formální verzi">LinkedIn ↗</a></li>
+              <li><a href="https://strava.app.link/vDsxY1WUI0b" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors"title="důkaz, že občas opravdu běhám">Strava ↗</a></li>
             </ul>
           </div>
         </div>

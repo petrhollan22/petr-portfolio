@@ -28,11 +28,11 @@ export default function AboutPage() {
       <section className="container pb-12">
         <p className="mono-label text-red-400 text-center mb-8">{t('statsTitle')}</p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto text-center">
-          <a href="https://ratings.fide.com/profile/360945" target="_blank" rel="noopener noreferrer" className="group">
+          <a href="https://ratings.fide.com/profile/360945" target="_blank" rel="noopener noreferrer" className="group" title="top 1 % šachistů na světě">
             <div className="text-5xl font-black gradient-text mb-2 group-hover:text-red-400 transition-colors">2300+</div>
             <div className="mono-label text-gray-500">FIDE rating</div>
           </a>
-          <a href="https://www.triatlony.com/bezecke-tabulky/zavodnici/286167-hollan-petr" target="_blank" rel="noopener noreferrer" className="group">
+          <a href="https://www.triatlony.com/bezecke-tabulky/zavodnici/286167-hollan-petr" target="_blank" rel="noopener noreferrer" className="group" title="Vodafone Prague Marathon 2026">
             <div className="text-5xl font-black gradient-text mb-2 group-hover:text-red-400 transition-colors">4:17</div>
             <div className="mono-label text-gray-500">Maraton PB</div>
           </a>
