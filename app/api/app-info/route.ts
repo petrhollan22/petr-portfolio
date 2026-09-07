@@ -36,9 +36,9 @@ async function fetchAppStore(appId: string, country: string) {
   };
 }
 
-async function fetchGooglePlay(packageId: string) {
+async function fetchGooglePlay(packageId: string, country: string = 'cz') {
   const gplay = require('google-play-scraper');
-  const info = await gplay.app({ appId: packageId, lang: 'cs', country: 'cz' });
+  const info = await gplay.app({ appId: packageId, lang: 'cs', country });
   return {
     platform: 'googleplay',
     appId: packageId,
@@ -72,7 +72,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Příliš mnoho požadavků. Zkus to za hodinu.' }, { status: 429 });
   }
 
-  const { platform, urls } = await req.json();
+  const { platform, urls, country = 'cz' } = await req.json();
   if (!platform || !urls?.length) {
     return NextResponse.json({ error: 'Chybí parametry' }, { status: 400 });
   }
@@ -85,11 +85,11 @@ export async function POST(req: NextRequest) {
       if (platform === 'appstore') {
         const id = parseAppStoreId(url);
         if (!id) throw new Error(`Nepodařilo se načíst App ID z: ${url}`);
-        return fetchAppStore(id, 'cz');
+        return fetchAppStore(id, country);
       } else {
         const id = parseGooglePlayId(url);
         if (!id) throw new Error(`Nepodařilo se načíst Package ID z: ${url}`);
-        return fetchGooglePlay(id);
+        return fetchGooglePlay(id, country);
       }
     })
   );
