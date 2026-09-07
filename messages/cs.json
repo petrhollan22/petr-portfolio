@@ -240,5 +240,38 @@
     "option2": "2. Předstírej, že šlo o promyšlenou oběť.",
     "option3": "3. Klikni níž a vrať se do bezpečí.",
     "cta": "Zpět na pevnou půdu"
+  },
+  "tools": {
+    "appCompare": {
+      "title": "Porovnání aplikací",
+      "lead": "Porovnej hodnocení aplikací z App Store nebo Google Play. Maximálně 5 aplikací najednou.",
+      "platformLabel": "Platforma",
+      "countryLabel": "Země",
+      "urlPlaceholderAppStore": "https://apps.apple.com/cz/app/muj-albert/id1487977886",
+      "urlPlaceholderGPlay": "https://play.google.com/store/apps/details?id=cz.albert.app",
+      "addApp": "+ Přidat aplikaci",
+      "compare": "Porovnat",
+      "comparing": "Načítám...",
+      "ratingTotal": "hodnocení celkem",
+      "currentVersion": "Aktuální verze",
+      "viewInStore": "Zobrazit v obchodě",
+      "comparisonTitle": "Porovnání hodnocení",
+      "downloadStats": "Stáhnout přehled (CSV)",
+      "loadReviews": "Načíst recenze a trendy",
+      "loadingReviews": "Načítám recenze...",
+      "trendTitle": "Trend průměrného hodnocení",
+      "trendDesc": "Průměrná hvězdička všech recenzí za daný měsíc. Ukazuje, zda se spokojenost uživatelů v čase zlepšuje nebo zhoršuje.",
+      "barsTitle": "Počet recenzí po měsících",
+      "barsDesc": "Sloupcový graf ukazuje kolik recenzí přišlo každý měsíc a jaké hvězdičky dostala aplikace. Barevně rozlišeno 1–5 hvězdiček.",
+      "reviewsLimit": "App Store RSS umožňuje stáhnout maximálně 500 nejnovějších recenzí. Pro starší recenze Apple veřejné API neposkytuje.",
+      "filterByDate": "Filtrovat recenze podle data",
+      "filterFrom": "Od",
+      "filterTo": "Do",
+      "downloadReviews": "Stáhnout recenze (CSV)",
+      "downloadFiltered": "Stáhnout filtrované recenze (CSV)",
+      "stars": "hvězdiček",
+      "totalReviews": "recenzí celkem",
+      "noReviews": "Žádné recenze v tomto období."
+    }
   }
 }

@@ -240,5 +240,38 @@
     "option2": "2. Pretend it was a calculated sacrifice.",
     "option3": "3. Click below and return to safety.",
     "cta": "Back to solid ground"
+  },
+  "tools": {
+    "appCompare": {
+      "title": "App comparison",
+      "lead": "Compare app ratings from the App Store or Google Play. Up to 5 apps at once.",
+      "platformLabel": "Platform",
+      "countryLabel": "Country",
+      "urlPlaceholderAppStore": "https://apps.apple.com/us/app/my-albert/id1487977886",
+      "urlPlaceholderGPlay": "https://play.google.com/store/apps/details?id=cz.albert.app",
+      "addApp": "+ Add app",
+      "compare": "Compare",
+      "comparing": "Loading...",
+      "ratingTotal": "ratings total",
+      "currentVersion": "Current version",
+      "viewInStore": "View in store",
+      "comparisonTitle": "Rating comparison",
+      "downloadStats": "Download overview (CSV)",
+      "loadReviews": "Load reviews and trends",
+      "loadingReviews": "Loading reviews...",
+      "trendTitle": "Average rating trend",
+      "trendDesc": "Average star rating of all reviews per month. Shows whether user satisfaction is improving or declining over time.",
+      "barsTitle": "Reviews per month",
+      "barsDesc": "Bar chart showing how many reviews came in each month and what star ratings the app received. Color-coded 1–5 stars.",
+      "reviewsLimit": "App Store RSS allows downloading a maximum of 500 most recent reviews. Apple does not provide a public API for older reviews.",
+      "filterByDate": "Filter reviews by date",
+      "filterFrom": "From",
+      "filterTo": "To",
+      "downloadReviews": "Download reviews (CSV)",
+      "downloadFiltered": "Download filtered reviews (CSV)",
+      "stars": "stars",
+      "totalReviews": "reviews total",
+      "noReviews": "No reviews in this period."
+    }
   }
 }
