@@ -22,6 +22,7 @@ export async function buildMetadata(
       languages: {
         cs: `${siteUrl}/cs${path}`,
         en: `${siteUrl}/en${path}`,
+        'x-default': `${siteUrl}/en${path}`,
       },
     },
     openGraph: {
