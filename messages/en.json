@@ -73,7 +73,8 @@
     "typeVolunteer": "Volunteering",
     "ctaTitle": "Want to get involved?",
     "ctaLead": "A chess lesson, a game together or an event invitation. Drop me a line.",
-    "ctaButton": "Message me"
+    "ctaButton": "Message me",
+    "typeTool": "Tool"
   },
   "schedule": {
     "title": "Book a time",

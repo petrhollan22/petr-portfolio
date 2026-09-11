@@ -16,7 +16,7 @@ export default function HustlePage() {
   const locale = useLocale();
 
   const typeLabel = (type: string) =>
-    type === 'coaching' ? t('typeCoaching') : type === 'event' ? t('typeEvent') : t('typeVolunteer');
+    type === 'coaching' ? t('typeCoaching') : type === 'event' ? t('typeEvent') : type === 'tool' ? t('typeTool') : t('typeVolunteer');
 
   return (
     <div className="bg-gradient-to-b from-primary to-secondary">

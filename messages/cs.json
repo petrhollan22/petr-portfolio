@@ -73,7 +73,8 @@
     "typeVolunteer": "Dobrovolnictví",
     "ctaTitle": "Chceš se zapojit?",
     "ctaLead": "Šachová lekce, společný sport nebo pozvánka na akci. Napiš mi.",
-    "ctaButton": "Napsat"
+    "ctaButton": "Napsat",
+    "typeTool": "Nástroj"
   },
   "schedule": {
     "title": "Rezervuj si čas",
