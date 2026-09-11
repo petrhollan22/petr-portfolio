@@ -35,7 +35,14 @@
     "footerCta": "Book a time",
     "bannerTitle": "Let's meet",
     "bannerLead": "A consultation on data, AI or social media, a chess lesson or a game together. Just say the word.",
-    "bannerButton": "Find a slot"
+    "bannerButton": "Find a slot",
+    "newsletterTitle": "Irregular dispatch",
+    "newsletterDesc": "Field notes on data, AI, and side projects. Sent only when I build or learn something genuinely worth sharing — no fluff, no marketing drip.",
+    "newsletterEmail": "where_to_send@domain.com",
+    "newsletterBtn": "Get updates",
+    "newsletterOk": "You are in. I will ping you only when there is something genuinely worth reading.",
+    "newsletterErr409": "Already on the list — good to have you back.",
+    "newsletterErrGeneral": "Something broke on the wire. Give it a moment and try again."
   },
   "work": {
     "title": "My work",

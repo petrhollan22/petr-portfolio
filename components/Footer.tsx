@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import NewsletterForm from './NewsletterForm';
 import { Link } from '@/i18n/routing';
 
 export default function Footer() {
@@ -40,6 +41,9 @@ export default function Footer() {
             </ul>
           </div>
 
+          <div>
+            <NewsletterForm />
+          </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">{t('contactTitle')}</h3>
             <ul className="space-y-2 text-gray-400 text-sm">

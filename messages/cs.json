@@ -35,7 +35,14 @@
     "footerCta": "Rezervuj si čas",
     "bannerTitle": "Pojďme se potkat",
     "bannerLead": "Konzultace k datům, AI a sociálním sítím, šachová lekce nebo společný sport. Stačí říct.",
-    "bannerButton": "Domluvit termín"
+    "bannerButton": "Domluvit termín",
+    "newsletterTitle": "Nepravidelný signál",
+    "newsletterDesc": "Praktické poznatky z dat, AI a mých side projektů. Píšu, jen když narazím na něco užitečného — žádná vata, žádný marketingový nátlak.",
+    "newsletterEmail": "kam_to_poslat@domena.cz",
+    "newsletterBtn": "Odebírat",
+    "newsletterOk": "Máš to tam. Dám vědět, až objevím něco, co stojí za otevření schránky.",
+    "newsletterErr409": "Už se známe — tenhle e-mail v databázi mám.",
+    "newsletterErrGeneral": "Něco spadlo pod stůl. Dej tomu vteřinu a zkus to znovu."
   },
   "work": {
     "title": "Moje práce",
