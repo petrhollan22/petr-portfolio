@@ -49,6 +49,12 @@ const STAR_COLORS: Record<number, string> = {
 
 const APP_COLORS = ['#f87171', '#60a5fa', '#34d399', '#fbbf24', '#a78bfa'];
 
+const PRESETS = [
+  { label: 'Rohlik vs. Kosik', platform: 'appstore' as const, country: 'cz', urls: ['https://apps.apple.com/cz/app/rohlik-cz/id1033157298', 'https://apps.apple.com/cz/app/kosik-cz/id1022137883'] },
+  { label: 'Revolut vs. Wise', platform: 'appstore' as const, country: 'cz', urls: ['https://apps.apple.com/cz/app/revolut/id932493382', 'https://apps.apple.com/cz/app/wise/id612261027'] },
+  { label: 'Albert vs. Kaufland', platform: 'googleplay' as const, country: 'cz', urls: ['https://play.google.com/store/apps/details?id=cz.albert.app', 'https://play.google.com/store/apps/details?id=com.kaufland.Kaufland'] },
+];
+
 function AppCard({ app, t }: { app: AppResult; t: any }) {
   if (app.error) return (
     <div className="card flex items-center justify-center min-h-40">
@@ -240,7 +246,7 @@ export default function AppComparePage() {
             ))}
           </div>
 
-          <div className="space-y-3 mb-4">
+          <div className="flex flex-wrap gap-2 mb-4"><span className="text-xs text-gray-500 w-full">{t("presetsLabel")}:</span>{PRESETS.map(preset => (<button key={preset.label} onClick={() => { setPlatform(preset.platform); setCountry(preset.country); setUrls(preset.urls); }} className="px-3 py-1.5 bg-gray-800 text-gray-400 hover:text-red-400 rounded-lg text-xs transition-colors">{preset.label}</button>))}</div><div className="space-y-3 mb-4">
             {urls.map((url, i) => (
               <div key={i} className="flex gap-2">
                 <input value={url} onChange={e => updateUrl(i, e.target.value)}
@@ -366,6 +372,13 @@ export default function AppComparePage() {
             )}
           </>
         )}
+      </section>
+      <section className="container max-w-4xl mx-auto pb-16">
+        <div className="card text-center">
+          <h3 className="text-xl font-bold mb-2">{t('ctaTitle')}</h3>
+          <p className="text-gray-400 mb-6">{t('ctaDesc')}</p>
+          <a href="/schedule-time" className="btn-primary inline-flex items-center gap-2">{t('ctaBtn')} →</a>
+        </div>
       </section>
     </div>
   );

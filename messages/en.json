@@ -282,7 +282,11 @@
       "step3Desc": "Get the basic comparison straight away. Then load individual reviews, see how ratings develop month by month and export data as CSV for further analysis.",
       "forWhoTitle": "What can you use it for",
       "forWho": "For example, to find out how your app compares with competitors, whether user ratings are improving or getting worse over time, how results differ across markets, or what users keep mentioning in their reviews.",
-      "origin": "I originally built it for my own use when comparing mobile apps. Then I figured it was more useful here than sitting on my laptop."
+      "origin": "I originally built it for my own use when comparing mobile apps. Then I figured it was more useful here than sitting on my laptop.",
+      "presetsLabel": "Quick examples",
+      "ctaTitle": "Need a deeper analysis?",
+      "ctaDesc": "Custom scraping, data pipeline or AI-powered review analysis — happy to take a look.",
+      "ctaBtn": "Get in touch"
     }
   }
 }

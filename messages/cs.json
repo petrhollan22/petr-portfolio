@@ -282,7 +282,11 @@
       "step3Desc": "Základní přehled dostaneš okamžitě. Pak si načteš recenze, podíváš se na vývoj hodnocení po měsících a stáhneš data jako CSV pro další analýzu.",
       "forWhoTitle": "K čemu se hodí",
       "forWho": "Třeba když chceš zjistit, jak si tvoje aplikace stojí vedle konkurence, jestli se hodnocení uživatelů v čase zlepšuje nebo zhoršuje, jak se výsledky liší mezi zeměmi, nebo co uživatelé v recenzích opakovaně řeší.",
-      "origin": "Nástroj jsem původně postavil pro vlastní potřebu při porovnávání mobilních aplikací. Pak mi přišlo škoda nechat si ho jen pro sebe."
+      "origin": "Nástroj jsem původně postavil pro vlastní potřebu při porovnávání mobilních aplikací. Pak mi přišlo škoda nechat si ho jen pro sebe.",
+      "presetsLabel": "Rychlé příklady",
+      "ctaTitle": "Potřebuješ hlubší analýzu?",
+      "ctaDesc": "Scrapování, datový pipeline na míru nebo analýza recenzí pomocí AI — rád se podívám.",
+      "ctaBtn": "Napiš mi"
     }
   }
 }
