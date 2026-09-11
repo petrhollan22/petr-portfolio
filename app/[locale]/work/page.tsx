@@ -111,6 +111,18 @@ export default function WorkPage() {
         );
       })}
 
+      <section className="container pt-16 pb-12">
+        <h2 className="section-title">Vlastní nástroje</h2>
+        <p className="text-gray-500 text-sm mb-8 -mt-4 italic">Občas je rychlejší něco postavit než to pětkrát dělat ručně.</p>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="card">
+            <span className="mono-label text-red-400">DATA · WEB · 2026</span>
+            <h3 className="text-2xl font-bold mt-2 mb-3">App Compare</h3>
+            <p className="text-gray-400 mb-6">Porovnání hodnocení a recenzí aplikací z App Store a Google Play napříč trhy. Až pět aplikací najednou, vývoj v čase a export dat pro další analýzu.</p>
+            <a href="/tools/app-compare" className="btn-primary inline-flex items-center gap-2">Vyzkoušet nástroj <span>→</span></a>
+          </div>
+        </div>
+      </section>
       <ContactForm />
       </section>
     </div>

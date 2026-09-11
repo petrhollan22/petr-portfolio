@@ -244,7 +244,7 @@
   "tools": {
     "appCompare": {
       "title": "Porovnání aplikací",
-      "lead": "Porovnej hodnocení aplikací z App Store nebo Google Play. Maximálně 5 aplikací najednou.",
+      "lead": "Vlož odkazy z App Store nebo Google Play, vyber zemi a sleduj hodnocení, počet recenzí a vývoj v čase. Bez přihlášení, API klíčů a ručního kopírování do Excelu.",
       "platformLabel": "Platforma",
       "countryLabel": "Země",
       "urlPlaceholderAppStore": "https://apps.apple.com/cz/app/muj-albert/id1487977886",
@@ -271,7 +271,17 @@
       "downloadFiltered": "Stáhnout filtrované recenze (CSV)",
       "stars": "hvězdiček",
       "totalReviews": "recenzí celkem",
-      "noReviews": "Žádné recenze v tomto období."
+      "noReviews": "Žádné recenze v tomto období.",
+      "howTitle": "Jak to funguje",
+      "step1Title": "Vyber platformu a zemi",
+      "step1Desc": "App Store nebo Google Play. Hodnocení i recenze se mezi jednotlivými zeměmi výrazně liší.",
+      "step2Title": "Vlož odkazy na aplikace",
+      "step2Desc": "Až pět aplikací najednou. Stačí zkopírovat URL přímo z obchodu — ID aplikace se detekuje automaticky.",
+      "step3Title": "Porovnej a stáhni",
+      "step3Desc": "Základní přehled dostaneš okamžitě. Pak si načteš recenze, podíváš se na vývoj hodnocení po měsících a stáhneš data jako CSV pro další analýzu.",
+      "forWhoTitle": "K čemu se hodí",
+      "forWho": "Třeba když chceš zjistit, jak si tvoje aplikace stojí vedle konkurence, jestli se hodnocení uživatelů v čase zlepšuje nebo zhoršuje, jak se výsledky liší mezi zeměmi, nebo co uživatelé v recenzích opakovaně řeší.",
+      "origin": "Nástroj jsem původně postavil pro vlastní potřebu při porovnávání mobilních aplikací. Pak mi přišlo škoda nechat si ho jen pro sebe."
     }
   }
 }

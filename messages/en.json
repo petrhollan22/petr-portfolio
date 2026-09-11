@@ -244,7 +244,7 @@
   "tools": {
     "appCompare": {
       "title": "App comparison",
-      "lead": "Compare app ratings from the App Store or Google Play. Up to 5 apps at once.",
+      "lead": "Paste links from the App Store or Google Play, choose a country and track ratings, review counts and trends over time. No login, API keys or manual Excel work required.",
       "platformLabel": "Platform",
       "countryLabel": "Country",
       "urlPlaceholderAppStore": "https://apps.apple.com/us/app/my-albert/id1487977886",
@@ -271,7 +271,17 @@
       "downloadFiltered": "Download filtered reviews (CSV)",
       "stars": "stars",
       "totalReviews": "reviews total",
-      "noReviews": "No reviews in this period."
+      "noReviews": "No reviews in this period.",
+      "howTitle": "How it works",
+      "step1Title": "Choose a platform and country",
+      "step1Desc": "App Store or Google Play. Ratings and reviews can differ significantly between markets.",
+      "step2Title": "Paste the app links",
+      "step2Desc": "Compare up to five apps at once. Just copy their URLs — app IDs are detected automatically.",
+      "step3Title": "Compare and export",
+      "step3Desc": "Get the basic comparison straight away. Then load individual reviews, see how ratings develop month by month and export data as CSV for further analysis.",
+      "forWhoTitle": "What can you use it for",
+      "forWho": "For example, to find out how your app compares with competitors, whether user ratings are improving or getting worse over time, how results differ across markets, or what users keep mentioning in their reviews.",
+      "origin": "I originally built it for my own use when comparing mobile apps. Then I figured it was more useful here than sitting on my laptop."
     }
   }
 }

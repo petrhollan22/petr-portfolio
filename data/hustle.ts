@@ -106,4 +106,16 @@ export const hustleProjects: HustleProject[] = [
     cta: { cs: "Sledovat na Stravě", en: "Follow on Strava" },
     ctaLink: "https://strava.app.link/vDsxY1WUI0b",
   },
+  {
+    id: 'app-compare',
+    status: 'ONGOING',
+    title: { cs: 'App Compare', en: 'App Compare' },
+    description: {
+      cs: 'Veřejný nástroj pro porovnání hodnocení a recenzí aplikací z App Store a Google Play. Vznikl z potřeby, kterou jsem původně řešil při porovnávání mobilních aplikací.',
+      en: 'A public tool for comparing App Store and Google Play ratings and reviews. Built out of a need I originally had when comparing mobile apps.',
+    },
+    type: 'event',
+    cta: { cs: 'Vyzkoušet nástroj', en: 'Try the tool' },
+    ctaLink: '/tools/app-compare',
+  },
 ];

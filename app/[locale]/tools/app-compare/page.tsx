@@ -200,6 +200,26 @@ export default function AppComparePage() {
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">{t('lead')}</p>
       </section>
 
+      <section className="container max-w-4xl mx-auto pb-8">
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          {[
+            { n: '01', title: t('step1Title'), desc: t('step1Desc') },
+            { n: '02', title: t('step2Title'), desc: t('step2Desc') },
+            { n: '03', title: t('step3Title'), desc: t('step3Desc') },
+          ].map(s => (
+            <div key={s.n} className="border-t border-gray-700 pt-4">
+              <p className="mono-label text-red-400 mb-2">{s.n}</p>
+              <h3 className="font-bold mb-2">{s.title}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+        <div className="card mb-8">
+          <h3 className="font-bold mb-2">{t('forWhoTitle')}</h3>
+          <p className="text-gray-400 leading-relaxed mb-4">{t('forWho')}</p>
+          <p className="text-gray-500 text-sm italic border-t border-gray-800 pt-4">{t('origin')}</p>
+        </div>
+      </section>
       <section className="container max-w-4xl mx-auto pb-16">
         <div className="card mb-6">
           <div className="flex gap-3 mb-4">
