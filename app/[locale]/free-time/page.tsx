@@ -199,7 +199,7 @@ export default function FreeTimePage() {
                 {races.map((race, i) => (
                   <tr key={i} className="border-b border-gray-800 hover:bg-gray-900/30 transition-colors">
                     <td className="py-3 pr-4 text-gray-400 whitespace-nowrap font-mono text-xs">
-                      {race.date}{race.year ? ' ' + race.year : ''}{race.time ? <span className="block text-gray-600">{race.time}</span> : null}
+                      {race.date}{race.time ? <span className="block text-gray-600">{race.time}</span> : null}
                     </td>
                     <td className="py-3 pr-4">
                       <a href={race.url} target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors font-medium">

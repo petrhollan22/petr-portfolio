@@ -5,7 +5,8 @@
     "scheduleTime": "Schedule",
     "hustle": "Side quests",
     "cv": "CV",
-    "inspiration": "Inspiration"
+    "inspiration": "Inspiration",
+    "races": "Races"
   },
   "home": {
     "role": "Analyst. Chess player. Athlete. Below-average retail guy.",
@@ -302,5 +303,14 @@
       "ctaDesc": "Custom scraping, data pipeline or AI-powered review analysis — happy to take a look.",
       "ctaBtn": "Get in touch"
     }
+  },
+  "races": {
+    "label": "Race calendar",
+    "title": "Races 2026",
+    "desc": "Races I am planning to run. Past ones are crossed out, upcoming ones sorted chronologically.",
+    "nextRace": "Next race",
+    "register": "Register",
+    "upcoming": "Upcoming races",
+    "past": "Past races"
   }
 }

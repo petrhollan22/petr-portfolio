@@ -15,6 +15,7 @@ export default function Navbar() {
     { href: '/work', label: t('work') },
     { href: '/cv', label: t('cv') },
     { href: '/free-time', label: t('freeTime') },
+    { href: '/races', label: t('races') },
     { href: '/schedule-time', label: t('scheduleTime') },
     { href: '/hustle', label: t('hustle') },
     { href: '/blog', label: 'Blog' },

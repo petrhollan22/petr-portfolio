@@ -5,7 +5,8 @@
     "scheduleTime": "Rezervace",
     "hustle": "Sidequesty",
     "cv": "Životopis",
-    "inspiration": "Inspirace"
+    "inspiration": "Inspirace",
+    "races": "Závody"
   },
   "home": {
     "role": "Analytik. Šachista. Sportovec. Průměrný prodavač.",
@@ -302,5 +303,14 @@
       "ctaDesc": "Scrapování, datový pipeline na míru nebo analýza recenzí pomocí AI — rád se podívám.",
       "ctaBtn": "Napiš mi"
     }
+  },
+  "races": {
+    "label": "Běžecký kalendář",
+    "title": "Závody 2026",
+    "desc": "Závody, na které se chystám. Minulé jsou přeškrtnuté, nadcházející seřazené chronologicky.",
+    "nextRace": "Nejbližší závod",
+    "register": "Přihlásit se",
+    "upcoming": "Nadcházející závody",
+    "past": "Absolvované závody"
   }
 }
