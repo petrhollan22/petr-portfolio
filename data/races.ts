@@ -46,4 +46,7 @@ export const races: Race[] = [
   { date: '28.10.2026', isoDate: '2026-10-28', day: 'Středa', name: 'Vaše liga - půlmaraton', url: 'https://www.vaseliga.cz/behaci-liga/', place: 'Praha - Braník', distance: 21.1, surface: 'Asfalt', profile: 'Rovina' },
   { date: '17.11.2026', isoDate: '2026-11-17', day: 'Úterý', name: 'Sametový běh', url: 'https://www.behej.com/terminovka', place: 'Odolena Voda', distance: 10, surface: 'Asfalt/Terén', profile: 'Zvlněný terén' },
   { date: '02.05.2027', isoDate: '2027-05-02', day: 'Neděle', time: '08:00', name: 'Vodafone Pražský maraton 2027', url: 'https://www.runczech.com/cs/akce/vodafone-maraton-praha-2027', place: 'Praha', distance: 42.2, shortVariant: '2Run', surface: 'Asfalt', profile: 'Rovina' },
+  { date: '17.10.2026', isoDate: '2026-10-17', day: 'Sobota', time: '07:00', name: 'Zapomenuté hory', url: 'https://www.zapomenutehory.com/zapomenute-hory', place: 'Uhelná, Jeseník', distance: 76, shortVariant: '46, 26', surface: 'Trail', profile: 'Kopce' },
+  { date: '03.04.2027', isoDate: '2027-04-03', day: 'Pátek', name: 'Generali 1/2Maraton Praha 2027', url: 'https://www.runczech.com/cs/akce/generali-1-2maraton-praha-2027', place: 'Praha', distance: 21.1, surface: 'Asfalt', profile: 'Rovina' },
+  { date: '12.06.2027', isoDate: '2027-06-12', day: 'Pátek', name: 'Mattoni Running Festival Olomouc 2027', url: 'https://www.runczech.com/cs/akce/mattoni-running-festival-olomouc-2027', place: 'Olomouc', distance: 21.1, surface: 'Asfalt', profile: 'Rovina' },
 ];
