@@ -1,6 +1,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { sports } from '@/data/sports';
+import { races } from '@/data/races';
 import { countriesVisited } from '@/data/travel';
 import { pick } from '@/lib/localized';
 import { buildMetadata } from '@/lib/metadata';
@@ -177,6 +178,47 @@ export default function FreeTimePage() {
         <h2 className="text-3xl font-bold mb-4">{t('ctaTitle')}</h2>
         <p className="text-gray-400 mb-8 max-w-2xl mx-auto">{t('ctaLead')}</p>
         <Link href={{ pathname: "/schedule-time", query: { type: "activity" } }} className="btn-primary">{t('ctaButton')}<span className="btn-arrow">→</span></Link>
+      </section>
+      <section className="container py-8">
+        <div className="card">
+          <h2 className="text-3xl font-bold mb-2 gradient-text">{t('racesTitle')}</h2>
+          <p className="text-gray-400 mb-6">{t('racesDesc')}</p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="text-left border-b border-gray-700">
+                  <th className="pb-3 pr-4 text-gray-400 font-medium">Datum</th>
+                  <th className="pb-3 pr-4 text-gray-400 font-medium">Závod</th>
+                  <th className="pb-3 pr-4 text-gray-400 font-medium">Místo</th>
+                  <th className="pb-3 pr-4 text-gray-400 font-medium">{t('racesDistance')}</th>
+                  <th className="pb-3 pr-4 text-gray-400 font-medium hidden md:table-cell">{t('racesSurface')}</th>
+                  <th className="pb-3 text-gray-400 font-medium hidden md:table-cell">{t('racesProfile')}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {races.map((race, i) => (
+                  <tr key={i} className="border-b border-gray-800 hover:bg-gray-900/30 transition-colors">
+                    <td className="py-3 pr-4 text-gray-400 whitespace-nowrap font-mono text-xs">
+                      {race.date}{race.year ? ' ' + race.year : ''}{race.time ? <span className="block text-gray-600">{race.time}</span> : null}
+                    </td>
+                    <td className="py-3 pr-4">
+                      <a href={race.url} target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors font-medium">
+                        {race.name} ↗
+                      </a>
+                    </td>
+                    <td className="py-3 pr-4 text-gray-400 text-xs">{race.place}</td>
+                    <td className="py-3 pr-4">
+                      <span className="mono-label text-red-400">{race.distance} km</span>
+                      {race.shortVariant && <span className="block text-gray-600 text-xs">{t('racesShort')}: {race.shortVariant} km</span>}
+                    </td>
+                    <td className="py-3 pr-4 text-gray-400 text-xs hidden md:table-cell">{race.surface}</td>
+                    <td className="py-3 text-gray-400 text-xs hidden md:table-cell">{race.profile}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
     </div>
   );

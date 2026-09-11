@@ -70,7 +70,14 @@
     "travelTitle": "Cestování",
     "travelLead": "Cestování pro mě není o sbírání magnetek na ledničku, ale o sbírání perspektiv. Bavit se s lidmi z druhého konce světa vás okamžitě vytáhne ze stereotypu i komfortní zóny a ukáže vám, kolik různých způsobů existuje, jak žít život. A když pak objevíte něco skvělého, byla by škoda si ty tipy nechat jen pro sebe.",
     "travelVisited": "A když už to někoho zajímá, tady je ta sbírka:",
-    "travelOutro": "A rozhodně se nehodlám zastavit. O cestování a zážitcích si vždycky rád popovídám."
+    "travelOutro": "A rozhodně se nehodlám zastavit. O cestování a zážitcích si vždycky rád popovídám.",
+    "racesTitle": "Plánované závody 2026",
+    "racesDesc": "Závody, na které se chystám. Někde budu startovat, někde jen fandit nebo plánuju.",
+    "racesDistance": "Vzdálenost",
+    "racesSurface": "Povrch",
+    "racesProfile": "Profil",
+    "racesShort": "Kratší varianta",
+    "racesRegister": "Přihlásit se"
   },
   "hustle": {
     "title": "Sidequesty",
