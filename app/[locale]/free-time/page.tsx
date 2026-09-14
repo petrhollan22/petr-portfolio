@@ -36,7 +36,7 @@ export default function FreeTimePage() {
                   <div>
                     <img
                       src={sport.image}
-                      alt={pick(sport.name, locale)}
+                      alt={sport.imageCaption ? pick(sport.imageCaption, locale) : pick(sport.name, locale)}
                       className="w-full rounded-lg"
                       loading="lazy"
                     />
@@ -50,7 +50,7 @@ export default function FreeTimePage() {
                     <div>
                       <img
                         src={(sport as any).image2}
-                        alt={pick(sport.name, locale)}
+                        alt={(sport as any).image2Caption ? pick((sport as any).image2Caption, locale) : pick(sport.name, locale)}
                         className="w-full rounded-lg"
                         loading="lazy"
                       />

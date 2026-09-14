@@ -3,6 +3,7 @@ import InspirationClient from './InspirationClient';
 import { getRecommendationPosts } from '@/sanity/queries';
 import PageGlow from '@/components/PageGlow';
 import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({
   params,
@@ -13,16 +14,18 @@ export async function generateMetadata({
   return buildMetadata(locale, 'inspirationTitle', 'inspirationDescription', '/inspiration');
 }
 
-export default async function Page() {
+export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'meta' });
   const posts = await getRecommendationPosts();
 
   return (
     <div className="bg-gradient-to-b from-primary to-secondary">
       <section className="relative overflow-hidden container pt-20 pb-4 text-center">
         <PageGlow />
-        <h1 className="text-5xl font-bold mb-4 gradient-text">Inspirace</h1>
+        <h1 className="text-5xl font-bold mb-4 gradient-text">{t('inspirationTitle')}</h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-          Co čtu, poslouchám a používám. A co bych doporučil i tobě.
+          {t('inspirationDescription')}
         </p>
       </section>
 
