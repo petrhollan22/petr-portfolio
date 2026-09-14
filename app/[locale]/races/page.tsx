@@ -6,15 +6,19 @@ import { races } from '@/data/races';
 import PageGlow from '@/components/PageGlow';
 import Reveal from '@/components/Reveal';
 
+const STATUS_BADGE: Record<string, { label: string; cls: string }> = {
+  registered: { label: 'Přihlášen', cls: 'bg-green-500/20 text-green-400 border border-green-500/30' },
+  considering: { label: 'Zvažuji', cls: 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30' },
+  watching: { label: 'Sleduji', cls: 'bg-gray-500/20 text-gray-400 border border-gray-500/30' },
+};
+
 function Countdown({ isoDate, time }: { isoDate: string; time?: string }) {
   const [diff, setDiff] = useState<{ days: number; hours: number; minutes: number; seconds: number } | null>(null);
 
   useEffect(() => {
     const target = new Date(isoDate + (time ? 'T' + time : 'T00:00:00'));
-
     const tick = () => {
-      const now = new Date();
-      const ms = target.getTime() - now.getTime();
+      const ms = target.getTime() - Date.now();
       if (ms <= 0) { setDiff({ days: 0, hours: 0, minutes: 0, seconds: 0 }); return; }
       setDiff({
         days: Math.floor(ms / 86400000),
@@ -23,7 +27,6 @@ function Countdown({ isoDate, time }: { isoDate: string; time?: string }) {
         seconds: Math.floor((ms % 60000) / 1000),
       });
     };
-
     tick();
     const id = setInterval(tick, 1000);
     return () => clearInterval(id);
@@ -50,13 +53,17 @@ function Countdown({ isoDate, time }: { isoDate: string; time?: string }) {
 
 export default function RacesPage() {
   const t = useTranslations('races');
+  const [filter, setFilter] = useState<'all' | 'registered' | 'considering'>('all');
+
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
   const sorted = [...races].sort((a, b) => a.isoDate.localeCompare(b.isoDate));
   const upcoming = sorted.filter(r => new Date(r.isoDate) >= today);
   const past = sorted.filter(r => new Date(r.isoDate) < today).reverse();
-  const next = upcoming[0];
+
+  const filtered = upcoming.filter(r => filter === 'all' || r.status === filter);
+  const next = upcoming.find(r => r.status === 'registered');
 
   return (
     <div className="bg-gradient-to-b from-primary to-secondary min-h-screen">
@@ -87,7 +94,17 @@ export default function RacesPage() {
 
       <Reveal>
         <section className="container pb-8">
-          <h2 className="section-title">{t('upcoming')}</h2>
+          <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+            <h2 className="section-title mb-0">{t('upcoming')}</h2>
+            <div className="flex gap-2">
+              {(['all', 'registered', 'considering'] as const).map(f => (
+                <button key={f} onClick={() => setFilter(f)}
+                  className={`px-3 py-1 rounded-full text-xs font-semibold transition-colors ${filter === f ? 'bg-red-600 text-white' : 'bg-secondary text-gray-400 hover:text-white'}`}>
+                  {f === 'all' ? 'Vše' : f === 'registered' ? 'Přihlášen' : 'Zvažuji'}
+                </button>
+              ))}
+            </div>
+          </div>
           <div className="card overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
@@ -96,11 +113,12 @@ export default function RacesPage() {
                   <th className="pb-3 pr-4 text-gray-400 font-medium">Závod</th>
                   <th className="pb-3 pr-4 text-gray-400 font-medium hidden sm:table-cell">Místo</th>
                   <th className="pb-3 pr-4 text-gray-400 font-medium">km</th>
-                  <th className="pb-3 text-gray-400 font-medium hidden md:table-cell">Povrch</th>
+                  <th className="pb-3 pr-4 text-gray-400 font-medium hidden md:table-cell">Povrch</th>
+                  <th className="pb-3 text-gray-400 font-medium">Status</th>
                 </tr>
               </thead>
               <tbody>
-                {upcoming.map((race, i) => (
+                {filtered.map((race, i) => (
                   <tr key={i} className="border-b border-gray-800 hover:bg-gray-900/30 transition-colors">
                     <td className="py-3 pr-4 text-gray-400 whitespace-nowrap font-mono text-xs">
                       {race.date}
@@ -116,7 +134,14 @@ export default function RacesPage() {
                       <span className="mono-label text-red-400">{race.distance}</span>
                       {race.shortVariant && <span className="block text-gray-600 text-xs">/{race.shortVariant}</span>}
                     </td>
-                    <td className="py-3 text-gray-400 text-xs hidden md:table-cell">{race.surface}</td>
+                    <td className="py-3 pr-4 text-gray-400 text-xs hidden md:table-cell">{race.surface}</td>
+                    <td className="py-3">
+                      {race.status && (
+                        <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${STATUS_BADGE[race.status].cls}`}>
+                          {STATUS_BADGE[race.status].label}
+                        </span>
+                      )}
+                    </td>
                   </tr>
                 ))}
               </tbody>

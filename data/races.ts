@@ -1,5 +1,7 @@
 import type { Localized } from '@/lib/localized';
 
+export type RaceStatus = 'registered' | 'considering' | 'watching' | null;
+
 export interface Race {
   date: string;
   isoDate: string;
@@ -12,6 +14,7 @@ export interface Race {
   shortVariant?: string;
   surface: string;
   profile: string;
+  status?: RaceStatus;
 }
 
 export const races: Race[] = [
@@ -35,18 +38,18 @@ export const races: Race[] = [
   { date: '16.09.2026', isoDate: '2026-09-16', day: 'Středa', name: 'Vaše liga', url: 'https://www.vaseliga.cz/behaci-liga/', place: 'Praha - Braník', distance: 10, surface: 'Asfalt', profile: 'Rovina' },
   { date: '19.09.2026', isoDate: '2026-09-19', day: 'Sobota', name: 'Železná Ruda', url: 'https://www.trailrunningcup.cz/', place: 'Železná Ruda', distance: 18, shortVariant: '13', surface: 'Trail', profile: 'Kopce' },
   { date: '27.09.2026', isoDate: '2026-09-27', day: 'Neděle', name: 'Praha - Běchovice', url: 'https://www.bechovice-praha.cz/', place: 'Běchovice', distance: 10, surface: 'Asfalt', profile: 'Zvlněná rovina' },
-  { date: '30.09.2026', isoDate: '2026-09-30', day: 'Středa', name: 'RS Run - Obora Hvězda', url: 'https://www.behej.com/terminovka', place: 'Praha - Obora Hvězda', distance: 5, surface: '', profile: '' },
-  { date: '03.10.2026', isoDate: '2026-10-03', day: 'Sobota', name: 'PUMA Třeboňský maraton', url: 'https://www.naturemarathon.cz/', place: 'Třeboň', distance: 42.2, shortVariant: '21.1, 10, 5', surface: 'Asfalt', profile: 'Rovina' },
+  { date: '30.09.2026', isoDate: '2026-09-30', day: 'Středa', name: 'RS Run - Obora Hvězda', url: 'https://www.behej.com/terminovka', place: 'Praha - Obora Hvězda', distance: 5, surface: '', profile: '', status: 'registered' },
+  { date: '03.10.2026', isoDate: '2026-10-03', day: 'Sobota', name: 'PUMA Třeboňský maraton', url: 'https://www.naturemarathon.cz/', place: 'Třeboň', distance: 42.2, shortVariant: '21.1, 10, 5', surface: 'Asfalt', profile: 'Rovina', status: 'registered' },
   { date: '03.10.2026', isoDate: '2026-10-03', day: 'Sobota', name: 'Liberec Trail run', url: 'https://www.trailrunningcup.cz/', place: 'Liberec', distance: 22, shortVariant: '12', surface: 'Trail', profile: 'Kopce' },
   { date: '04.10.2026', isoDate: '2026-10-04', day: 'Neděle', name: 'Hradecký půlmaraton', url: 'https://www.hradeckypulmaraton.cz/', place: 'Hradec Králové', distance: 21.1, surface: 'Asfalt', profile: 'Rovina' },
+  { date: '17.10.2026', isoDate: '2026-10-17', day: 'Sobota', time: '07:00', name: 'Zapomenuté hory', url: 'https://www.zapomenutehory.com/zapomenute-hory', place: 'Uhelná, Jeseník', distance: 76, shortVariant: '46, 26', surface: 'Trail', profile: 'Kopce', status: 'considering' },
   { date: '18.10.2026', isoDate: '2026-10-18', day: 'Neděle', name: 'Klánovický půlmaraton', url: 'https://www.klanovickypulmaraton.cz/', place: 'Praha - Klánovice', distance: 21.1, surface: 'Terén', profile: 'Zvlněná rovina' },
   { date: '18.10.2026', isoDate: '2026-10-18', day: 'Neděle', name: 'Klánovická 10ka', url: 'https://www.klanovickypulmaraton.cz/', place: 'Praha - Klánovice', distance: 10, surface: 'Terén', profile: 'Zvlněná rovina' },
   { date: '26.10.2026', isoDate: '2026-10-26', day: 'Neděle', name: 'Dresden Marathon', url: 'https://www.dresden-marathon.com/', place: 'Drážďany', distance: 42.2, surface: 'Asfalt', profile: 'Rovina' },
   { date: '26.10.2026', isoDate: '2026-10-26', day: 'Neděle', name: 'Dresden Půlmaraton', url: 'https://www.dresden-marathon.com/', place: 'Drážďany', distance: 21.1, surface: 'Asfalt', profile: 'Rovina' },
   { date: '28.10.2026', isoDate: '2026-10-28', day: 'Středa', name: 'Vaše liga - půlmaraton', url: 'https://www.vaseliga.cz/behaci-liga/', place: 'Praha - Braník', distance: 21.1, surface: 'Asfalt', profile: 'Rovina' },
-  { date: '17.11.2026', isoDate: '2026-11-17', day: 'Úterý', name: 'Sametový běh', url: 'https://www.behej.com/terminovka', place: 'Odolena Voda', distance: 10, surface: 'Asfalt/Terén', profile: 'Zvlněný terén' },
-  { date: '02.05.2027', isoDate: '2027-05-02', day: 'Neděle', time: '08:00', name: 'Vodafone Pražský maraton 2027', url: 'https://www.runczech.com/cs/akce/vodafone-maraton-praha-2027', place: 'Praha', distance: 42.2, shortVariant: '2Run', surface: 'Asfalt', profile: 'Rovina' },
-  { date: '17.10.2026', isoDate: '2026-10-17', day: 'Sobota', time: '07:00', name: 'Zapomenuté hory', url: 'https://www.zapomenutehory.com/zapomenute-hory', place: 'Uhelná, Jeseník', distance: 76, shortVariant: '46, 26', surface: 'Trail', profile: 'Kopce' },
-  { date: '03.04.2027', isoDate: '2027-04-03', day: 'Pátek', name: 'Generali 1/2Maraton Praha 2027', url: 'https://www.runczech.com/cs/akce/generali-1-2maraton-praha-2027', place: 'Praha', distance: 21.1, surface: 'Asfalt', profile: 'Rovina' },
-  { date: '12.06.2027', isoDate: '2027-06-12', day: 'Pátek', name: 'Mattoni Running Festival Olomouc 2027', url: 'https://www.runczech.com/cs/akce/mattoni-running-festival-olomouc-2027', place: 'Olomouc', distance: 21.1, surface: 'Asfalt', profile: 'Rovina' },
+  { date: '17.11.2026', isoDate: '2026-11-17', day: 'Úterý', name: 'Sametový běh', url: 'https://www.behej.com/terminovka', place: 'Odolena Voda', distance: 10, surface: 'Asfalt/Terén', profile: 'Zvlněný terén', status: 'considering' },
+  { date: '03.04.2027', isoDate: '2027-04-03', day: 'Pátek', name: 'Generali 1/2Maraton Praha 2027', url: 'https://www.runczech.com/cs/akce/generali-1-2maraton-praha-2027', place: 'Praha', distance: 21.1, surface: 'Asfalt', profile: 'Rovina', status: 'registered' },
+  { date: '02.05.2027', isoDate: '2027-05-02', day: 'Neděle', time: '08:00', name: 'Vodafone Pražský maraton 2027', url: 'https://www.runczech.com/cs/akce/vodafone-maraton-praha-2027', place: 'Praha', distance: 42.2, shortVariant: '2Run', surface: 'Asfalt', profile: 'Rovina', status: 'registered' },
+  { date: '12.06.2027', isoDate: '2027-06-12', day: 'Pátek', name: 'Mattoni Running Festival Olomouc 2027', url: 'https://www.runczech.com/cs/akce/mattoni-running-festival-olomouc-2027', place: 'Olomouc', distance: 21.1, surface: 'Asfalt', profile: 'Rovina', status: 'registered' },
 ];
