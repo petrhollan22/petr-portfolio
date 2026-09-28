@@ -37,4 +37,6 @@ export const countriesVisited: Country[] = [
   { name: { cs: "Španělsko", en: "Spain" }, flag: "🇪🇸" },
   { name: { cs: "Švédsko", en: "Sweden" }, flag: "🇸🇪" },
   { name: { cs: "Švýcarsko", en: "Switzerland" }, flag: "🇨🇭" },
+  { name: { cs: "Rumunsko", en: "Romania" }, flag: "🇷🇴" },
+  { name: { cs: "Bulharsko", en: "Bulgaria" }, flag: "🇧🇬" },
 ];
