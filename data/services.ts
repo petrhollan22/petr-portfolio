@@ -74,6 +74,7 @@ export const scheduleActivities: Localized[] = [
   { cs: "Squash", en: "Squash" },
   { cs: "Lyžování", en: "Skiing" },
   { cs: "Hory a turistika", en: "Hiking" },
+  { cs: "Běh", en: "Running" },
   { cs: "Cestování", en: "Travel" },
   { cs: "Společenské akce", en: "Social events" },
   { cs: "Workshop", en: "Workshop" },
