@@ -4,65 +4,65 @@ export interface Service {
   id: string;
   name: Localized;
   description: Localized;
+  tier: 'main' | 'side' | 'other';
   hidden?: boolean;
 }
 
 export const workServices: Service[] = [
   {
-    id: "web-design",
-    name: { cs: "Web development", en: "Web development" },
+    id: "data-analytics",
+    tier: "main",
+    name: { cs: "Data & BI", en: "Data & BI" },
     description: {
-      cs: "Osobní weby a menší aplikace v Next.js. Stavím vlastní projekty a pomáhám s weby přátelům a známým.",
-      en: "Personal sites and smaller apps in Next.js. I build my own projects and help friends and people I know."
+      cs: "Daty se živím. Nejčastěji SQL, Databricks, PySpark a Power BI. Baví mě hlavně ta část mezi \"někde máme data\" a \"někdo podle nich dokáže udělat rozhodnutí\".",
+      en: "Data is my day job. Mostly SQL, Databricks, PySpark and Power BI. I enjoy the part between \"we have data somewhere\" and \"someone can actually make decisions with it\"."
     }
   },
   {
     id: "ai-solutions",
-    name: { cs: "AI řešení", en: "AI solutions" },
+    tier: "main",
+    name: { cs: "AI", en: "AI" },
     description: {
-      cs: "Praktické nasazení AI a ML do tvého byznysu. Integrace LLM, stavba inteligentních chatbotů a automatizace procesů.",
-      en: "Practical AI and ML deployment for your business. LLM integration, building intelligent chatbots and process automation."
+      cs: "AI řeším v práci, vlastních projektech i akademicky. V diplomce jsem zkoumal, jak ji zavádí osm českých firem — a co se mezi prezentací o AI a skutečným nasazením obvykle pokazí. Pokud řešíte podobný problém, rád se na něj podívám s vámi.",
+      en: "I work with AI professionally, in my own projects and academically. My thesis looked at how eight Czech companies adopt AI — and what usually goes wrong between the AI presentation and actual deployment. If you're facing something similar, I'm happy to take a look."
     }
   },
   {
-    id: "data-analytics",
-    name: { cs: "Datová analytika", en: "Data analytics" },
+    id: "web-design",
+    tier: "side",
+    name: { cs: "Weby & vlastní projekty", en: "Websites & side projects" },
     description: {
-      cs: "Zpracování a analýza dat v Databricks a PySparku. Přehledné vizualizace, Business Intelligence a efektivní datové pipeline.",
-      en: "Data processing and analysis in Databricks and PySpark. Clear visualisations, business intelligence and efficient data pipelines."
+      cs: "Tenhle web jsem si postavil sám. Pak jsem zjistil, že mě to baví, a začal stavět další. Dělám hlavně menší weby a nástroje v Next.js — zatím spíš vlastní projekty a weby pro lidi kolem mě.",
+      en: "I built this site myself. Then I realised I enjoyed it and started building more. Mostly smaller sites and tools in Next.js — so far mainly my own projects and sites for people I know."
+    }
+  },
+  {
+    id: "chess-coaching",
+    tier: "other",
+    name: { cs: "Šachový trénink", en: "Chess coaching" },
+    description: {
+      cs: "Šachy hraju závodně přes dvacet let a mám titul FIDE Master. Trénuju individuálně i skupinově, online i osobně.",
+      en: "I've played chess competitively for over twenty years and hold the FIDE Master title. I coach individually and in groups, online and in person."
     }
   },
   {
     id: "ai-audit",
-    name: { cs: "AI audit & Governance", en: "AI Audit & Governance" },
+    tier: "side",
+    hidden: true,
+    name: { cs: "AI governance readiness", en: "AI governance readiness" },
     description: {
-      cs: "Analýza AI use cases, rizik a governance s ohledem na požadavky EU AI Act. Vychází z diplomové práce o zavádění AI v českých firmách.",
-      en: "Analysis of AI use cases, risks and governance with regard to EU AI Act requirements. Based on my thesis research on AI adoption in Czech companies."
-    }
-  },
-  {
-    id: "social-media",
-    name: { cs: "Sociální sítě", en: "Social media" },
-    description: {
-      cs: "Tvorba obsahu a růstová strategie pro vaše profily. Správa komunity, plánování a vyhodnocování dosahu.",
-      en: "Content creation and growth strategy for your profiles. Community management, planning and reach analysis."
+      cs: "Analýza AI use cases a governance s ohledem na EU AI Act. Vychází z diplomové práce o zavádění AI v českých firmách.",
+      en: "Analysis of AI use cases and governance with regard to EU AI Act. Based on my thesis research on AI adoption in Czech companies."
     }
   },
   {
     id: "cv-request",
     hidden: true,
+    tier: "other",
     name: { cs: "Žádost o životopis", en: "CV request" },
     description: {
       cs: "Pošlu ti kompletní životopis v PDF včetně kontaktních údajů.",
       en: "I'll send you the full CV as a PDF, including contact details."
-    }
-  },
-  {
-    id: "chess-coaching",
-    name: { cs: "Šachový trénink", en: "Chess coaching" },
-    description: {
-      cs: "Individuální i skupinové lekce šachu pro začátečníky i pokročilé. Online formou nebo osobně.",
-      en: "Individual and group chess lessons for beginners and advanced players. Online or in person."
     }
   }
 ];
