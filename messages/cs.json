@@ -50,7 +50,8 @@
     "newsletterBtn": "Odebírat",
     "newsletterOk": "Máš to tam. Dám vědět, až objevím něco, co stojí za otevření schránky.",
     "newsletterErr409": "Už se známe — tenhle e-mail v databázi mám.",
-    "newsletterErrGeneral": "Něco spadlo pod stůl. Dej tomu vteřinu a zkus to znovu."
+    "newsletterErrGeneral": "Něco spadlo pod stůl. Dej tomu vteřinu a zkus to znovu.",
+    "builtBy": "Web jsem si postavil sám. Případné chyby tedy nemám na koho svést."
   },
   "work": {
     "title": "Moje práce",
