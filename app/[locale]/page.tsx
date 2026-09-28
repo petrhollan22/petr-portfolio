@@ -76,6 +76,28 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         </div>
       </section>
 
+      <section className="container pb-8 pt-4">
+        <p className="mono-label text-red-400 mb-6">{t('nowTitle')}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="card">
+            <span className="mono-label text-red-400 text-xs mb-2 block">Data & BI</span>
+            <p className="text-sm text-gray-300">{t('nowBi')}</p>
+          </div>
+          <div className="card">
+            <span className="mono-label text-red-400 text-xs mb-2 block">AI</span>
+            <p className="text-sm text-gray-300">{t('nowAi')}</p>
+          </div>
+          <div className="card">
+            <span className="mono-label text-red-400 text-xs mb-2 block">Side projects</span>
+            <p className="text-sm text-gray-300">{t('nowSide')}</p>
+          </div>
+          <div className="card">
+            <span className="mono-label text-red-400 text-xs mb-2 block">Šachy</span>
+            <p className="text-sm text-gray-300">{t('nowChess')}</p>
+          </div>
+        </div>
+      </section>
+
       <section className="container pb-16">
         <PhotoStrip />
       </section>

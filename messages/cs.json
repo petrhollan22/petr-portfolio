@@ -27,7 +27,12 @@
     "tagline": "FIDE Master, maratonec a člověk, který neumí dělat koníčky úplně rekreačně.",
     "heroNote": "Pokud chcete zjistit, co vlastně dělám a proč toho dělám tolik, jste tu správně. Alespoň na první otázku tu odpověď najdete.",
     "fromBlog": "Z blogu",
-    "heroProfession": "Přes den řeším BI v retailu. Vedle toho experimentuju s AI a stavím vlastní věci."
+    "heroProfession": "Přes den řeším BI v retailu. Vedle toho experimentuju s AI a stavím vlastní věci.",
+    "nowTitle": "Co teď dělám",
+    "nowBi": "BI Analyst v retailu (Albert / Ahold Delhaize). Databricks, PySpark, Power BI.",
+    "nowAi": "Diplomka o adopci AI v českých firmách — hotovo. Teď vlastní experimenty s LLM a automatizací.",
+    "nowSide": "Tenhle web, App Compare a pár dalších věcí co mě baví stavět.",
+    "nowChess": "FIDE Master. Trenér a občasný hráč."
   },
   "footer": {
     "tagline": "Data & AI. Praha, Česká republika.",

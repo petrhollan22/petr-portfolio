@@ -27,7 +27,12 @@
     "tagline": "FIDE Master, marathon runner, and someone who cannot do hobbies casually.",
     "heroNote": "If you want to find out what I actually do and why I do so much of it, you are in the right place. At least the first question has an answer here.",
     "fromBlog": "From the blog",
-    "heroProfession": "By day I work on BI in retail. On the side I experiment with AI and build my own things."
+    "heroProfession": "By day I work on BI in retail. On the side I experiment with AI and build my own things.",
+    "nowTitle": "What I am working on",
+    "nowBi": "BI Analyst in retail (Albert / Ahold Delhaize). Databricks, PySpark, Power BI.",
+    "nowAi": "Thesis on AI adoption in Czech companies — done. Now running my own LLM and automation experiments.",
+    "nowSide": "This site, App Compare and a few other things I enjoy building.",
+    "nowChess": "FIDE Master. Coach and occasional player."
   },
   "footer": {
     "tagline": "Data & AI. Prague, Czech Republic.",
