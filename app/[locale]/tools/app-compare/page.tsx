@@ -377,7 +377,7 @@ export default function AppComparePage() {
         <div className="card text-center">
           <h3 className="text-xl font-bold mb-2">{t('ctaTitle')}</h3>
           <p className="text-gray-400 mb-6">{t('ctaDesc')}</p>
-          <a href="/schedule-time" className="btn-primary inline-flex items-center gap-2">{t('ctaBtn')} →</a>
+          <a href="mailto:petr@hollan.eu" className="btn-primary inline-flex items-center gap-2">{t('ctaBtn')} →</a>
         </div>
       </section>
     </div>
