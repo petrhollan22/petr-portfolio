@@ -34,15 +34,15 @@ export default function AboutPage() {
           </a>
           <a href="https://www.triatlony.com/bezecke-tabulky/zavodnici/286167-hollan-petr" target="_blank" rel="noopener noreferrer" className="group" title="Vodafone Prague Marathon 2026">
             <div className="text-5xl font-black gradient-text mb-2 group-hover:text-red-400 transition-colors">4:17</div>
-            <div className="mono-label text-gray-500">Maraton PB</div>
+            <div className="mono-label text-gray-500">{t('statMarathon')}</div>
           </a>
           <Link href="/free-time" className="group">
             <div className="text-5xl font-black gradient-text mb-2 group-hover:text-red-400 transition-colors">{countriesVisited.length}</div>
-            <div className="mono-label text-gray-500">Zemí</div>
+            <div className="mono-label text-gray-500">{t('statCountries')}</div>
           </Link>
           <div>
             <div className="text-5xl font-black gradient-text mb-2">20+</div>
-            <div className="mono-label text-gray-500">Let šachy</div>
+            <div className="mono-label text-gray-500">{t('statChess')}</div>
           </div>
         </div>
       </section>
