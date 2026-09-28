@@ -55,10 +55,8 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <head>
-        <StructuredData locale={locale} />
-      </head>
       <body className={`${displayFont.variable} ${bodyFont.variable} ${monoFont.variable} bg-primary text-white font-sans`}>
+        <StructuredData locale={locale} />
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           <main className="min-h-screen">{children}</main>
