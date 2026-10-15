@@ -33,7 +33,7 @@ export default function AboutPage() {
             <div className="mono-label text-gray-500">FIDE rating</div>
           </a>
           <a href="https://www.triatlony.com/bezecke-tabulky/zavodnici/286167-hollan-petr" target="_blank" rel="noopener noreferrer" className="group" title="Vodafone Prague Marathon 2026">
-            <div className="text-5xl font-black gradient-text mb-2 group-hover:text-red-400 transition-colors">4:17</div>
+            <div className="text-5xl font-black gradient-text mb-2 group-hover:text-red-400 transition-colors">3:56</div>
             <div className="mono-label text-gray-500">{t('statMarathon')}</div>
           </a>
           <Link href="/free-time" className="group">
