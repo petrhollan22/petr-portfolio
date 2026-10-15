@@ -96,11 +96,11 @@ export const hustleProjects: HustleProject[] = [
   },
   {
     id: "sub4-marathon",
-    status: "QUESTIONABLE DECISION",
+    status: "COMPLETED",
     title: { cs: "Maraton pod 4 hodiny", en: "Sub-4 marathon" },
     description: {
-      cs: "Cíl existuje. Trénink méně. Závod brzy. Kolena zatím nesouhlasí.",
-      en: "The goal exists. Training less so. Race coming up. Knees yet to be convinced."
+      cs: "3:56:21 v Třeboni. Kolena přežila. A zdá se, že tam ještě něco zbývá.",
+      en: "3:56:21 in Třeboň. Knees survived. And it looks like there's still more in the tank."
     },
     type: "event",
     cta: { cs: "Sledovat na Stravě", en: "Follow on Strava" },
