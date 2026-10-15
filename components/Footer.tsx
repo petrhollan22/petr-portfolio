@@ -48,8 +48,8 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">{t('contactTitle')}</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li><a href="mailto:petr@hollan.eu" className="hover:text-red-400 transition-colors">petr@hollan.eu</a></li>
-              <li><a href="https://cz.linkedin.com/in/petr-hollan" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors"title="pro ty, co preferují formální verzi">LinkedIn ↗</a></li>
-              <li><a href="https://strava.app.link/vDsxY1WUI0b" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors"title="důkaz, že občas opravdu běhám">Strava ↗</a></li>
+              <li><a href="https://cz.linkedin.com/in/petr-hollan" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors" title={t('linkedinTitle')}>LinkedIn ↗</a></li>
+              <li><a href="https://strava.app.link/vDsxY1WUI0b" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors" title={t('stravaTitle')}>Strava ↗</a></li>
             </ul>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function Footer() {
           <p>&copy; 2026 Petr Hollan</p>
               <p className="text-xs text-gray-600 mt-1">{t('builtBy')}</p>
           <span className="hidden sm:inline">·</span>
-          <Link href="/privacy" className="hover:text-red-400 transition-colors">Ochrana soukromí</Link>
+          <Link href="/privacy" className="hover:text-red-400 transition-colors">{t('privacy')}</Link>
         </div>
       </div>
     </footer>

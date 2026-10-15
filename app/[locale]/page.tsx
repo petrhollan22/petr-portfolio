@@ -102,7 +102,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <PhotoStrip />
       </section>
 
-      {latestPost && (
+      {locale === 'cs' && latestPost && (
         <section className="container py-12 border-t border-gray-800">
           <p className="mono-label text-red-400 mb-6">{t('fromBlog')}</p>
           <div className="grid md:grid-cols-2 gap-8 items-center">

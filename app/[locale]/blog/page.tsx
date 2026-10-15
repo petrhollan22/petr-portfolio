@@ -9,7 +9,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return buildMetadata(locale, 'blogTitle', 'blogDescription', '/blog');
 }
 
-export default async function BlogPage() {
+export default async function BlogPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const cs = locale === 'cs';
   const posts = await getAllPosts();
 
   return (
@@ -18,12 +20,14 @@ export default async function BlogPage() {
         <PageGlow />
         <h1 className="text-5xl font-bold mb-4 gradient-text">Blog</h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-          Novinky a poznámky k tomu, na čem pracuji.
+          {cs ? 'Novinky a poznámky k tomu, na čem pracuju.' : "Notes on what I'm working on."}
         </p>
       </section>
 
       <section className="container pt-16 pb-12">
-        {posts.length === 0 ? (
+        {!cs ? (
+          <p className="text-gray-400 text-center">The blog is in Czech for now. <a href="/cs/blog" className="text-red-400 hover:text-red-300 transition-colors">Read it in Czech →</a></p>
+        ) : posts.length === 0 ? (
           <p className="text-gray-400 text-center">Zatím tu nic není.</p>
         ) : (
           <div className="space-y-6 max-w-3xl mx-auto">

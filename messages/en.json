@@ -51,7 +51,10 @@
     "newsletterOk": "You are in. I will ping you only when there is something genuinely worth reading.",
     "newsletterErr409": "Already on the list — good to have you back.",
     "newsletterErrGeneral": "Something broke on the wire. Give it a moment and try again.",
-    "builtBy": "I built this site myself. So there is no one else to blame for the bugs."
+    "builtBy": "I built this site myself. So there is no one else to blame for the bugs.",
+    "linkedinTitle": "for those who prefer the formal version",
+    "stravaTitle": "proof that I actually run sometimes",
+    "privacy": "Privacy"
   },
   "work": {
     "title": "My work",

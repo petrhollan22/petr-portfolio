@@ -1,15 +1,15 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { races } from '@/data/races';
 import PageGlow from '@/components/PageGlow';
 import Reveal from '@/components/Reveal';
 
-const STATUS_BADGE: Record<string, { label: string; cls: string }> = {
-  registered: { label: 'Přihlášen', cls: 'bg-green-500/20 text-green-400 border border-green-500/30' },
-  considering: { label: 'Zvažuji', cls: 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30' },
-  watching: { label: 'Sleduji', cls: 'bg-gray-500/20 text-gray-400 border border-gray-500/30' },
+const STATUS_BADGE: Record<string, { label: { cs: string; en: string }; cls: string }> = {
+  registered: { label: { cs: 'Přihlášen', en: 'Registered' }, cls: 'bg-green-500/20 text-green-400 border border-green-500/30' },
+  considering: { label: { cs: 'Zvažuji', en: 'Considering' }, cls: 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30' },
+  watching: { label: { cs: 'Sleduji', en: 'Watching' }, cls: 'bg-gray-500/20 text-gray-400 border border-gray-500/30' },
 };
 
 function Countdown({ isoDate, time }: { isoDate: string; time?: string }) {
@@ -32,15 +32,16 @@ function Countdown({ isoDate, time }: { isoDate: string; time?: string }) {
     return () => clearInterval(id);
   }, [isoDate, time]);
 
+  const cs = useLocale() === 'cs';
   if (!diff) return null;
 
   return (
     <div className="grid grid-cols-4 gap-3 mt-4">
       {[
-        { label: 'dní', value: diff.days },
-        { label: 'hodin', value: diff.hours },
-        { label: 'minut', value: diff.minutes },
-        { label: 'sekund', value: diff.seconds },
+        { label: cs ? 'dní' : 'days', value: diff.days },
+        { label: cs ? 'hodin' : 'hours', value: diff.hours },
+        { label: cs ? 'minut' : 'minutes', value: diff.minutes },
+        { label: cs ? 'sekund' : 'seconds', value: diff.seconds },
       ].map(({ label, value }) => (
         <div key={label} className="bg-primary rounded-xl p-3 text-center">
           <div className="text-3xl font-bold font-mono text-red-400">{String(value).padStart(2, '0')}</div>
@@ -53,6 +54,7 @@ function Countdown({ isoDate, time }: { isoDate: string; time?: string }) {
 
 export default function RacesPage() {
   const t = useTranslations('races');
+  const cs = useLocale() === 'cs';
   const [filter, setFilter] = useState<'all' | 'registered' | 'considering'>('all');
 
   const today = new Date();
@@ -100,7 +102,7 @@ export default function RacesPage() {
               {(['all', 'registered', 'considering'] as const).map(f => (
                 <button key={f} onClick={() => setFilter(f)}
                   className={`px-3 py-1 rounded-full text-xs font-semibold transition-colors ${filter === f ? 'bg-red-600 text-white' : 'bg-secondary text-gray-400 hover:text-white'}`}>
-                  {f === 'all' ? 'Vše' : f === 'registered' ? 'Přihlášen' : 'Zvažuji'}
+                  {f === 'all' ? (cs ? 'Vše' : 'All') : f === 'registered' ? (cs ? 'Přihlášen' : 'Registered') : (cs ? 'Zvažuji' : 'Considering')}
                 </button>
               ))}
             </div>
@@ -109,11 +111,11 @@ export default function RacesPage() {
             <table className="w-full text-sm">
               <thead>
                 <tr className="text-left border-b border-gray-700">
-                  <th className="pb-3 pr-4 text-gray-400 font-medium">Datum</th>
-                  <th className="pb-3 pr-4 text-gray-400 font-medium">Závod</th>
-                  <th className="pb-3 pr-4 text-gray-400 font-medium hidden sm:table-cell">Místo</th>
+                  <th className="pb-3 pr-4 text-gray-400 font-medium">{cs ? 'Datum' : 'Date'}</th>
+                  <th className="pb-3 pr-4 text-gray-400 font-medium">{cs ? 'Závod' : 'Race'}</th>
+                  <th className="pb-3 pr-4 text-gray-400 font-medium hidden sm:table-cell">{cs ? 'Místo' : 'Place'}</th>
                   <th className="pb-3 pr-4 text-gray-400 font-medium">km</th>
-                  <th className="pb-3 pr-4 text-gray-400 font-medium hidden md:table-cell">Povrch</th>
+                  <th className="pb-3 pr-4 text-gray-400 font-medium hidden md:table-cell">{cs ? 'Povrch' : 'Surface'}</th>
                   <th className="pb-3 text-gray-400 font-medium">Status</th>
                 </tr>
               </thead>
@@ -138,7 +140,7 @@ export default function RacesPage() {
                     <td className="py-3">
                       {race.status && (
                         <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${STATUS_BADGE[race.status].cls}`}>
-                          {STATUS_BADGE[race.status].label}
+                          {STATUS_BADGE[race.status].label[cs ? 'cs' : 'en']}
                         </span>
                       )}
                     </td>

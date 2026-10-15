@@ -187,9 +187,9 @@ export default function FreeTimePage() {
             <table className="w-full text-sm">
               <thead>
                 <tr className="text-left border-b border-gray-700">
-                  <th className="pb-3 pr-4 text-gray-400 font-medium">Datum</th>
-                  <th className="pb-3 pr-4 text-gray-400 font-medium">Závod</th>
-                  <th className="pb-3 pr-4 text-gray-400 font-medium">Místo</th>
+                  <th className="pb-3 pr-4 text-gray-400 font-medium">{locale === 'cs' ? 'Datum' : 'Date'}</th>
+                  <th className="pb-3 pr-4 text-gray-400 font-medium">{locale === 'cs' ? 'Závod' : 'Race'}</th>
+                  <th className="pb-3 pr-4 text-gray-400 font-medium">{locale === 'cs' ? 'Místo' : 'Place'}</th>
                   <th className="pb-3 pr-4 text-gray-400 font-medium">{t('racesDistance')}</th>
                   <th className="pb-3 pr-4 text-gray-400 font-medium hidden md:table-cell">{t('racesSurface')}</th>
                   <th className="pb-3 text-gray-400 font-medium hidden md:table-cell">{t('racesProfile')}</th>

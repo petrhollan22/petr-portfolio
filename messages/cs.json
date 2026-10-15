@@ -51,7 +51,10 @@
     "newsletterOk": "Máš to tam. Dám vědět, až objevím něco, co stojí za otevření schránky.",
     "newsletterErr409": "Už se známe — tenhle e-mail v databázi mám.",
     "newsletterErrGeneral": "Něco spadlo pod stůl. Dej tomu vteřinu a zkus to znovu.",
-    "builtBy": "Web jsem si postavil sám. Případné chyby tedy nemám na koho svést."
+    "builtBy": "Web jsem si postavil sám. Případné chyby tedy nemám na koho svést.",
+    "linkedinTitle": "pro ty, co preferují formální verzi",
+    "stravaTitle": "důkaz, že občas opravdu běhám",
+    "privacy": "Ochrana soukromí"
   },
   "work": {
     "title": "Moje práce",

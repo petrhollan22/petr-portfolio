@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import { ArrowUp } from '@phosphor-icons/react';
+import { useLocale } from 'next-intl';
 
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false);
+  const cs = useLocale() === 'cs';
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 600);
@@ -18,7 +20,7 @@ export default function ScrollToTop() {
   return (
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      aria-label="Zpět nahoru"
+      aria-label={cs ? 'Zpět nahoru' : 'Back to top'}
       className="fixed bottom-24 right-5 z-30 w-11 h-11 rounded-full bg-red-600 hover:bg-red-500 text-white shadow-lg flex items-center justify-center transition-all hover:-translate-y-0.5"
     >
       <ArrowUp weight="regular" className="w-5 h-5" />

@@ -29,7 +29,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
         </p>
       </section>
 
-      {posts.length > 0 && (
+      {locale === 'cs' && posts.length > 0 && (
         <section className="container py-12 space-y-8 max-w-3xl mx-auto">
           {posts.map((post: any) => (
             <article key={post._id} className="card">
