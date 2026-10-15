@@ -88,5 +88,8 @@ export const languages: { name: Localized; level: Localized }[] = [
 ];
 
 export const certificates = [
-  "Certificate in Advanced English (CAE)"
+  "Certificate in Advanced English (CAE)",
+  "Introduction to Databricks",
+  "Introduction to Power BI",
+  "Elements of AI"
 ];

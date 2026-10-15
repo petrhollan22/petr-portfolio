@@ -10,7 +10,7 @@
   },
   "home": {
     "role": "Analyst. Chess player. Athlete. Average salesman.",
-    "intro": "I do BI for retail at Albert. Outside work I coach chess, run marathons and organise things nobody asked me to.",
+    "intro": "At Albert I work with BI and data for retail. Outside work I coach chess, run, and every now and then start a project I never planned to start.",
     "ctaWork": "My work",
     "ctaSchedule": "Get in touch",
     "cardWork": "What I do and know",
@@ -27,7 +27,7 @@
     "tagline": "FIDE Master, marathon runner, and someone who cannot do hobbies casually.",
     "heroNote": "This site mostly fills in what my friends already know about me. If you're not one of them yet, this is a good start. As for why I do so much of it, you won't find the answer here. I don't know either.",
     "fromBlog": "From the blog",
-    "heroProfession": "By day I build data models and reports at Albert that people use to make decisions in four countries. In the evenings I coach chess, run, or organise something for others.",
+    "heroProfession": "At Albert I work with BI and data for retail. Outside work I coach chess, run, and every now and then start a project I never planned to start.",
     "nowTitle": "What I am working on",
     "nowBi": "BI Analyst at Albert. Comparing loyalty metrics across retail brands and building reports for management in four countries. Databricks, PySpark, Power BI.",
     "nowAi": "Thesis on how eight Czech companies adopt AI. Now mostly testing what LLMs actually help with in analytical work.",
@@ -58,7 +58,7 @@
   },
   "work": {
     "title": "My work",
-    "lead": "What I do for a living, what I build on the side, and where I'm a fast beginner.",
+    "lead": "I work with data in retail. On the side I build my own tools and try things around AI. Here are projects, research and a few other things I've been part of.",
     "projectsTitle": "Academic projects",
     "readThesis": "Read the thesis",
     "servicesTitle": "What I can help with",
@@ -160,7 +160,7 @@
     "ctaButton": "Get in touch",
     "present": "present",
     "minor": "minor",
-    "certificatesNote": "I deleted the intro courses so it doesn't look like I have time for everything."
+    "certificatesNote": "I have a few certificates too. I see them as a complement to what someone can actually do."
   },
   "inspiration": {
     "title": "Inspiration",

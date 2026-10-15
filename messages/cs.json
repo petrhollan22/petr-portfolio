@@ -10,7 +10,7 @@
   },
   "home": {
     "role": "Analytik. Šachista. Sportovec. Průměrný prodavač.",
-    "intro": "V Albertu dělám BI pro retail. Mimo práci trénuju šachy, běhám maratony a organizuju věci, o které mě nikdo nežádal.",
+    "intro": "V Albertu pracuju s BI a daty pro retail. Mimo práci trénuju šachy, běhám a občas se pustím do projektu, který jsem původně vůbec neměl v plánu.",
     "ctaWork": "Moje práce",
     "ctaSchedule": "Ozvi se",
     "cardWork": "Co dělám a co umím",
@@ -27,7 +27,7 @@
     "tagline": "FIDE Master, maratonec a člověk, který neumí dělat koníčky úplně rekreačně.",
     "heroNote": "Tenhle web hlavně doplňuje, co o mně vědí kamarádi. Pokud mezi ně zatím nepatříš, je to dobrý začátek. Proč toho dělám tolik, tu ale nenajdeš. To nevím ani já.",
     "fromBlog": "Z blogu",
-    "heroProfession": "Přes den v Albertu stavím datové modely a reporty, podle kterých se rozhoduje ve čtyřech zemích. Večer trénuju šachy, běhám nebo organizuju něco pro ostatní.",
+    "heroProfession": "V Albertu pracuju s BI a daty pro retail. Mimo práci trénuju šachy, běhám a občas se pustím do projektu, který jsem původně vůbec neměl v plánu.",
     "nowTitle": "Co teď dělám",
     "nowBi": "BI analytik v Albertu. Porovnávám loyalty metriky napříč retailovými brandy a připravuju reporty pro management ve čtyřech zemích. Databricks, PySpark, Power BI.",
     "nowAi": "Diplomka o tom, jak osm českých firem zavádí AI. Teď hlavně zkouším, co z LLM reálně pomáhá v analytické práci.",
@@ -58,7 +58,7 @@
   },
   "work": {
     "title": "Moje práce",
-    "lead": "Čím se živím, co stavím bokem a v čem jsem rychlý začátečník.",
+    "lead": "Pracuju s daty v retailu. Vedle toho si stavím vlastní nástroje a zkouším věci kolem AI. Tady jsou projekty, výzkum a pár dalších věcí, na kterých jsem se podílel.",
     "projectsTitle": "Akademické projekty",
     "readThesis": "Číst práci",
     "servicesTitle": "S čím můžu pomoct",
@@ -160,7 +160,7 @@
     "ctaButton": "Ozvat se",
     "present": "nyní",
     "minor": "vedlejší specializace",
-    "certificatesNote": "Úvodní kurzy jsem smazal, aby to nevypadalo, že mám čas na všechno."
+    "certificatesNote": "Pár certifikátů mám taky. Beru je spíš jako doplněk k tomu, co člověk skutečně umí."
   },
   "inspiration": {
     "title": "Inspirace",
