@@ -68,11 +68,12 @@ export const sports: Sport[] = [
     id: "running",
     name: { cs: "Běh", en: "Running" },
     description: {
-      cs: "Běh je pro mě protiváha k práci u počítače: jasně měřitelný pokrok a čas o samotě. Střídám závodní tempo s během v přírodě.",
-      en: "Running balances out desk work: measurable progress and time alone. I mix race pace with easy runs outdoors."
+      cs: "Běh je pro mě protiváha k práci u počítače: jasně měřitelný pokrok a čas o samotě. Střídám závodní tempo s během v přírodě. První maraton jsem běžel v Praze za 4:17, druhý o pět měsíců později v Třeboni za 3:56:21. Kolena zatím nebyla přizvána k jednání.",
+      en: "Running balances out desk work: measurable progress and time alone. I mix race pace with easy runs outdoors. My first marathon was Prague in 4:17, the second five months later in Třeboň in 3:56:21. My knees have not yet been consulted."
     },
     achievements: [
-      { cs: "Maraton 3:56:21 (Třeboň 2026)", en: "Marathon 3:56:21 (Třeboň 2026)" },
+      { cs: "Maraton 3:56:21, osobní rekord (Třeboň 2026)", en: "Marathon 3:56:21, personal best (Třeboň 2026)" },
+      { cs: "První maraton 4:17 (Praha 2026)", en: "First marathon 4:17 (Prague 2026)" },
       { cs: "Půlmaraton 1:44:32", en: "Half marathon 1:44:32" }
     ],
     links: [

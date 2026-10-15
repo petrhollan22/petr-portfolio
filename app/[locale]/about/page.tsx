@@ -28,11 +28,11 @@ export default function AboutPage() {
       <section className="container pb-12">
         <p className="mono-label text-red-400 text-center mb-8">{t('statsTitle')}</p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto text-center">
-          <a href="https://ratings.fide.com/profile/360945" target="_blank" rel="noopener noreferrer" className="group" title="top 1 % šachistů na světě">
-            <div className="text-5xl font-black gradient-text mb-2 group-hover:text-red-400 transition-colors">2300+</div>
-            <div className="mono-label text-gray-500">FIDE rating</div>
+          <a href="https://ratings.fide.com/profile/360945" target="_blank" rel="noopener noreferrer" className="group" title={locale === 'cs' ? 'Maximum z doby, kdy byly šachy moje životní priorita. Dnes 2263 a trénuju spíš ostatní.' : 'Peak from the days when chess was my top priority. Now 2263 and mostly coaching others.'}>
+            <div className="text-5xl font-black gradient-text mb-2 group-hover:text-red-400 transition-colors">2300</div>
+            <div className="mono-label text-gray-500">{locale === 'cs' ? 'max. FIDE rating' : 'peak FIDE rating'}</div>
           </a>
-          <a href="https://www.triatlony.com/bezecke-tabulky/zavodnici/286167-hollan-petr" target="_blank" rel="noopener noreferrer" className="group" title="Vodafone Prague Marathon 2026">
+          <a href="https://www.triatlony.com/bezecke-tabulky/zavodnici/286167-hollan-petr" target="_blank" rel="noopener noreferrer" className="group" title={locale === 'cs' ? 'Třeboň 2026. První maraton v Praze byl o víc než 20 minut pomalejší.' : 'Třeboň 2026. My first marathon in Prague was more than 20 minutes slower.'}>
             <div className="text-5xl font-black gradient-text mb-2 group-hover:text-red-400 transition-colors">3:56</div>
             <div className="mono-label text-gray-500">{t('statMarathon')}</div>
           </a>
@@ -75,7 +75,7 @@ export default function AboutPage() {
           <p>{t("note3")}</p>
         </div>
       <section className="container pb-8 text-center">
-        <Link href="/now" className="text-red-400 hover:text-red-300 transition-colors text-sm">Co právě dělám →</Link>
+        <Link href="/now" className="text-red-400 hover:text-red-300 transition-colors text-sm">{locale === 'cs' ? 'Co právě dělám →' : "What I'm up to now →"}</Link>
       </section>
       </section>
 

@@ -14,8 +14,8 @@ export const workServices: Service[] = [
     tier: "main",
     name: { cs: "Data & BI", en: "Data & BI" },
     description: {
-      cs: "Daty se živím. Nejčastěji SQL, Databricks, PySpark a Power BI. Baví mě hlavně ta část mezi \"někde máme data\" a \"někdo podle nich dokáže udělat rozhodnutí\".",
-      en: "Data is my day job. Mostly SQL, Databricks, PySpark and Power BI. I enjoy the part between \"we have data somewhere\" and \"someone can actually make decisions with it\"."
+      cs: "Daty se živím, takže tady pozor: začátečník nejsem. Nejčastěji SQL, Databricks, PySpark a Power BI. Baví mě hlavně ta část mezi \"někde máme data\" a \"někdo podle nich dokáže udělat rozhodnutí\".",
+      en: "Data is my day job, so careful here: not a beginner. Mostly SQL, Databricks, PySpark and Power BI. I enjoy the part between \"we have data somewhere\" and \"someone can actually make decisions with it\"."
     }
   },
   {
@@ -23,8 +23,8 @@ export const workServices: Service[] = [
     tier: "main",
     name: { cs: "AI", en: "AI" },
     description: {
-      cs: "AI řeším v práci, vlastních projektech i akademicky. V diplomce jsem zkoumal, jak ji zavádí osm českých firem — a co se mezi prezentací o AI a skutečným nasazením obvykle pokazí. Pokud řešíte podobný problém, rád se na něj podívám s vámi.",
-      en: "I work with AI professionally, in my own projects and academically. My thesis looked at how eight Czech companies adopt AI — and what usually goes wrong between the AI presentation and actual deployment. If you're facing something similar, I'm happy to take a look."
+      cs: "AI řeším v práci i ve vlastních projektech a napsal jsem o ní diplomku: jak ji zavádí osm českých firem a co se mezi prezentací o AI a skutečným nasazením obvykle pokazí. Expertem mě to dělá asi tak, jako z přečtení kuchařky dělá šéfkuchaře. Ale pokecám o tom rád.",
+      en: "I work with AI in my job and side projects, and wrote my thesis on it: how eight Czech companies adopt AI and what usually goes wrong between the AI presentation and actual deployment. That makes me an expert roughly the way reading a cookbook makes you a chef. Happy to talk about it though."
     }
   },
   {
@@ -32,8 +32,8 @@ export const workServices: Service[] = [
     tier: "side",
     name: { cs: "Weby & vlastní projekty", en: "Websites & side projects" },
     description: {
-      cs: "Tenhle web jsem si postavil sám. Pak jsem zjistil, že mě to baví, a začal stavět další. Dělám hlavně menší weby a nástroje v Next.js — zatím spíš vlastní projekty a weby pro lidi kolem mě.",
-      en: "I built this site myself. Then I realised I enjoyed it and started building more. Mostly smaller sites and tools in Next.js — so far mainly my own projects and sites for people I know."
+      cs: "Tenhle web jsem si postavil sám. Pak jsem zjistil, že mě to baví, a začal stavět další: menší weby a nástroje v Next.js, zatím hlavně pro sebe a lidi kolem mě. Jak se mi to daří, posuď sám. Právě se na to díváš.",
+      en: "I built this site myself. Then I realised I enjoyed it and kept going: smaller sites and tools in Next.js, so far mostly for myself and people I know. Judge the result yourself. You're looking at it."
     }
   },
   {
@@ -41,8 +41,8 @@ export const workServices: Service[] = [
     tier: "other",
     name: { cs: "Šachový trénink", en: "Chess coaching" },
     description: {
-      cs: "Šachy hraju závodně přes dvacet let a mám titul FIDE Master. Trénuju individuálně i skupinově, online i osobně.",
-      en: "I've played chess competitively for over twenty years and hold the FIDE Master title. I coach individually and in groups, online and in person."
+      cs: "Tady výjimečně začátečník nejsem. Šachy hraju závodně přes dvacet let, mám titul FIDE Master a od roku 2020 trénuju v šachové škole Vávra & Černoušek. Individuálně i skupinově, online i osobně.",
+      en: "One place where I'm definitely not a beginner. I've played competitive chess for over twenty years, hold the FIDE Master title and have coached at the Vávra & Černoušek chess school since 2020. Individually or in groups, online or in person."
     }
   },
   {
