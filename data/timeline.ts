@@ -77,14 +77,14 @@ export const timeline: TimelineEntry[] = [
   {
     year: "2023",
     icon: "graduation",
-    title: { cs: "Data, AI a dokončený bakalář", en: "Data, AI and a finished bachelor's degree" },
-    text: { cs: "Dokončil jsem bakalářské studium na VŠE, pracoval jako Data Analyst v Samsungu a dostal se do finále Profinit AI Talents.", en: "I finished my bachelor's degree at VŠE, worked as a Data Analyst at Samsung, and reached the finals of Profinit AI Talents." }
+    title: { cs: "Samsung a dokončený bakalář", en: "Samsung and a finished bachelor's degree" },
+    text: { cs: "Dokončil jsem bakalářské studium na VŠE a nastoupil do Samsungu.", en: "I finished my bachelor's degree at VŠE and joined Samsung." }
   },
   {
     year: "2024",
     icon: "pin",
-    title: { cs: "Erasmus+ v Lichtenštejnsku", en: "Erasmus+ in Liechtenstein" },
-    text: { cs: "Strávil jsem semestr na Universität Liechtenstein, kde se propojilo mezinárodní prostředí, technologie a business.", en: "I spent a semester at the University of Liechtenstein, where international environment, technology and business came together." }
+    title: { cs: "Erasmus+ a finále Profinit AI Talents", en: "Erasmus+ and the Profinit AI Talents final" },
+    text: { cs: "Strávil jsem semestr na Universität Liechtenstein a s týmem se dostal do finále Profinit AI Talents.", en: "I spent a semester at the University of Liechtenstein and reached the Profinit AI Talents final with my team." }
   },
   {
     year: "2025",

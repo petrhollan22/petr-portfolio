@@ -33,6 +33,11 @@ export default function WorkPage() {
       <section className="container py-12">
         <p className="mono-label text-red-400 mb-2 text-center">{locale === 'cs' ? 'Co dělám profesně' : 'What I do professionally'}</p>
         <h2 className="section-title">{locale === 'cs' ? 'Data a AI' : 'Data & AI'}</h2>
+        <p className="text-gray-400 text-center max-w-2xl mx-auto mb-10 leading-relaxed">
+          {locale === 'cs'
+            ? 'Nejsem agentura a nic neprodávám (viz průměrný prodavač). Jsem ale docela rychlý začátečník: ze šachisty analytik, z volejbalisty maratonec, z Prahy na rok do Pensylvánie a zpátky. Když máš zajímavý nápad, naučím se, co bude potřeba.'
+            : "I'm not an agency and I'm not selling anything (see: average salesman). I am, however, a fairly fast beginner: chess player turned analyst, volleyball player turned marathoner, Prague to Pennsylvania for a year and back. If you have an interesting idea, I'll learn whatever it takes."}
+        </p>
         <div className="max-w-3xl mx-auto border-t border-gray-800">
           {mainServices.map((s) => (
             <Link
@@ -50,7 +55,7 @@ export default function WorkPage() {
         </div>
         <div className="text-center mt-8">
           <Link href="/schedule-time?service=data-analytics" className="btn-primary">
-            {locale === 'cs' ? 'Probrat váš projekt' : 'Discuss your project'}<span className="btn-arrow">→</span>
+            {locale === 'cs' ? 'Mám nápad' : 'I have an idea'}<span className="btn-arrow">→</span>
           </Link>
         </div>
       </section>

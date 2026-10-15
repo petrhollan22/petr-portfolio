@@ -19,8 +19,8 @@ export const hustleProjects: HustleProject[] = [
     status: "ONGOING",
     title: { cs: "Šachový trénink & mentoring", en: "Chess coaching & mentoring" },
     description: {
-      cs: "Za šachovnicí jsem pracoval s různorodými skupinami, od začátečníků a juniorů až po ambiciózní hráče, kteří se chtěli výrazně posunout. Vedl jsem individuální i skupinové tréninky, přednášky, besedy i simultánky. Trénoval jsem v češtině, angličtině a několik svěřenců dokonce i ve španělštině. Dokážu pomoct také s přípravou na turnaje nebo se změnou mindsetu.",
-      en: "Over the board I have worked with a wide range of groups, from beginners and juniors to ambitious players wanting to make a real leap forward. I have run individual and group lessons, talks, discussions and simultaneous exhibitions. I coach in Czech, English, and have taught a few students in Spanish as well. I can also help with tournament preparation or with a shift in mindset."
+      cs: "Za šachovnicí jsem pracoval s různorodými skupinami, od začátečníků a juniorů až po ambiciózní hráče, kteří se chtěli výrazně posunout. Vedl jsem individuální i skupinové tréninky, přednášky, besedy i simultánky. Trénoval jsem v češtině, angličtině a několik svěřenců dokonce i ve španělštině. Pomůžu i s přípravou na turnaje, nebo s hlavou, když se zrovna nedaří.",
+      en: "Over the board I have worked with a wide range of groups, from beginners and juniors to ambitious players wanting to make a real leap forward. I have run individual and group lessons, talks, discussions and simultaneous exhibitions. I coach in Czech, English, and have taught a few students in Spanish as well. I can also help with tournament prep, or with your head when things aren't going well."
     },
     type: "coaching",
     cta: { cs: "Domluvit lekci", en: "Book a lesson" },
@@ -46,7 +46,7 @@ export const hustleProjects: HustleProject[] = [
     bullets: [
       { cs: "Pořádání sportovních turnajů, tréninků a workshopů", en: "Running sports tournaments, training sessions and workshops" },
       { cs: "Zajištění sportovišť, vybavení a související logistiky", en: "Securing venues, equipment and related logistics" },
-      { cs: "Hladká komunikace s účastníky i partnery akcí", en: "Smooth communication with participants and event partners" },
+      { cs: "Komunikace s účastníky, fakultou i partnery akcí", en: "Communication with participants, the faculty and event partners" },
       { cs: "Vytváření příležitostí k setkávání a osobnímu rozvoji studentů", en: "Creating opportunities for students to connect and grow" }
     ]
   },
@@ -99,8 +99,8 @@ export const hustleProjects: HustleProject[] = [
     status: "COMPLETED",
     title: { cs: "Maraton pod 4 hodiny", en: "Sub-4 marathon" },
     description: {
-      cs: "3:56:21 v Třeboni. Kolena přežila. A zdá se, že tam ještě něco zbývá.",
-      en: "3:56:21 in Třeboň. Knees survived. And it looks like there's still more in the tank."
+      cs: "3:56:21 v Třeboni, o víc než 20 minut rychleji než první maraton v Praze. Kolena přežila. A zdá se, že tam ještě něco zbývá.",
+      en: "3:56:21 in Třeboň, more than 20 minutes faster than my first marathon in Prague. Knees survived. And it looks like there's still more in the tank."
     },
     type: "event",
     cta: { cs: "Sledovat na Stravě", en: "Follow on Strava" },

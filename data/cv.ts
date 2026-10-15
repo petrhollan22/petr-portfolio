@@ -26,11 +26,16 @@ export const jobs: Job[] = [
   {
     title: { cs: "Datový analytik", en: "Data Analyst" },
     org: "Samsung Electronics",
-    period: "11/2023 – 04/2025",
+    period: "11/2024 – 04/2025",
     description: {
       cs: "Analýza zákaznických dat, pravidelné i ad-hoc reporty a datová podpora rozhodování pro divizi mobilních zařízení.",
       en: "Customer data analysis, recurring and ad-hoc reporting, and decision support for the mobile devices division."
     }
+  },
+  {
+    title: { cs: "Technická podpora, mobilní zařízení (MX CS)", en: "Tech Support, Mobile Devices (MX CS)" },
+    org: "Samsung Electronics",
+    period: "11/2023 – 11/2024"
   },
   {
     title: { cs: "Stáž: implementace interního chatbota", en: "Internship: internal chatbot implementation" },
@@ -83,8 +88,5 @@ export const languages: { name: Localized; level: Localized }[] = [
 ];
 
 export const certificates = [
-  "Certificate in Advanced English (CAE)",
-  "Introduction to Databricks",
-  "Introduction to Power BI",
-  "Elements of AI"
+  "Certificate in Advanced English (CAE)"
 ];
