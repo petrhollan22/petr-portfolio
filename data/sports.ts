@@ -72,14 +72,14 @@ export const sports: Sport[] = [
       en: "Running balances out desk work: measurable progress and time alone. I mix race pace with easy runs outdoors."
     },
     achievements: [
-      { cs: "Maraton 4:17:59", en: "Marathon 4:17:59" },
+      { cs: "Maraton 3:56:21 (Třeboň 2026)", en: "Marathon 3:56:21 (Třeboň 2026)" },
       { cs: "Půlmaraton 1:44:32", en: "Half marathon 1:44:32" }
     ],
     links: [
       { label: { cs: "Běžecké tabulky na triatlony.com", en: "Race results on triatlony.com" }, url: "https://www.triatlony.com/bezecke-tabulky/zavodnici/286167-hollan-petr" }
     ],
-    image: "/images/sports/maraton.jpeg",
-    imageCaption: { cs: "Vodafone Prague Marathon 2026", en: "Vodafone Prague Marathon 2026" },
+    image: "/images/sports/trebonPetr.jpg",
+    imageCaption: { cs: "PUMA Třeboňský maraton 2026 · 3:56:21", en: "PUMA Třeboň Marathon 2026 · 3:56:21" },
     image2: "/images/sports/pulmaraton.jpeg",
     image2Caption: { cs: "Půlmaraton 1:44:32", en: "Half marathon 1:44:32" }
   },
