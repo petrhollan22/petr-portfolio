@@ -41,6 +41,15 @@ npm install a spuštění dev serveru:
     cp .env.example .env.local
     npm run dev
 
+## Lokální spuštění projektu
+
+Pro rychlé nastartování projektu na vašem počítači:
+
+1. **Instalace závislostí** – spusťte `npm install`.
+2. **Zkopírování env souboru** – `cp .env.example .env.local` (pokud ještě neexistuje).
+3. **Spuštění vývojového serveru** – `npm run dev`.
+4. Otevřete prohlížeč na adrese `http://localhost:3000`.
+
 ## Environment variables
 
     NEXT_PUBLIC_SANITY_PROJECT_ID=
