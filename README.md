@@ -33,7 +33,11 @@ Osobní portfolio a brand hub. Postaveno na Next.js 14, nasazeno na Vercel, obsa
 
 ## Lokální spuštění projektu
 
-npm install a spuštění dev serveru:
+Pro lokální vývoj nejprve nainstalujte závislosti, připravte
+lokální proměnné prostředí a spusťte vývojový server.
+Po spuštění otevřete http://localhost:3000.
+
+Instalace a spuštění:
 
     git clone https://github.com/petrhollan22/petr-portfolio
     cd petr-portfolio
