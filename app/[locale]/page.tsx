@@ -4,6 +4,8 @@ import { buildMetadata } from '@/lib/metadata';
 import PhotoStrip from '@/components/PhotoStrip';
 import { getLatestPost } from '@/sanity/queries';
 
+// AI agent test 2
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   return buildMetadata(locale, 'defaultTitle', 'defaultDescription', '');
