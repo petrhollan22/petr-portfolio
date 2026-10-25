@@ -31,7 +31,7 @@ Osobní portfolio a brand hub. Postaveno na Next.js 14, nasazeno na Vercel, obsa
 | `/schedule-time` | Rezervace času |
 | `/planovac` | Interní plánovač akcí s RSVP (chráněno basic auth) |
 
-## Lokální vývoj
+## Lokální spuštění projektu
 
 npm install a spuštění dev serveru:
 
@@ -40,15 +40,6 @@ npm install a spuštění dev serveru:
     npm install
     cp .env.example .env.local
     npm run dev
-
-## Lokální spuštění projektu
-
-Pro rychlé nastartování projektu na vašem počítači:
-
-1. **Instalace závislostí** – spusťte `npm install`.
-2. **Zkopírování env souboru** – `cp .env.example .env.local` (pokud ještě neexistuje).
-3. **Spuštění vývojového serveru** – `npm run dev`.
-4. Otevřete prohlížeč na adrese `http://localhost:3000`.
 
 ## Environment variables
 
