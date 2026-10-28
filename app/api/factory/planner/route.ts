@@ -33,7 +33,7 @@ export async function POST(request: Request) {
     return Response.json({ error: "invalid_request_key" }, { status: 400 });
   }
 
-  let payload: Record<string, string>;
+  let payload: Record<string, unknown>;
 
   if (data.action === "create_group") {
     if (typeof data.name !== "string" ||
@@ -52,9 +52,26 @@ export async function POST(request: Request) {
       return Response.json({ error: "invalid_event" }, { status: 400 });
     }
 
+    const ids = data.personIds;
+    const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+    if (!Array.isArray(ids) || ids.length < 1 ||
+        ids.length > 100 || !ids.every(
+          (id) => typeof id === "string" && uuid.test(id)
+        ) || new Set(ids).size !== ids.length) {
+      return Response.json({ error: "invalid_people" }, { status: 400 });
+    }
+
+    if (data.groupId !== undefined &&
+        (typeof data.groupId !== "string" || !uuid.test(data.groupId))) {
+      return Response.json({ error: "invalid_group_id" }, { status: 400 });
+    }
+
     payload = {
       activity: data.activity.trim(),
       startsAt: new Date(data.startsAt).toISOString(),
+      personIds: ids,
+      ...(data.groupId ? { groupId: data.groupId } : {}),
     };
   } else {
     return Response.json({ error: "unsupported_action" }, { status: 400 });
