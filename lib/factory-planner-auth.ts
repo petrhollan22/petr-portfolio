@@ -2,9 +2,10 @@ import { createHmac, timingSafeEqual } from "node:crypto";
 
 export function verifyFactoryPlannerRequest(
   request: Request,
-  body: string
+  body: string,
+  secretName: "FACTORY_PLANNER_HMAC_KEY" | "FACTORY_PLANNER_APPROVAL_KEY" = "FACTORY_PLANNER_HMAC_KEY"
 ): boolean {
-  const secret = process.env.FACTORY_PLANNER_HMAC_KEY;
+  const secret = process.env[secretName];
   const timestamp = request.headers.get("x-factory-timestamp");
   const signature = request.headers.get("x-factory-signature");
 
