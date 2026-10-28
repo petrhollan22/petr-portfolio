@@ -4,7 +4,7 @@ const GROUP = "beh";
 const TEMPLATE = "beh";
 
 export async function GET(req: Request) {
-  if (req.headers.get("authorization") !== `Bearer ${process.env.CRON_SECRET}`) {
+  if (!process.env.CRON_SECRET || req.headers.get("authorization") !== `Bearer ${process.env.CRON_SECRET}`) {
     return Response.json({ ok: false, error: "unauthorized" }, { status: 401 });
   }
 
