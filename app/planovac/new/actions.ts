@@ -1,4 +1,5 @@
 "use server";
+import { requirePlannerAdmin } from "@/lib/planner-admin";
 
 import { supabase } from "@/lib/supabase";
 import { redirect } from "next/navigation";
@@ -14,6 +15,7 @@ function pragueToUtc(local: string): string {
 }
 
 export async function createEvent(formData: FormData) {
+  await requirePlannerAdmin();
   const activity = String(formData.get("activity") || "").trim();
   const place = String(formData.get("place") || "").trim() || null;
   const startsLocal = String(formData.get("starts_at") || "");

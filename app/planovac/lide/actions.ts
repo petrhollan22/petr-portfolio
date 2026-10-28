@@ -1,10 +1,12 @@
 "use server";
+import { requirePlannerAdmin } from "@/lib/planner-admin";
 
 import { supabase } from "@/lib/supabase";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 export async function addPerson(formData: FormData) {
+  await requirePlannerAdmin();
   const full_name = String(formData.get("full_name") || "").trim();
   const email = String(formData.get("email") || "").trim() || null;
   const phone = String(formData.get("phone") || "").trim() || null;
@@ -29,6 +31,7 @@ export async function addPerson(formData: FormData) {
 }
 
 export async function toggleMembership(formData: FormData) {
+  await requirePlannerAdmin();
   const personId = String(formData.get("person_id"));
   const groupId = String(formData.get("group_id"));
   const on = String(formData.get("on")) === "1";
@@ -43,6 +46,7 @@ export async function toggleMembership(formData: FormData) {
   revalidatePath("/planovac/lide");
 }
 export async function updatePerson(formData: FormData) {
+  await requirePlannerAdmin();
   const id = String(formData.get("id"));
   const full_name = String(formData.get("full_name") || "").trim();
   const email = String(formData.get("email") || "").trim() || null;
