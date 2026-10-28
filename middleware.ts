@@ -42,5 +42,5 @@ export default async function middleware(request: NextRequest) {
 
 
 export const config = {
-  matcher: ['/', '/(cs|en)/:path*', '/((?!api|studio|_next|_vercel|.well-known|.*\..*).*)'],
+  matcher: ['/', '/planovac/:path*', '/(cs|en)/:path*', '/((?!api|studio|_next|_vercel|.well-known|.*\..*).*)'],
 };
