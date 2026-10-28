@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY!);
 const BASE = process.env.NEXT_PUBLIC_BASE_URL!;
 
 export async function POST(req: Request) {
-  if (req.headers.get("authorization") !== `Bearer ${process.env.SEND_SECRET}`) {
+  if (!process.env.SEND_SECRET || req.headers.get("authorization") !== `Bearer ${process.env.SEND_SECRET}`) {
     return Response.json({ ok: false, error: "unauthorized" }, { status: 401 });
   }
 

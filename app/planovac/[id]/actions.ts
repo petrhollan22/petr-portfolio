@@ -1,10 +1,12 @@
 "use server";
+import { requirePlannerAdmin } from "@/lib/planner-admin";
 
 import { supabase } from "@/lib/supabase";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 
 export async function deleteEvent(formData: FormData) {
+  await requirePlannerAdmin();
   const id = String(formData.get("id"));
 
   const { count } = await supabase
@@ -20,6 +22,7 @@ export async function deleteEvent(formData: FormData) {
 }
 
 export async function cancelEvent(formData: FormData) {
+  await requirePlannerAdmin();
   const id = String(formData.get("id"));
   await supabase.from("events").update({ is_cancelled: true }).eq("id", id);
 
@@ -35,6 +38,7 @@ export async function cancelEvent(formData: FormData) {
 }
 
 export async function sendInvites(formData: FormData) {
+  await requirePlannerAdmin();
   const id = String(formData.get("id"));
 
   await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/send`, {
