@@ -140,7 +140,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
               height={900}
               className="w-full max-w-sm rounded-2xl shadow-xl"
             />
-            <p className="mono-label text-gray-500 mt-3">FIDE Master · Praha</p>
+            <p className="text-lg font-semibold text-white mt-3">Petr Hollan</p>
+            <p className="mono-label text-gray-500 mt-1">FIDE Master · Praha</p>
           </div>
         </div>
       </section>
