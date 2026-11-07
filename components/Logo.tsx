@@ -12,7 +12,7 @@ export default function Logo({ compact = false }: Props) {
       </span>
       {!compact && (
         <span className="text-xl font-bold text-white whitespace-nowrap">
-          Petr Hollan
+          FM ING. Petr Hollan
         </span>
       )}
     </Link>
