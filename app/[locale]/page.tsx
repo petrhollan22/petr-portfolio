@@ -35,6 +35,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-center mb-16">
             <div>
               <h1 className="text-6xl md:text-7xl font-black mb-6 gradient-text">Petr Hollan</h1>
+              <p className="text-xl text-gray-300 mb-4">vitejte na mém webu</p>
               <p className="text-2xl text-gray-300 mb-2">{t('role')}</p>
               <p className="text-lg text-gray-500 mb-8 max-w-xl">{t('tagline')}</p>
               <p className="text-base text-gray-300 mb-3 max-w-xl font-medium">{t('heroProfession')}</p>
